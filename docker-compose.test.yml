@@ -1,0 +1,34 @@
+# This file is auto-synced from product-os/jellyfish-config/sync/docker-compose.test.yml
+# and should only be edited there!
+
+version: '2.1'
+
+services:
+  sut:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NPM_TOKEN: $NPM_TOKEN
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      - DATABASE=postgres
+      - LOGLEVEL=crit
+      - NODE_ENV=test
+      - POSTGRES_DATABASE=jellyfish
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=docker
+      - REDIS_HOST=redis
+      - REDIS_PASSWORD=
+      - REDIS_PORT=6379
+      - OAUTH_REDIRECT_BASE_URL=https://jel.ly.fish
+      - INTEGRATION_DEFAULT_USER=admin
+      - CI=1
+      - NPM_TOKEN
+    env_file:
+      - test.env
+    networks:
+      - internal
