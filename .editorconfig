@@ -1,0 +1,15 @@
+# This file is auto-synced from product-os/jellyfish-config/sync/.editorconfig
+# and should only be edited there!
+
+root = true
+
+[*]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{yml,yaml,json}]
+indent_style = space
