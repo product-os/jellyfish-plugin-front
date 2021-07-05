@@ -1,0 +1,13 @@
+- commits:
+    - subject: Convert to TypeScript
+      hash: ccbb1400e001cc19d88f597193696d8c5a41c272
+      body: ''
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 1.0.0
+  date: 2021-07-05T00:03:54.470Z
