@@ -1,0 +1,6 @@
+type: 'node'
+upstream:
+  - repo: 'jellyfish-plugin-base'
+    url: 'https://github.com/product-os/jellyfish-plugin-base'
+  - repo: 'jellyfish-plugin-default'
+    url: 'https://github.com/product-os/jellyfish-plugin-default'
