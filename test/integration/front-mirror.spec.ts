@@ -7,6 +7,7 @@
 import ActionLibrary from '@balena/jellyfish-action-library';
 import { defaultEnvironment as environment } from '@balena/jellyfish-environment';
 import { PluginManager } from '@balena/jellyfish-plugin-base';
+import { DefaultPlugin } from '@balena/jellyfish-plugin-default';
 import { Sync } from '@balena/jellyfish-sync';
 import Bluebird from 'bluebird';
 import { Front } from 'front-sdk';
@@ -14,9 +15,6 @@ import _ from 'lodash';
 import sinon from 'sinon';
 import { v4 as uuidv4 } from 'uuid';
 import { FrontPlugin } from '../../lib';
-
-// tslint:disable-next-line: no-var-requires
-const DefaultPlugin = require('@balena/jellyfish-plugin-default');
 
 const TOKEN = environment.integration.front;
 const context: any = {
