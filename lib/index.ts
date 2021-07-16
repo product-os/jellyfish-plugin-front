@@ -28,7 +28,7 @@ export class FrontPlugin extends JellyfishPluginBase {
 				},
 				{
 					slug: 'jellyfish-plugin-default',
-					version: '>=17.x',
+					version: '>=19.x',
 				},
 			],
 		});
