@@ -677,6 +677,17 @@ function getThreadPatchFromEvent(card: any, event: any): any {
 }
 
 /**
+ * @summary Get the loop to associate with an event payload
+ * @param {Object} event - event payload
+ * @param {String} threadType - thread type
+ * @returns  {String} the versioned slug loop
+ */
+function getLoop(_event: any, _threadType: string): string {
+	// TODO: cases for other loops
+	return 'loop-balena-io@1.0.0';
+}
+
+/**
  * @summary Get thread from an event payload
  * @function
  * @private
@@ -706,8 +717,10 @@ async function getThread(
 	}
 
 	const slug = _.last(mirrorId.split('/')) || '';
+	const loop = getLoop(event, threadType);
 	return {
 		name: event.data.payload.conversation.subject.replace(/^Re:\s/, ''),
+		loop,
 		tags: [],
 		links: {},
 		markers: [],
