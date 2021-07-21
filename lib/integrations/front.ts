@@ -23,6 +23,18 @@ const Front = require('front-sdk').Front;
 
 const SLUG = 'front';
 
+// This abomination is temporary code - while we migrate legacy
+// brainstorm topics from Front.
+const INBOX_TO_BRAINSTORM_CATEGORY = {
+	'#Architecture': 'balena-io architecture',
+	'#Product': 'balena-io product',
+	'#Process': 'product-os product',
+	'#Balenalabs': 'balenalabs architecture',
+	'#Hardware': 'balena-io hardware architecture',
+};
+
+const BRAINSTORM_INBOXES = _.keys(INBOX_TO_BRAINSTORM_CATEGORY);
+
 /**
  * @summary All the thread types we support
  * @constant
@@ -33,9 +45,14 @@ const ALL_THREAD_TYPES = [
 	'support-thread',
 	'sales-thread@1.0.0',
 	'support-thread@1.0.0',
+	'brainstorm-topic@1.0.0',
 ];
 
 function getThreadType(inbox: string): string | null {
+	if (BRAINSTORM_INBOXES.includes(inbox)) {
+		return `brainstorm-topic@1.0.0`;
+	}
+
 	if (
 		[
 			'S/Paid_Support',
@@ -707,7 +724,7 @@ async function getThread(
 	threadType: string,
 ): Promise<any> {
 	const mirrorId: string = getConversationMirrorId(event);
-	const threadCard = await getElementByFuzzyMirrorId(
+	let threadCard = await getElementByFuzzyMirrorId(
 		context,
 		threadType,
 		mirrorId,
@@ -718,7 +735,7 @@ async function getThread(
 
 	const slug = _.last(mirrorId.split('/')) || '';
 	const loop = getLoop(event, threadType);
-	return {
+	threadCard = {
 		name: event.data.payload.conversation.subject.replace(/^Re:\s/, ''),
 		loop,
 		tags: [],
@@ -730,7 +747,17 @@ async function getThread(
 			/[@.]/g,
 			'-',
 		),
-		data: {
+	};
+
+	// TEMPORARY code to sync legacy brainstorm topics
+	if (threadType === 'brainstorm-topic@1.0.0') {
+		threadCard.data = {
+			status: 'closed',
+			category: INBOX_TO_BRAINSTORM_CATEGORY[inbox] ?? '',
+			description: '(See timeline)',
+		};
+	} else {
+		threadCard.data = {
 			translateDate: utils
 				.getDateFromEpoch(event.data.payload.conversation.created_at)
 				.toISOString(),
@@ -741,8 +768,9 @@ async function getThread(
 			alertsUser: [],
 			description: '',
 			status: 'open',
-		},
-	};
+		};
+	}
+	return threadCard;
 }
 
 async function handleRateLimit(
