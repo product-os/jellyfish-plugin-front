@@ -1,4 +1,21 @@
 - commits:
+    - subject: Set the loop field of synced support threads
+      hash: b6fd14c30f7bf78d0d315b85fc7aae45f60fd2cb
+      body: >
+        Need to add jellyfish-plugin-product-os as a dev dependency to pull in
+        the `loop-balena-io` contract and load it before running the translate
+        integration tests so that jellyfish-core doesn't complain that the loop
+        field is being set to a non-existent loop!
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 1.1.0
+  date: 2021-07-22T01:39:45.180Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.203'
       hash: 6b1ee7dcd2e3dfc2a59c52a46dabc2a309fb9f6b
       body: ''

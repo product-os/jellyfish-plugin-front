@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.1.0 - 2021-07-22
+
+* Set the loop field of synced support threads [Graham McCulloch]
+
 ## 1.0.26 - 2021-07-17
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.203 [Renovate Bot]
