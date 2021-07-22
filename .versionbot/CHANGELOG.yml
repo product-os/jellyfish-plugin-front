@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add support for syncing legacy brainstorm topics
+      hash: 1fed2709d1d478a690b45a314eb01aee55db8dd4
+      body: >
+        This is a temporary change and will be reverted once the legacy
+        brainstorm topics have all been synced to Jellyfish.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 1.2.0
+  date: 2021-07-22T11:41:40.974Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: deb7e890b31a4b933968e9a1d7ef1c02f541cc2c
       body: ''

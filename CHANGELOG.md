@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.0 - 2021-07-22
+
+* Add support for syncing legacy brainstorm topics [Graham McCulloch]
+
 ## 1.1.1 - 2021-07-22
 
 * patch: Update internal-patch [Renovate Bot]
