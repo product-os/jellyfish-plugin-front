@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.1.1 - 2021-07-22
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 1.1.0 - 2021-07-22
 
 * Set the loop field of synced support threads [Graham McCulloch]

@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: deb7e890b31a4b933968e9a1d7ef1c02f541cc2c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.1.1
+  date: 2021-07-22T10:46:06.575Z
+- commits:
     - subject: Set the loop field of synced support threads
       hash: b6fd14c30f7bf78d0d315b85fc7aae45f60fd2cb
       body: >
