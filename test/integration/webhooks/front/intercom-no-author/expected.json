@@ -4,7 +4,7 @@
     "type": "support-thread@1.0.0",
     "version": "1.0.0",
     "active": true,
-    "loop": null,
+    "loop": "loop-balena-io@1.0.0",
     "tags": [],
     "requires": [],
     "capabilities": [],
@@ -48,6 +48,7 @@
           "requires": [],
           "tags": [],
           "type": "support-thread@1.0.0",
+          "loop": "loop-balena-io@1.0.0",
           "version": "1.0.0"
         },
         "timestamp": "2019-01-02T21:36:31.639Z"

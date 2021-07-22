@@ -7,6 +7,7 @@
 import ActionLibrary from '@balena/jellyfish-action-library';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { DefaultPlugin } from '@balena/jellyfish-plugin-default';
+import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { syncIntegrationScenario } from '@balena/jellyfish-test-harness';
 import { FrontPlugin } from '../../lib';
 import webhooks from './webhooks/front';
@@ -23,8 +24,14 @@ syncIntegrationScenario.run(
 	},
 	{
 		basePath: __dirname,
-		plugins: [ActionLibrary, DefaultPlugin, FrontPlugin],
-		cards: ['support-thread', 'sales-thread', 'whisper', 'message'],
+		plugins: [ActionLibrary, DefaultPlugin, ProductOsPlugin, FrontPlugin],
+		cards: [
+			'support-thread',
+			'sales-thread',
+			'whisper',
+			'message',
+			'loop-balena-io',
+		],
 		scenarios: webhooks,
 		baseUrl: /(api2.frontapp.com|api.intercom.io)(:443)?$/,
 		stubRegex: /.*/,
