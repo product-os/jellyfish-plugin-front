@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: 9aeb6d2ba5664fdf4501cab525c78d1e291f905c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.2.1
+  date: 2021-07-24T02:58:50.056Z
+- commits:
     - subject: Add support for syncing legacy brainstorm topics
       hash: 1fed2709d1d478a690b45a314eb01aee55db8dd4
       body: >
