@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.2 - 2021-07-24
+
+* patch: Update external-non-major [Renovate Bot]
+
 ## 1.2.1 - 2021-07-24
 
 * patch: Update internal-patch [Renovate Bot]
