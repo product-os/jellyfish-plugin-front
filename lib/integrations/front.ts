@@ -752,6 +752,7 @@ async function getThread(
 	// TEMPORARY code to sync legacy brainstorm topics
 	if (threadType === 'brainstorm-topic@1.0.0') {
 		threadCard.data = {
+			mirrors: [mirrorId],
 			status: 'closed',
 			category: INBOX_TO_BRAINSTORM_CATEGORY[inbox] ?? '',
 			description: '(See timeline)',
