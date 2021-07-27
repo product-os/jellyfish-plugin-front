@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.10 - 2021-07-27
+
+* Ensure data.mirrors set for synced brainstorm-topics [Graham McCulloch]
+
 ## 1.2.9 - 2021-07-26
 
 * patch: Update dependency @balena/jellyfish-action-library to ^15.0.49 [Renovate Bot]

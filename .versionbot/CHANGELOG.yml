@@ -1,4 +1,19 @@
 - commits:
+    - subject: Ensure data.mirrors set for synced brainstorm-topics
+      hash: c0be71ea148be556f6d5612a1dfc6af05710904e
+      body: >
+        This is another temporary change while we pull in legacy brainstorm
+        topics before deleting this code again.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Graham McCulloch <graham@balena.io>
+        signed-off-by: Graham McCulloch <graham@balena.io>
+      author: Graham McCulloch
+      nested: []
+  version: 1.2.10
+  date: 2021-07-27T04:04:40.504Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-action-library to ^15.0.49'
       hash: ad016cbaf7df0c3f8c2191e0a6f8a526aa6080d3
       body: ''
