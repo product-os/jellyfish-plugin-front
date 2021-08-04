@@ -3,5 +3,5 @@ version: '3'
 tasks:
   test:
     cmds:
-      - npm run mirror
-      - npm run translate
+      - npm run test:mirror
+      - npm run test:translate
