@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump jellyfish-test-harness to v6.1.0
+      hash: 8ec30c59b6fa5ad985aa95cbcf616eefbc7b36a2
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 1.2.12
+  date: 2021-08-21T15:21:49.490Z
+- commits:
     - subject: Test with new version of test-harness
       hash: 99697860678437e5080ee466f93f8537e0cfad86
       body: ''

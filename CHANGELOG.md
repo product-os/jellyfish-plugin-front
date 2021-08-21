@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.12 - 2021-08-21
+
+* Bump jellyfish-test-harness to v6.1.0 [Josh Bowling]
+
 ## 1.2.11 - 2021-08-21
 
 * Test with new version of test-harness [Josh Bowling]
