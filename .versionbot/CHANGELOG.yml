@@ -1,4 +1,17 @@
 - commits:
+    - subject: Only disable internal patch bumps
+      hash: 69d4fb7937706bf70711df3d8f17d6c3123f5e3c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 1.2.16
+  date: 2021-08-21T21:19:15.433Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-default to v20'
       hash: 232b76324bbdca2d309a866139b91656f997a3ac
       body: |
