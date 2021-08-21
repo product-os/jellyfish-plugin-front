@@ -1,4 +1,46 @@
 - commits:
+    - subject: Test with new version of test-harness
+      hash: 99697860678437e5080ee466f93f8537e0cfad86
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Bump jellyfish-core to v5.1.20
+      hash: ee21247ad0eedc761f47f5b1ca74ed5217c00591
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Bump action-library and jellyfish-types
+      hash: 9914155598b4dc739b8b6b087bf577b5ae73dd1f
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: 'patch: Update dependency @balena/jellyfish-environment to v5'
+      hash: 4b690da6f4539b4008ff9e85ea0b16a23df0c1cf
+      body: |
+        Update @balena/jellyfish-environment from 4.3.18 to 5.0.1
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.2.11
+  date: 2021-08-21T14:27:29.819Z
+- commits:
     - subject: Ensure data.mirrors set for synced brainstorm-topics
       hash: c0be71ea148be556f6d5612a1dfc6af05710904e
       body: >

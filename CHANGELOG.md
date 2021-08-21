@@ -4,6 +4,13 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.11 - 2021-08-21
+
+* Test with new version of test-harness [Josh Bowling]
+* Bump jellyfish-core to v5.1.20 [Josh Bowling]
+* Bump action-library and jellyfish-types [Josh Bowling]
+* patch: Update dependency @balena/jellyfish-environment to v5 [Renovate Bot]
+
 ## 1.2.10 - 2021-07-27
 
 * Ensure data.mirrors set for synced brainstorm-topics [Graham McCulloch]
