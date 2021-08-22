@@ -1,4 +1,17 @@
 - commits:
+    - subject: Bump @types/jest to v27.0.1
+      hash: 5e0deeaadb0c6359f1c280427733ce07447e10f0
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 1.2.20
+  date: 2021-08-22T00:46:15.232Z
+- commits:
     - subject: 'Add compose up command, more test docs'
       hash: 83e64a657390d1041ef985b0e6b4488329d006e0
       body: ''

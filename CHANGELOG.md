@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.20 - 2021-08-22
+
+* Bump @types/jest to v27.0.1 [Josh Bowling]
+
 ## 1.2.19 - 2021-08-21
 
 * Add compose up command, more test docs [Josh Bowling]
