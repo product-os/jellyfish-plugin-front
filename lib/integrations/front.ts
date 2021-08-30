@@ -781,7 +781,7 @@ async function handleRateLimit(
 ): Promise<any> {
 	try {
 		return await fn();
-	} catch (error) {
+	} catch (error: any) {
 		if (error.name === 'FrontError' && error.status === 429 && times > 0) {
 			// The error message suggest how many milliseconds to retry,
 			// but the number is embedded in the message string. For example:
@@ -1765,7 +1765,7 @@ module.exports = class FrontIntegration implements Integration {
 				},
 			);
 			return Buffer.from(response.data, 'utf8');
-		} catch (error) {
+		} catch (error: any) {
 			assert.USER(
 				null,
 				error.statusCode !== 500,
