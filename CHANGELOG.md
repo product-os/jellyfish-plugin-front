@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.24 - 2021-08-30
+
+* patch: Update dependency @balena/jellyfish-action-library to ^15.1.22 [Renovate Bot]
+
 ## 1.2.23 - 2021-08-30
 
 * Remove env command from Taskfile [Josh Bowling]

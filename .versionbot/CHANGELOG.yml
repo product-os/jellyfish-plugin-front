@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-action-library to ^15.1.22'
+      hash: bd82296ba9aa6e369be0e2e37d5bd941d20e2136
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.2.24
+  date: 2021-08-30T04:35:06.298Z
+- commits:
     - subject: Remove env command from Taskfile
       hash: b1865fe5bfec194270e442824369e76a7baf4503
       body: ''
