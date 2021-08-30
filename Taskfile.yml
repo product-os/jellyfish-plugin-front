@@ -9,6 +9,5 @@ env:
 tasks:
   test:
     cmds:
-      - env
       - npm run test:mirror
       - npm run test:translate
