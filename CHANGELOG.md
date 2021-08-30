@@ -4,6 +4,13 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.23 - 2021-08-30
+
+* Remove env command from Taskfile [Josh Bowling]
+* Give any type to caught errors [Josh Bowling]
+* Update files to use secrets [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 1.2.22 - 2021-08-22
 
 * patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.229 [Renovate Bot]

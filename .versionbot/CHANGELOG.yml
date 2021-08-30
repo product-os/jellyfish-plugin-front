@@ -1,4 +1,45 @@
 - commits:
+    - subject: Remove env command from Taskfile
+      hash: b1865fe5bfec194270e442824369e76a7baf4503
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Give any type to caught errors
+      hash: 80ec363b006e7b7105025c484372ec6355e877c3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Update files to use secrets
+      hash: 230d5ef747100a4bcc7299c786a99ebaeb4848a3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: "\U0001F504 Synced file(s) with product-os/secrets"
+      hash: da077d2f10ebb4d8f930998f1fb47a4a09764557
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 1.2.23
+  date: 2021-08-30T03:24:40.295Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.229'
       hash: a455ef824ec2e969bcd4471f8ef0a15663d02658
       body: ''
