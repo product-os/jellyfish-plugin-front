@@ -27,7 +27,7 @@ const context: any = {
 async function retryWhile404(fn: any, times = 5): Promise<any> {
 	try {
 		return await fn();
-	} catch (error) {
+	} catch (error: any) {
 		if (error.status === 404 && times > 0) {
 			await Bluebird.delay(500);
 			return retryWhile404(fn, times - 1);
@@ -40,7 +40,7 @@ async function retryWhile404(fn: any, times = 5): Promise<any> {
 async function retryWhile429(fn: any, times = 100): Promise<any> {
 	try {
 		return await fn();
-	} catch (error) {
+	} catch (error: any) {
 		if (error.name === 'FrontError' && error.status === 429 && times > 0) {
 			const delay =
 				_.parseInt(_.first(error.message.match(/(\d+)/)) || '') || 2000;
