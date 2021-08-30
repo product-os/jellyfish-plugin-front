@@ -1,7 +1,14 @@
 version: '3'
 
+env:
+  INTEGRATION_FRONT_TOKEN:
+    sh: cat /run/secrets/integration_front_token
+  INTEGRATION_INTERCOM_TOKEN:
+    sh: cat /run/secrets/integration_intercom_token
+
 tasks:
   test:
     cmds:
+      - env
       - npm run test:mirror
       - npm run test:translate

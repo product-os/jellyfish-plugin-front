@@ -5,11 +5,10 @@ version: '2.1'
 
 services:
   sut:
+    image: balena/jellyfish-plugin-front_sut:latest
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        NPM_TOKEN: $NPM_TOKEN
     depends_on:
       - postgres
       - redis
@@ -30,5 +29,14 @@ services:
       - NPM_TOKEN
     env_file:
       - test.env
+    secrets:
+      - integration_front_token
+      - integration_intercom_token
     networks:
       - internal
+
+secrets:
+  integration_front_token:
+    file: ./.balena/secrets/integration_front_token.txt
+  integration_intercom_token:
+    file: ./.balena/secrets/integration_intercom_token.txt
