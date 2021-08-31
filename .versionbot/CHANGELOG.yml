@@ -1,4 +1,25 @@
 - commits:
+    - subject: Ignore decrypted Discourse secrets
+      hash: e487e79042f817ccfe345378294e3ed80bfb4f98
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: "\U0001F504 Synced file(s) with product-os/secrets"
+      hash: 2158f0e0413e877f9d86862271ceaab7b9733e56
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 1.2.25
+  date: 2021-08-31T08:18:29.281Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-action-library to ^15.1.22'
       hash: bd82296ba9aa6e369be0e2e37d5bd941d20e2136
       body: ''

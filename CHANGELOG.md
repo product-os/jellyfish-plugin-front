@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.25 - 2021-08-31
+
+* Ignore decrypted Discourse secrets [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 1.2.24 - 2021-08-30
 
 * patch: Update dependency @balena/jellyfish-action-library to ^15.1.22 [Renovate Bot]
