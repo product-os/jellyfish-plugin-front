@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-action-library to ^15.1.44'
+      hash: 9deed7023c50b3ad8cbe0cd0a42044cd9c39acda
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.2.32
+  date: 2021-09-05T05:15:30.131Z
+- commits:
     - subject: 'patch: Update dependency axios to ^0.21.3'
       hash: 290ca02ab6f70000eca29201ff5b5d29fe887305
       body: ''

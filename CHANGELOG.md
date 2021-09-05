@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.32 - 2021-09-05
+
+* patch: Update dependency @balena/jellyfish-action-library to ^15.1.44 [Renovate Bot]
+
 ## 1.2.31 - 2021-09-04
 
 * patch: Update dependency axios to ^0.21.3 [Renovate Bot]
