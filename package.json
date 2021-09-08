@@ -69,7 +69,7 @@
     "@balena/jellyfish-plugin-default": "^21.0.2",
     "@balena/jellyfish-plugin-product-os": "^2.7.0",
     "@balena/jellyfish-sync": "^6.1.5",
-    "@balena/jellyfish-test-harness": "^6.2.0",
+    "@balena/jellyfish-test-harness": "^6.3.0",
     "@balena/jellyfish-types": "^1.1.0",
     "@balena/lint": "^6.1.1",
     "@types/bluebird": "^3.5.36",
