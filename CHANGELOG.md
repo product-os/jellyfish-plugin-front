@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.2.43 - 2021-09-08
+
+* patch: Update dependency @balena/jellyfish-test-harness to ^6.3.0 [Renovate Bot]
+
 ## 1.2.42 - 2021-09-08
 
 * patch: Update dependency @balena/jellyfish-plugin-product-os to ^2.7.0 [Renovate Bot]
