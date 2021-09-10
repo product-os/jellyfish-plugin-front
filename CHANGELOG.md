@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.0 - 2021-09-09
+
+* changes the filter to work with the reworked TA trigger logic, which only triggers if a referenced path is changed [Martin Rauscher]
+
 ## 1.2.43 - 2021-09-08
 
 * patch: Update dependency @balena/jellyfish-test-harness to ^6.3.0 [Renovate Bot]

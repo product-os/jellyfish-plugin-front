@@ -1,4 +1,17 @@
 - commits:
+    - subject: >-
+        changes the filter to work with the reworked TA trigger logic, which
+        only triggers if a referenced path is changed
+      hash: 62b8b4997f7d48923b17f670d10fa39052b472f1
+      body: ''
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Martin Rauscher
+      nested: []
+  version: 1.3.0
+  date: 2021-09-09T14:13:10.599Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-test-harness to ^6.3.0'
       hash: f9070fbcd1439c58c83ef1ec44262cfeb441316f
       body: |
