@@ -37,10 +37,13 @@ export const triggeredActionIntegrationFrontMirrorEvent: TriggeredActionContract
 						allOf: [
 							{
 								properties: {
-									// this needs to be specified separately, because we want to run on any changes
-									// within /data
+									// need to be specified separately, because we want to run on any changes
+									// within these properties
 									data: {
 										type: 'object',
+									},
+									tags: {
+										type: 'array',
 									},
 								},
 							},
