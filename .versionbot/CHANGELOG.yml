@@ -1,4 +1,17 @@
 - commits:
+    - subject: ensure changes to /tags trigger
+      hash: 5063df79fa18ed02bc35713fc0321529c024bed9
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Martin Rauscher <martin@balena.io>
+        signed-off-by: Martin Rauscher <martin@balena.io>
+      author: Martin Rauscher
+      nested: []
+  version: 1.3.5
+  date: 2021-09-14T10:26:19.871Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-core to ^6.1.1'
       hash: 56feb51d537580b4d5d229c179e989aa3ff2e599
       body: |
