@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.6 - 2021-09-14
+
+* patch: Update dependency @balena/jellyfish-test-harness to v7 [Renovate Bot]
+
 ## 1.3.5 - 2021-09-14
 
 * ensure changes to /tags trigger [Martin Rauscher]
