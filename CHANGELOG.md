@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.8 - 2021-09-15
+
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 1.3.7 - 2021-09-15
 
 * Bring in mirror tests from main repo [Josh Bowling]
