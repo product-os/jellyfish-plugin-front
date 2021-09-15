@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-test-harness to ^7.3.2'
+      hash: 60a9a7d4ea7e94c8bbcfd6c76a386037255c2ce5
+      body: |
+        Update @balena/jellyfish-test-harness from 7.2.4 to 7.3.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.9
+  date: 2021-09-15T16:30:30.022Z
+- commits:
     - subject: "\U0001F504 Synced file(s) with product-os/secrets"
       hash: 9125159be024540df4013ad0b32a7abae2d3ad0c
       body: ''
