@@ -4,25 +4,47 @@
  * Proprietary and confidential.
  */
 
-import ActionLibrary from '@balena/jellyfish-action-library';
-import { defaultEnvironment as environment } from '@balena/jellyfish-environment';
-import { PluginManager } from '@balena/jellyfish-plugin-base';
+import ActionLibrary = require('@balena/jellyfish-action-library');
+import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { DefaultPlugin } from '@balena/jellyfish-plugin-default';
-import { Sync } from '@balena/jellyfish-sync';
+import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
+import { integrationHelpers } from '@balena/jellyfish-test-harness';
 import Bluebird from 'bluebird';
-import { Front } from 'front-sdk';
+import { Conversation, Front } from 'front-sdk';
 import _ from 'lodash';
-import sinon from 'sinon';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import { FrontPlugin } from '../../lib';
+import { strict as assert } from 'assert';
 
-const TOKEN = environment.integration.front;
-const context: any = {
-	id: 'jellyfish-plugin-front-test',
-};
+let ctx: integrationHelpers.IntegrationTestContext;
+const inboxes = defaultEnvironment.test.integration.front.inboxes;
+const front = new Front(defaultEnvironment.integration.front.api);
+let channel: any = {};
+let remoteInbox: any = {};
+let user: any = {};
+let userSession: string = '';
 
-// Because Front might take a while to process
-// message creation requests.
+beforeAll(async () => {
+	ctx = await integrationHelpers.before([
+		DefaultPlugin,
+		ActionLibrary,
+		ProductOsPlugin,
+		FrontPlugin,
+	]);
+
+	channel = await getChannel();
+	remoteInbox = await getInbox();
+	const teammate = await getTeammate();
+	const createdUser = await ctx.createUser(teammate.replace(/_/g, '-'));
+	user = createdUser.contract;
+	userSession = createdUser.session;
+});
+
+afterAll(() => {
+	return integrationHelpers.after(ctx);
+});
+
+// Because Front might take a while to process message creation requests.
 // See: https://dev.frontapp.com/#receive-custom-message
 async function retryWhile404(fn: any, times = 5): Promise<any> {
 	try {
@@ -52,137 +74,398 @@ async function retryWhile429(fn: any, times = 100): Promise<any> {
 	}
 }
 
-async function wait(fn: any, check: any, times = 8): Promise<any> {
-	const result = await fn();
-	if (check(result)) {
-		return result;
+const getChannel = async () => {
+	// We need a "custom" channel in order to simulate an inbound
+	const channels = await retryWhile429(() => {
+		return front.inbox.listChannels({
+			inbox_id: inboxes[0],
+		});
+	});
+	const result = _.find(channels._results, {
+		type: 'custom',
+	});
+	if (!result) {
+		throw new Error('No custom channel to simulate inbound');
 	}
+	return result;
+};
 
-	if (times <= 0) {
-		throw new Error('Timeout while waiting for check condition');
+const getTeammate = async () => {
+	const teammates = await retryWhile429(() => {
+		return front.inbox.listTeammates({
+			inbox_id: inboxes[0],
+		});
+	});
+	const testTeammate = _.find(teammates._results, {
+		is_available: true,
+	});
+	if (!testTeammate) {
+		throw new Error(`No available teammate for inbox ${inboxes[0]}`);
 	}
+	return testTeammate.username;
+};
 
-	await Bluebird.delay(1000);
-	return wait(fn, check, times - 1);
-}
+const getInbox = async () => {
+	const inbox = await retryWhile429(() => {
+		return front.inbox.get({
+			inbox_id: inboxes[0],
+		});
+	});
+	return inbox;
+};
 
-async function listResourceUntil(
-	fn: any,
-	id: string,
-	predicate: any,
-	retries = 10,
+async function createSupportThread(
+	title: string,
+	description: string,
 ): Promise<any> {
-	const result = await retryWhile429(() => {
-		return fn({
-			conversation_id: id,
+	const inboundResult = await retryWhile429(() => {
+		return front.message.receiveCustom({
+			channel_id: channel.id,
+			subject: title,
+			body: description,
+			sender: {
+				handle: `jellytest-${uuid()}`,
+			},
 		});
 	});
 
-	const elements = result._results.filter((element: any) => {
-		// Ignore webhook errors, as we know already that
-		// we are not listening to them in these tests.
-		return element.error_type !== 'webhook_timeout';
+	// Add a small delay for the message to become available from the Front API
+	// This means we spend less time loop in `retryWhile404` and reduces API requests
+	await Bluebird.delay(1000);
+
+	const message = await retryWhile404(async () => {
+		return retryWhile429(() => {
+			return front.message.get({
+				// The "receive custom" endpoint gives us a uid,
+				// while all the other endpoints take an id.
+				// Front supports interpreting a uid as an id
+				// using this alternate notation.
+				message_id: `alt:uid:${inboundResult.message_uid}`,
+			});
+		});
 	});
 
-	if (predicate(elements)) {
-		return elements;
-	}
-
-	if (retries <= 0) {
-		throw new Error('Condition never true');
-	}
-
-	await Bluebird.delay(1000);
-	return listResourceUntil(fn, id, predicate, retries - 1);
+	const supportThread = await ctx.createSupportThread(
+		user.id,
+		userSession,
+		title,
+		{
+			environment: 'production',
+			inbox: remoteInbox.name,
+			status: 'open',
+			mirrors: [message._links.related.conversation],
+			description,
+			alertsUser: [],
+			mentionsUser: [],
+		},
+	);
+	return supportThread;
 }
 
-const sandbox = sinon.createSandbox();
-
-const testMirroringOfComment = async (testContext: any, { message }) => {
-	const supportThread = await testContext.startSupportThread(
-		`My Issue ${uuidv4()}`,
-		`Foo Bar ${uuidv4()}`,
-		testContext.inboxes[0],
+test('should mirror support thread status', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
 	);
+	const id = _.last(supportThread.data.mirrors[0].split('/')) as string;
 
-	const messageCard = testContext.constructEvent({
-		actor: testContext.mirrorOptions.actor,
-		target: supportThread.id,
-		message,
-		type: 'whisper',
-	});
-
-	const getElementById = sandbox
-		.stub()
-		.onCall(0)
-		.resolves(supportThread)
-		.onCall(1)
-		.resolves(testContext.user);
-
-	const localContext = {
-		...testContext.mirrorContext,
-		getElementById,
-	};
-
-	const [syncedMessageCard] = await testContext.sync.mirror(
-		'front',
-		TOKEN,
-		messageCard,
-		localContext,
-		testContext.mirrorOptions,
-	);
-
-	expect(syncedMessageCard.data.payload.message).toEqual(message);
-	expect(syncedMessageCard.data.mirrors[0]).toBeTruthy();
-
-	const comments = await testContext.getFrontCommentsUntil(
-		_.last(supportThread.data.mirrors[0].split('/')),
-		(elements: any) => {
-			return elements.length > 0;
+	// Update status to closed
+	await ctx.worker.patchCard(
+		ctx.context,
+		userSession,
+		ctx.worker.typeContracts[supportThread.type],
+		{
+			attachEvents: true,
+			actor: user.id,
 		},
+		supportThread,
+		[
+			{
+				op: 'replace',
+				path: '/data/status',
+				value: 'closed',
+			},
+		],
 	);
+	await ctx.flushAll(userSession);
 
-	expect(comments.length).toEqual(1);
-
-	// Verify that the comments returned contain the expected value
-	expect(comments[0].body).toEqual(message);
-};
-
-async function testArchivingOfThread(
-	testContext: any,
-	{ status },
-): Promise<any> {
-	const supportThread = await testContext.startSupportThread(
-		`My Issue ${uuidv4()}`,
-		`Foo Bar ${uuidv4()}`,
-		testContext.inboxes[0],
-	);
-
-	const updatedSupportThread = _.merge({}, supportThread, {
-		data: {
-			status,
-		},
-	});
-
-	const localContext = {
-		...testContext.mirrorContext,
-	};
-
-	const [syncedThreadCard] = await testContext.sync.mirror(
-		'front',
-		TOKEN,
-		updatedSupportThread,
-		localContext,
-		testContext.mirrorOptions,
-	);
-
-	expect(syncedThreadCard.id).toEqual(supportThread.id);
-
-	const result = await wait(
+	// Check that the remote converstion status has updated
+	await ctx.retry(
 		() => {
 			return retryWhile429(() => {
-				return testContext.front.conversation.get({
-					conversation_id: _.last(supportThread.data.mirrors[0].split('/')),
+				return front.conversation.get({
+					conversation_id: id,
+				});
+			});
+		},
+		(cnv: Conversation) => {
+			return cnv.status === 'archived';
+		},
+	);
+
+	// Check that it remains closed after a while
+	await Bluebird.delay(5000);
+	await ctx.retry(
+		() => {
+			return retryWhile429(() => {
+				return front.conversation.get({
+					conversation_id: id,
+				});
+			});
+		},
+		(cnv: Conversation) => {
+			return cnv.status === 'archived';
+		},
+	);
+
+	// Check that the support thread is still closed
+	const threadAfter = await ctx.jellyfish.getCardById(
+		ctx.context,
+		ctx.session,
+		supportThread.id,
+	);
+	expect(threadAfter!.active).toBe(true);
+	expect(threadAfter!.data.status).toEqual('closed');
+});
+
+test('should mirror whisper on insert support threads', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+
+	const body = ctx.generateRandomWords(5);
+	const whisper: any = await ctx.createWhisper(
+		user.id,
+		userSession,
+		supportThread,
+		body,
+	);
+	assert(whisper !== null);
+
+	// Give a small delay for the comment to become available on Front's API
+	await Bluebird.delay(1000);
+
+	// Retrieve the comment from Front's API using the mirror ID
+	const comment = await retryWhile404(async () => {
+		return retryWhile429(() => {
+			return front.comment.get({
+				comment_id: whisper.data.mirrors[0].split('/').pop(),
+			});
+		});
+	});
+
+	// Double check that it's the same comment body
+	expect(comment.body).toEqual(body);
+});
+
+test('should mirror message insert on support threads', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+
+	const body = ctx.generateRandomWords(5);
+	const message: any = await ctx.createMessage(
+		user.id,
+		userSession,
+		supportThread,
+		body,
+	);
+	assert(message !== null);
+
+	// Give a small delay for the comment to become available on Front's API
+	await Bluebird.delay(1000);
+
+	// Retrieve the comment from Front's API using the mirror ID
+	const frontMessage = await retryWhile404(async () => {
+		return retryWhile429(() => {
+			return front.message.get({
+				message_id: message.data.mirrors[0].split('/').pop(),
+			});
+		});
+	});
+	expect(frontMessage.text).toEqual(body);
+});
+
+test('should be able to tag an unassigned conversation', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+	const id = _.last((supportThread.data as any).mirrors[0].split('/'));
+
+	await retryWhile429(() => {
+		return front.conversation.update({
+			conversation_id: id as string,
+			tags: [],
+			assignee_id: undefined,
+		});
+	});
+
+	await ctx.worker.patchCard(
+		ctx.context,
+		userSession,
+		ctx.worker.typeContracts[supportThread.type],
+		{
+			attachEvents: true,
+			actor: user.id,
+		},
+		supportThread,
+		[
+			{
+				op: 'replace',
+				path: '/tags',
+				value: ['foo'],
+			},
+		],
+	);
+	await ctx.flushAll(userSession);
+
+	const result = await ctx.retry(
+		() => {
+			return retryWhile429(() => {
+				return front.conversation.get({
+					conversation_id: id as string,
+				});
+			});
+		},
+		(conversation: Conversation) => {
+			return conversation.tags.length > 0;
+		},
+	);
+
+	expect(_.map(result.tags, 'name')).toEqual(['foo']);
+});
+
+test('should be able to comment using a complex code', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+
+	const body =
+		"One last piece of the puzzle is to get the image url to pull. To get that you can run this from the browser console or sdk. \n\n`(await sdk.pine.get({ resource: 'release', id: <release-id>, options: { $expand: { image__is_part_of__release: { $expand: { image: { $select: ['is_stored_at__image_location'] } } }} } })).image__is_part_of__release.map(({ image }) => image[0].is_stored_at__image_location )`\n";
+	const whisper: any = await ctx.createWhisper(
+		user.id,
+		userSession,
+		supportThread,
+		body,
+	);
+	assert(whisper !== null);
+
+	// Give a small delay for the comment to become available on Front's API
+	await Bluebird.delay(1000);
+
+	// Retrieve the comment from Front's API using the mirror ID
+	const comment = await retryWhile404(async () => {
+		return retryWhile429(() => {
+			return front.comment.get({
+				comment_id: whisper.data.mirrors[0].split('/').pop(),
+			});
+		});
+	});
+
+	// Double check that it's the same comment body
+	expect(comment.body).toEqual(body);
+});
+
+test('should be able to comment using triple backticks', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+
+	const body = '```Foo\nBar```';
+	const whisper: any = await ctx.createWhisper(
+		user.id,
+		userSession,
+		supportThread,
+		body,
+	);
+	assert(whisper !== null);
+
+	// Give a small delay for the comment to become available on Front's API
+	await Bluebird.delay(1000);
+
+	// Retrieve the comment from Front's API using the mirror ID
+	const comment = await retryWhile404(async () => {
+		return retryWhile429(() => {
+			return front.comment.get({
+				comment_id: whisper.data.mirrors[0].split('/').pop(),
+			});
+		});
+	});
+
+	// Double check that it's the same comment body
+	expect(comment.body).toEqual(body);
+});
+
+test('should be able to comment using brackets', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+
+	const body = 'Hello <world> foo <bar>';
+	const whisper: any = await ctx.createWhisper(
+		user.id,
+		userSession,
+		supportThread,
+		body,
+	);
+	assert(whisper !== null);
+
+	// Give a small delay for the comment to become available on Front's API
+	await Bluebird.delay(1000);
+
+	// Retrieve the comment from Front's API using the mirror ID
+	const comment = await retryWhile404(async () => {
+		return retryWhile429(() => {
+			return front.comment.get({
+				comment_id: whisper.data.mirrors[0].split('/').pop(),
+			});
+		});
+	});
+
+	// Double check that it's the same comment body
+	expect(comment.body).toEqual(body);
+});
+
+test('should be able to close an inbound message', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+
+	// Update status to closed
+	await ctx.worker.patchCard(
+		ctx.context,
+		userSession,
+		ctx.worker.typeContracts[supportThread.type],
+		{
+			attachEvents: true,
+			actor: user.id,
+		},
+		supportThread,
+		[
+			{
+				op: 'replace',
+				path: '/data/status',
+				value: 'closed',
+			},
+		],
+	);
+	await ctx.flushAll(userSession);
+
+	// Check that the remove conversation status has updated
+	const result = await ctx.retry(
+		() => {
+			return retryWhile429(() => {
+				return front.conversation.get({
+					conversation_id: _.last(
+						supportThread.data.mirrors[0].split('/'),
+					) as string,
 				});
 			});
 		},
@@ -192,314 +475,86 @@ async function testArchivingOfThread(
 	);
 
 	expect(result.status).toEqual('archived');
-}
+});
 
-beforeAll(async () => {
-	context.mirrorContext = {
-		log: {
-			warn: sandbox.stub().returns(null),
-			debug: sandbox.stub().returns(null),
-			info: sandbox.stub().returns(null),
-			error: sandbox.stub().returns(null),
-		},
-		upsertElement: async (_type: any, object: any) => {
-			return object;
-		},
-	};
-
-	const pluginManager = new PluginManager(context.mirrorContext, {
-		plugins: [ActionLibrary, DefaultPlugin, FrontPlugin],
-	});
-
-	// TS-TODO: Replace "any" type with the proper type when this fix PR is merged:
-	// https://github.com/product-os/jellyfish-plugin-base/pull/320
-	const integrations: any = pluginManager.getSyncIntegrations(
-		context.mirrorContext,
+test('should be able to archive an inbound message', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
 	);
-	context.sync = new Sync({
-		integrations,
-	});
 
-	context.user = {
-		id: uuidv4(),
-		data: {
-			email: 'accounts-front-dev@example.com',
-			avatar: null,
+	// Update status to closed
+	await ctx.worker.patchCard(
+		ctx.context,
+		userSession,
+		ctx.worker.typeContracts[supportThread.type],
+		{
+			attachEvents: true,
+			actor: user.id,
 		},
-		name: null,
-		slug: 'user-accounts-front-dev',
-		type: 'user@1.0.0',
-		active: true,
-		markers: [],
-		version: '1.0.0',
-	};
+		supportThread,
+		[
+			{
+				op: 'replace',
+				path: '/data/status',
+				value: 'archived',
+			},
+		],
+	);
+	await ctx.flushAll(userSession);
 
-	context.mirrorOptions = {
-		actor: context.user.id,
-		defaultUser: 'admin',
-		origin: 'https://jel.ly.fish/oauth/front',
-	};
-
-	context.generateRandomSlug = (options: any) => {
-		const suffix = uuidv4();
-		if (options.prefix) {
-			return `${options.prefix}-${suffix}`;
-		}
-
-		return suffix;
-	};
-
-	if (TOKEN) {
-		context.front = new Front(TOKEN.api);
-	}
-
-	context.inboxes = environment.test.integration.front.inboxes;
-
-	const teammates = await retryWhile429(() => {
-		return context.front.inbox.listTeammates({
-			inbox_id: context.inboxes[0],
-		});
-	});
-
-	// Find the first available teammate for the tests
-	const teammate = _.find(teammates._results, {
-		is_available: true,
-	});
-	if (!teammate) {
-		throw new Error(`No available teammate for inbox ${context.inboxes[0]}`);
-	}
-
-	context.teammate = teammate.username;
-
-	context.getMessageSlug = () => {
-		return context.generateRandomSlug({
-			prefix: 'message',
-		});
-	};
-
-	context.getWhisperSlug = () => {
-		return context.generateRandomSlug({
-			prefix: 'whisper',
-		});
-	};
-
-	context.startSupportThread = async (
-		title: string,
-		description: string,
-		inbox: string,
-	) => {
-		// We need a "custom" channel in order to simulate an inbound
-		const channels = await retryWhile429(() => {
-			return context.front.inbox.listChannels({
-				inbox_id: inbox,
-			});
-		});
-
-		const channel = _.find(channels._results, {
-			type: 'custom',
-		});
-		if (!channel) {
-			throw new Error('No custom channel to simulate inbound');
-		}
-
-		const inboundResult = await retryWhile429(() => {
-			return context.front.message.receiveCustom({
-				channel_id: channel.id,
-				subject: title,
-				body: description,
-				sender: {
-					handle: `jellytest-${uuidv4()}`,
-				},
-			});
-		});
-
-		const message = await retryWhile404(async () => {
+	// Check that the remove conversation status has updated
+	const result = await ctx.retry(
+		() => {
 			return retryWhile429(() => {
-				return context.front.message.get({
-					// The "receive custom" endpoint gives us a uid,
-					// while all the other endpoints take an id.
-					// Front supports interpreting a uid as an id
-					// using this alternate notation.
-					message_id: `alt:uid:${inboundResult.message_uid}`,
+				return front.conversation.get({
+					conversation_id: _.last(
+						supportThread.data.mirrors[0].split('/'),
+					) as string,
 				});
 			});
-		});
-
-		const remoteInbox = await retryWhile429(() => {
-			return context.front.inbox.get({
-				inbox_id: context.inboxes[0],
-			});
-		});
-
-		const slug = context.generateRandomSlug({
-			prefix: 'support-thread',
-		});
-
-		const supportThread = {
-			id: uuidv4(),
-			name: title,
-			slug,
-			tags: [],
-			type: 'support-thread@1.0.0',
-			active: true,
-			markers: [],
-			version: '1.0.0',
-			data: {
-				environment: 'production',
-				inbox: remoteInbox.name,
-				status: 'open',
-				mirrors: [message._links.related.conversation],
-				description,
-				alertsUser: [],
-				mentionsUser: [],
-			},
-			requires: [],
-			capabilities: [],
-		};
-
-		return supportThread;
-	};
-
-	context.getFrontCommentsUntil = async (id: string, fn: any) => {
-		return listResourceUntil(context.front.conversation.listComments, id, fn);
-	};
-
-	context.getFrontMessagesUntil = async (id: string, filter: any, fn: any) => {
-		const results = await listResourceUntil(
-			context.front.conversation.listMessages,
-			id,
-			(elements: any) => {
-				return fn(_.filter(elements, filter));
-			},
-		);
-
-		return _.filter(results, filter);
-	};
-
-	context.constructEvent = ({ type, actor, target, message }) => {
-		return {
-			id: uuidv4(),
-			data: {
-				actor,
-				target,
-				payload: {
-					message,
-				},
-				timestamp: new Date().toISOString(),
-			},
-			name: null,
-			slug:
-				type === 'message'
-					? context.getMessageSlug()
-					: context.getWhisperSlug(),
-			type: `${type}@1.0.0`,
-			active: true,
-			version: '1.0.0',
-		};
-	};
-});
-
-afterEach(() => {
-	sandbox.restore();
-});
-
-// Skip all tests if there is no Front token
-const jestTest =
-	_.some(_.values(TOKEN), _.isEmpty) || environment.test.integration.skip
-		? test.skip
-		: test;
-
-jestTest('should be able to comment using a complex code', async () => {
-	await testMirroringOfComment(context, {
-		message:
-			"One last piece of the puzzle is to get the image url to pull. To get that you can run this from the browser console or sdk. \n\n`(await sdk.pine.get({ resource: 'release', id: <release-id>, options: { $expand: { image__is_part_of__release: { $expand: { image: { $select: ['is_stored_at__image_location'] } } }} } })).image__is_part_of__release.map(({ image }) => image[0].is_stored_at__image_location )`\n",
-	});
-});
-
-jestTest('should be able to comment using triple backticks', async () => {
-	await testMirroringOfComment(context, {
-		message: '```Foo\nBar```',
-	});
-});
-
-jestTest('should be able to comment using brackets', async () => {
-	await testMirroringOfComment(context, {
-		message: 'Hello <world> foo <bar>',
-	});
-});
-
-jestTest('should be able to reply to a moved inbound message', async () => {
-	const supportThread = await context.startSupportThread(
-		`My Issue ${uuidv4()}`,
-		`Foo Bar ${uuidv4()}`,
-		context.inboxes[0],
+		},
+		(conversation: any) => {
+			return conversation.status === 'archived';
+		},
 	);
 
-	const conversationId = _.last(supportThread.data.mirrors[0].split('/'));
+	expect(result.status).toEqual('archived');
+});
 
+test('should be able to reply to a moved inbound message', async () => {
+	const supportThread = await createSupportThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+	);
+	const conversationId = _.last(
+		supportThread.data.mirrors[0].split('/'),
+	) as string;
+
+	// Move conversation to a different inbox
 	await retryWhile429(() => {
-		return context.front.conversation.update({
+		return front.conversation.update({
 			conversation_id: conversationId,
-			inbox_id: context.inboxes[1],
+			inbox_id: inboxes[1],
 		});
 	});
 
+	// Add a new message to the thread
 	const message = 'Message in another inbox';
+	await ctx.createMessage(user.id, userSession, supportThread, message);
 
-	const messageCard = context.constructEvent({
-		actor: context.mirrorOptions.actor,
-		target: supportThread.id,
-		message,
-		type: 'message',
-	});
-
-	const getElementById = sandbox
-		.stub()
-		.onCall(0)
-		.resolves(supportThread)
-		.onCall(1)
-		.resolves(context.user);
-
-	const localContext = {
-		...context.mirrorContext,
-		getElementById,
-	};
-
-	const [syncedMessageCard] = await context.sync.mirror(
-		'front',
-		TOKEN,
-		messageCard,
-		localContext,
-		context.mirrorOptions,
-	);
-
-	expect(syncedMessageCard.data.payload.message).toEqual(message);
-	expect(syncedMessageCard.data.mirrors[0]).toBeTruthy();
-
-	const messages = await context.getFrontMessagesUntil(
-		conversationId,
-		{
-			is_draft: false,
+	// Check that the new message was synced to the moved conversation
+	const messages = await ctx.retry(
+		() => {
+			return retryWhile429(() => {
+				return front.conversation.listMessages({
+					conversation_id: conversationId,
+				});
+			});
 		},
-		(elements: any) => {
-			return elements.length > 1;
+		(msgs: any) => {
+			return msgs._results.length === 2;
 		},
 	);
-
-	expect(messages.length).toEqual(2);
-
-	// Verify that the messages returned contain the expected value
-	expect(messages[0].body).toEqual(`<p>${message}</p>\n`);
-});
-
-jestTest('should be able to close an inbound message', async () => {
-	await testArchivingOfThread(context, {
-		status: 'closed',
-	});
-});
-
-jestTest('should be able to archive an inbound message', async () => {
-	await testArchivingOfThread(context, {
-		status: 'archived',
-	});
+	expect(messages._results[0].body).toEqual(`<p>${message}</p>\n`);
 });
