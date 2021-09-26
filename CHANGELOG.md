@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.19 - 2021-09-26
+
+* Add typedoc to depcheck ignore list [Josh Bowling]
+* patch: Update external-non-major [Renovate Bot]
+
 ## 1.3.18 - 2021-09-26
 
 * Ignore decrypted mailgun and meet secrets [Josh Bowling]
