@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.18 - 2021-09-26
+
+* Ignore decrypted mailgun and meet secrets [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 1.3.17 - 2021-09-26
 
 * patch: Update internal-patch [Renovate Bot]

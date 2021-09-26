@@ -1,4 +1,25 @@
 - commits:
+    - subject: Ignore decrypted mailgun and meet secrets
+      hash: 5e5ad859e438a81b23c4d115075bc0da394cf6c3
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: "\U0001F504 Synced file(s) with product-os/secrets"
+      hash: cab50dd87f6f15721c8b15cee5cdf3993432f119
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 1.3.18
+  date: 2021-09-26T05:45:41.576Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: 2dffa9f25adc02fb1e73cbfec72fa00ad02382f1
       body: ''
