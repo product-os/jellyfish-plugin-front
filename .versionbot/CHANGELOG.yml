@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-action-library to ^15.1.76'
+      hash: 8c0b672380797637d6b8edcfaf69b1d816406d25
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.20
+  date: 2021-09-29T00:47:38.684Z
+- commits:
     - subject: Add typedoc to depcheck ignore list
       hash: 1ce19afae553423364c19ff3bf25e26cf287712d
       body: ''
