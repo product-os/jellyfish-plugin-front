@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'Update test:compose to match image name'
+      hash: 3f59e05791cb8949129cfa5a5b5a3053f8625cbb
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: "\U0001F504 Synced file(s) with product-os/jellyfish-config"
+      hash: 18bd9f98ed55b7d834e7a496c7b0ad8fbedb6af4
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 1.3.23
+  date: 2021-10-05T00:56:23.701Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-config to ^1.5.4'
       hash: 8cc78873c1e51736869f26060a681c23072bd83f
       body: |
