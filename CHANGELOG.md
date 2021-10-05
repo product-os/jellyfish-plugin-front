@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.24 - 2021-10-05
+
+* patch: Update dependency @balena/jellyfish-core to ^6.2.0 [Renovate Bot]
+
 ## 1.3.23 - 2021-10-05
 
 * Update test:compose to match image name [Josh Bowling]
