@@ -39,7 +39,7 @@
     "test:unit": "jest test/unit",
     "test:mirror": "npx jest --runInBand --bail test/integration/front-mirror.spec.ts",
     "test:translate": "npx jest --runInBand --bail test/integration/front-translate.spec.ts",
-    "test:compose": "DOCKER_BUILDKIT=1 docker build -t balena/jellyfish-plugin-front_sut:latest --secret id=npmrc,src=.balena/secrets/npmrc.txt . && docker-compose -f docker-compose.test.yml -f docker-compose.yml up --exit-code-from=sut",
+    "test:compose": "DOCKER_BUILDKIT=1 docker build -t balena/jellyfish-sut:latest --secret id=npmrc,src=.balena/secrets/npmrc.txt . && docker-compose -f docker-compose.test.yml -f docker-compose.yml up --exit-code-from=sut",
     "doc": "typedoc lib/ && touch docs/.nojekyll",
     "prepack": "npm run build",
     "check": "jellycheck",
