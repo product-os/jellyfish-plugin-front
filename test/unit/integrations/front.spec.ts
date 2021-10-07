@@ -88,7 +88,7 @@ jestTest('getFile() should download file', async () => {
 	});
 
 	// eslint-disable-next-line no-underscore-dangle
-	const channel = _.find(channels.data._results, {
+	const channel = _.find((channels.data as any)._results, {
 		name: 'Test Channel',
 	});
 
@@ -99,7 +99,7 @@ jestTest('getFile() should download file', async () => {
 	form.append('sender_name', 'test');
 	form.append('body', '<p>Test message body</p>');
 	form.append('attachments[0]', fs.createReadStream(context.file.path));
-	const message = await axios.post(
+	const message = await axios.post<any>(
 		`https://api2.frontapp.com/channels/${channel.id}/messages`,
 		form,
 		{
