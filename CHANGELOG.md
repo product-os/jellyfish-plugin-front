@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.30 - 2021-10-09
+
+* patch: Update dependency lint-staged to ^11.2.2 [Renovate Bot]
+
 ## 1.3.29 - 2021-10-09
 
 * patch: Update dependency @balena/jellyfish-action-library to ^15.1.88 [Renovate Bot]
