@@ -4,6 +4,12 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.26 - 2021-10-09
+
+* patch: Update dependency jest to ^27.2.5 [Renovate Bot]
+* Add missing types in unit tests [Josh Bowling]
+* patch: Update external-non-major [Renovate Bot]
+
 ## 1.3.25 - 2021-10-05
 
 * patch: Update internal-patch [Renovate Bot]
