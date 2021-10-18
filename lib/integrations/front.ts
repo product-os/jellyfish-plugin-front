@@ -1764,7 +1764,7 @@ module.exports = class FrontIntegration implements Integration {
 					responseType: 'arraybuffer',
 				},
 			);
-			return Buffer.from(response.data, 'utf8');
+			return Buffer.from(response.data as string, 'utf8');
 		} catch (error: any) {
 			assert.USER(
 				null,
