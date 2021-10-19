@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.38 - 2021-10-19
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 1.3.37 - 2021-10-19
 
 * Cast response.data from Buffer.from [Josh Bowling]
