@@ -1,4 +1,25 @@
 - commits:
+    - subject: Cast response.data from Buffer.from
+      hash: 4476cc135abaed24ff89520d88a5182abadb8d4d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: 'patch: Update external-non-major'
+      hash: c72f34d225934ace7fdd433c6f2745a005b7d032
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.37
+  date: 2021-10-19T00:06:26.700Z
+- commits:
     - subject: 'patch: Update dependency @balena/jellyfish-action-library to ^15.1.95'
       hash: a21ade6642eff641a5e837b6ba0a9f46e7ecd54b
       body: ''
