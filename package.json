@@ -50,8 +50,8 @@
   "dependencies": {
     "@balena/jellyfish-action-library": "^15.1.95",
     "@balena/jellyfish-assert": "^1.1.68",
-    "@balena/jellyfish-environment": "^5.0.4",
-    "@balena/jellyfish-plugin-base": "^2.1.244",
+    "@balena/jellyfish-environment": "^5.0.5",
+    "@balena/jellyfish-plugin-base": "^2.1.246",
     "axios": "^0.23.0",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.0",
