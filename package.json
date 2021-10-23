@@ -48,10 +48,10 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "UNLICENSED",
   "dependencies": {
-    "@balena/jellyfish-action-library": "^15.1.101",
+    "@balena/jellyfish-action-library": "^15.1.103",
     "@balena/jellyfish-assert": "^1.1.68",
-    "@balena/jellyfish-environment": "^5.0.7",
-    "@balena/jellyfish-plugin-base": "^2.1.251",
+    "@balena/jellyfish-environment": "^5.0.8",
+    "@balena/jellyfish-plugin-base": "^2.1.253",
     "axios": "^0.23.0",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.0",
