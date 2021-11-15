@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.62 - 2021-11-13
+
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 1.3.61 - 2021-11-13
 
 * patch: Update internal-patch [Renovate Bot]
