@@ -4,6 +4,13 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.63 - 2021-11-18
+
+* Update compose, remove old secrets [Josh Bowling]
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+* Increase jest timeout [Josh Bowling]
+* Set license [Josh Bowling]
+
 ## 1.3.62 - 2021-11-13
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]

@@ -1,4 +1,45 @@
 - commits:
+    - subject: 'Update compose, remove old secrets'
+      hash: b60a46a4666a9eccfc08661625a6431c1f8c733c
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: "\U0001F504 Synced file(s) with product-os/secrets"
+      hash: 7c4f353e7bf90952d97d84e67d0a5e651a25eaec
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+    - subject: Increase jest timeout
+      hash: 6ae8204a6e88b2cab0350bbe073a43a6bc369532
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+    - subject: Set license
+      hash: 838ff019309b9a12c3a180a6608a1ea9509388f6
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 1.3.63
+  date: 2021-11-18T03:36:50.350Z
+- commits:
     - subject: "\U0001F504 Synced file(s) with product-os/secrets"
       hash: 41971753e5917cbefd9b9ed4c65a1e05f576a977
       body: ''
