@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: c497b2837966466c27bb62624bedb61e3746bce1
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.64
+  date: 2021-11-18T21:33:51.823Z
+- commits:
     - subject: 'Update compose, remove old secrets'
       hash: b60a46a4666a9eccfc08661625a6431c1f8c733c
       body: ''

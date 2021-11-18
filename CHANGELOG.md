@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.64 - 2021-11-18
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 1.3.63 - 2021-11-18
 
 * Update compose, remove old secrets [Josh Bowling]
