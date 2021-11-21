@@ -1,9 +1,3 @@
-/*
- * Copyright (C) Balena.io - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential.
- */
-
 import { WorkerContext } from '@balena/jellyfish-types/build/worker';
 import type { Context, Contract } from '@balena/jellyfish-types/build/core';
 import isArray from 'lodash/isArray';
