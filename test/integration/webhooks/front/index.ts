@@ -1,9 +1,3 @@
-/*
- * Copyright (C) Balena.io - All Rights Reserved
- * Unauthorized copying of this file, via any medium is strictly prohibited.
- * Proprietary and confidential.
- */
-
 export default {
 	'inbound-message-multiple-inboxes': {
 		expected: require('./inbound-message-multiple-inboxes/expected.json'),
