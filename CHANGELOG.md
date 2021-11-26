@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.88 - 2021-11-26
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 1.3.87 - 2021-11-26
 
 * Use product-os/renovate-config [Josh Bowling]
