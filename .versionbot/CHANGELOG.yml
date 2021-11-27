@@ -1,4 +1,23 @@
 - commits:
+    - subject: 'patch: Update external-non-major Docker tags'
+      hash: 757a4486d8c17c5213c73e4ba7aa8eef1fb3a9bb
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: 'patch: Update dependency @balena/jellyfish-plugin-base to ^2.1.308'
+      hash: 99b8ae9a30ebfaa435ad2a787add23cac6ccab33
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.91
+  date: 2021-11-27T16:08:18.064Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: d88e8eff6959087e685519db098fd07da407dc6b
       body: ''
