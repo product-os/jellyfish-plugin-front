@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.92 - 2021-11-27
+
+* patch: Update dependency @balena/jellyfish-action-library to ^15.1.160 [Renovate Bot]
+
 ## 1.3.91 - 2021-11-27
 
 * patch: Update external-non-major Docker tags [Renovate Bot]
