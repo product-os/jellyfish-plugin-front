@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.100 - 2021-12-01
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 1.3.99 - 2021-12-01
 
 * Remove old secrets from gitignore [Josh Bowling]
