@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.120 - 2021-12-11
+
+* Bump internal dependencies [Josh Bowling]
+
 ## 1.3.119 - 2021-12-09
 
 * patch: Update dependency typescript to ^4.5.3 [Renovate Bot]
