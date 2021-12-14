@@ -50,7 +50,7 @@
     "@balena/jellyfish-action-library": "^15.1.192",
     "@balena/jellyfish-assert": "^1.1.102",
     "@balena/jellyfish-environment": "^6.0.1",
-    "@balena/jellyfish-plugin-base": "^2.1.323",
+    "@balena/jellyfish-plugin-base": "^2.2.1",
     "axios": "^0.24.0",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.0",
