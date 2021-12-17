@@ -1,4 +1,15 @@
 - commits:
+    - subject: 'patch: Update internal-patch'
+      hash: e69c0fbe7693a51f7271280574615c8ad270a840
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.128
+  date: 2021-12-16T23:41:37.917Z
+- commits:
     - subject: "\U0001F504 Synced file(s) with product-os/secrets"
       hash: b2caf51b8864b4d3016df8543a4ee774a454d1e3
       body: ''
