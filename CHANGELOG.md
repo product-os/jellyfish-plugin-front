@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.130 - 2021-12-18
+
+* Bump test-harness to v8.1.204 [Josh Bowling]
+* patch: Update dependency @balena/jellyfish-core to ^8.2.2 [Renovate Bot]
+
 ## 1.3.129 - 2021-12-17
 
 * patch: Update dependency @balena/jellyfish-assert to ^1.2.0 [Renovate Bot]
