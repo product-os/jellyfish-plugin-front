@@ -1,14 +1,14 @@
-import ActionLibrary = require('@balena/jellyfish-action-library');
+import { ActionLibrary } from '@balena/jellyfish-action-library';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { DefaultPlugin } from '@balena/jellyfish-plugin-default';
 import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { integrationHelpers } from '@balena/jellyfish-test-harness';
+import { strict as assert } from 'assert';
 import Bluebird from 'bluebird';
 import { Conversation, Front } from 'front-sdk';
 import _ from 'lodash';
 import { v4 as uuid } from 'uuid';
 import { FrontPlugin } from '../../lib';
-import { strict as assert } from 'assert';
 
 let ctx: integrationHelpers.IntegrationTestContext;
 const inboxes = defaultEnvironment.test.integration.front.inboxes;
