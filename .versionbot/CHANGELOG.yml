@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'patch: Update dependency @balena/jellyfish-sync to ^6.3.0'
+      hash: 5a1f8130900af07ff676a66b786783d300e6dd3a
+      body: |
+        Update @balena/jellyfish-sync from 6.2.0 to 6.3.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.149
+  date: 2022-01-10T23:50:49.434Z
+- commits:
     - subject: 'patch: Update internal-patch'
       hash: d86ffd4cc6e855fbd22dc5ff1fa6e036e0674b96
       body: ''
