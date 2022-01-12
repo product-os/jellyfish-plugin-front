@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.152 - 2022-01-12
+
+* Bump lint-staged to v12 [Josh Bowling]
+
 ## 1.3.151 - 2022-01-12
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
