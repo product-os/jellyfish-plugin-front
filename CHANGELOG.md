@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.153 - 2022-01-17
+
+* patch: Update internal-patch [Renovate Bot]
+
 ## 1.3.152 - 2022-01-12
 
 * Bump lint-staged to v12 [Josh Bowling]
