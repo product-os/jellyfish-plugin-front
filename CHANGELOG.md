@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.156 - 2022-01-18
+
+* patch: Update resinci/jellyfish-test Docker tag to v1.4.20 [Renovate Bot]
+
 ## 1.3.155 - 2022-01-17
 
 * patch: Update external-non-major [Renovate Bot]
