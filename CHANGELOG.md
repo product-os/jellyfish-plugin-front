@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.159 - 2022-01-23
+
+* patch: Update internal-non-major [Renovate Bot]
+
 ## 1.3.158 - 2022-01-19
 
 * patch: Update dependency axios to ^0.25.0 [Renovate Bot]
