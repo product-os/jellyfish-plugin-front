@@ -47,9 +47,9 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@balena/jellyfish-action-library": "^16.1.21",
-    "@balena/jellyfish-assert": "^1.2.7",
-    "@balena/jellyfish-environment": "^6.0.9",
+    "@balena/jellyfish-action-library": "^16.2.11",
+    "@balena/jellyfish-assert": "^1.2.10",
+    "@balena/jellyfish-environment": "^6.0.12",
     "@balena/jellyfish-plugin-base": "^2.2.25",
     "axios": "^0.25.0",
     "bluebird": "^3.7.2",
