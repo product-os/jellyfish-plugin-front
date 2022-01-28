@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.166 - 2022-01-28
+
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+* patch: Update dependency @balena/jellyfish-core to v14 [Renovate Bot]
+
 ## 1.3.165 - 2022-01-26
 
 * patch: Update dependency @balena/jellyfish-action-library to ^16.2.18 [Renovate Bot]
