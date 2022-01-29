@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 1.3.169 - 2022-01-29
+
+* Update internal-patch [Renovate Bot]
+
 ## 1.3.168 - 2022-01-29
 
 * Update balena/balena-redis Docker tag to v0.0.4 [Renovate Bot]

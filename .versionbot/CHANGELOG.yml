@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: fc7d0268299a1f24e1481f5909ea37e608f2f6e5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.169
+  title: Update internal-patch
+  date: 2022-01-29T06:40:15.514Z
+- commits:
     - subject: Update balena/balena-redis Docker tag to v0.0.4
       hash: cf72a2dae1d94e0e56c84de2435c9714ec043963
       body: ""
