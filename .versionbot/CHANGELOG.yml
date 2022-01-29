@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependencies (internal patch bumps)
+      hash: e39bfd3c940a15de5bfc4d2850d4059a7837361b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.170
+  title: Update dependencies (internal patch bumps)
+  date: 2022-01-29T10:10:49.577Z
+- commits:
     - subject: Update internal-patch
       hash: fc7d0268299a1f24e1481f5909ea37e608f2f6e5
       body: ""
