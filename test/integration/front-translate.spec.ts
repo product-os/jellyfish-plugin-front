@@ -44,7 +44,7 @@ describe('front-translate', () => {
 			tail: _.sortBy(testCase.expected.tail, workerTestUtils.tailSort),
 		};
 		for (const variation of workerTestUtils.getVariations(testCase.steps, {
-			permutations: false,
+			permutations: true,
 		})) {
 			if (variation.combination.length !== testCase.steps.length) {
 				continue;
