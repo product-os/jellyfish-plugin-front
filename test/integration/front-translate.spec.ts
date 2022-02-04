@@ -15,15 +15,8 @@ beforeAll(async () => {
 		plugins: [productOsPlugin(), defaultPlugin(), frontPlugin()],
 	});
 
-	// Remove triggered-action-sync-thread-post-link-whisper from the worker
-	// triggers as it interferes with the expected test suite result by causing
-	// an extra whisper to be added to the timeline
 	// TODO: Improve translate test suite/protocol to avoid this
-	const triggers = ctx.worker.getTriggers().filter((trigger) => {
-		return trigger.slug !== 'triggered-action-sync-thread-post-link-whisper';
-	});
-
-	ctx.worker.setTriggers(ctx.logContext, triggers);
+	ctx.worker.setTriggers(ctx.logContext, []);
 
 	await workerTestUtils.translateBeforeAll(ctx);
 });
