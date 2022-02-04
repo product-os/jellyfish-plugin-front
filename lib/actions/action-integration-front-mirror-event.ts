@@ -1,20 +1,21 @@
-import { mirror } from '@balena/jellyfish-action-library/build/actions/mirror';
-import type { ActionFile } from '@balena/jellyfish-plugin-base';
+import { mirror } from '@balena/jellyfish-plugin-default';
+import { ActionDefinition } from '@balena/jellyfish-worker';
 
-const handler: ActionFile['handler'] = async (
+const handler: ActionDefinition['handler'] = async (
 	session,
 	context,
-	card,
+	contract,
 	request,
 ) => {
-	return mirror('front', session, context, card, request);
+	return mirror('front', session, context, contract, request);
 };
 
-export const actionIntegrationFrontMirrorEvent: ActionFile = {
+export const actionIntegrationFrontMirrorEvent: ActionDefinition = {
 	handler,
-	card: {
+	contract: {
 		slug: 'action-integration-front-mirror-event',
 		type: 'action@1.0.0',
+		version: '1.0.0',
 		data: {
 			filter: {
 				type: 'object',

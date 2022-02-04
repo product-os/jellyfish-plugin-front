@@ -1,15 +1,11 @@
-import { FrontPlugin } from '../../lib';
+import { PluginManager } from '@balena/jellyfish-worker';
+import { defaultPlugin } from '@balena/jellyfish-plugin-default';
+import { frontPlugin } from '../../lib';
 
-import { cardMixins } from '@balena/jellyfish-core';
-
-const context = {
-	id: 'jellyfish-plugin-front-test',
-};
-
-const plugin = new FrontPlugin();
+const pluginManager = new PluginManager([defaultPlugin(), frontPlugin()]);
 
 test('Expected cards are loaded', () => {
-	const cards = plugin.getCards(context, cardMixins);
+	const cards = pluginManager.getCards();
 
 	// Sanity check
 	expect(cards['triggered-action-integration-front-mirror-event'].name).toEqual(
@@ -18,8 +14,8 @@ test('Expected cards are loaded', () => {
 });
 
 test('Expected integrations are loaded', () => {
-	const integrations = plugin.getSyncIntegrations(context);
+	const integrations = pluginManager.getSyncIntegrations();
 
 	// Sanity check
-	expect(integrations.front.slug).toEqual('front');
+	expect(Object.keys(integrations).includes('front')).toBeTruthy();
 });

@@ -1,5 +1,5 @@
-import { WorkerContext } from '@balena/jellyfish-types/build/worker';
-import type { Context, Contract } from '@balena/jellyfish-types/build/core';
+import type { Contract } from '@balena/jellyfish-types/build/core';
+import { WorkerContext } from '@balena/jellyfish-worker';
 import isArray from 'lodash/isArray';
 import { v4 as uuidv4 } from 'uuid';
 import { actionIntegrationFrontMirrorEvent } from '../../../lib/actions/action-integration-front-mirror-event';
@@ -63,7 +63,7 @@ function makeRequest(args = {}): any {
 		},
 		card: uuidv4(),
 		actor: uuidv4(),
-		context: {} as Context,
+		context: { id: uuidv4() },
 		timestamp: new Date().toISOString(),
 		epoch: new Date().toISOString(),
 		arguments: args,

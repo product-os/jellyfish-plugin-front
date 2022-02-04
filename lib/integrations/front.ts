@@ -1,5 +1,9 @@
 import * as assert from '@balena/jellyfish-assert';
-import { Integration } from '@balena/jellyfish-plugin-base';
+import {
+	Integration,
+	IntegrationDefinition,
+	errors as workerErrors,
+} from '@balena/jellyfish-worker';
 import axios from 'axios';
 import Bluebird from 'bluebird';
 import jsonpatch from 'fast-json-patch';
@@ -490,7 +494,7 @@ async function getMessage(
 		intercom,
 		payload,
 	);
-	assert.INTERNAL(null, actor, instance.options.errors.SyncNoActor, () => {
+	assert.INTERNAL(null, actor, workerErrors.SyncNoActor, () => {
 		return `Not actor id for message ${JSON.stringify(payload)}`;
 	});
 
@@ -1075,7 +1079,7 @@ async function getAllThreadMessages(
 	);
 }
 
-module.exports = class FrontIntegration implements Integration {
+export class FrontIntegration implements Integration {
 	public slug = SLUG;
 	public context: any;
 	public options: any;
@@ -1094,15 +1098,11 @@ module.exports = class FrontIntegration implements Integration {
 		}
 	}
 
-	async initialize() {
-		return Bluebird.resolve();
+	public async destroy() {
+		return;
 	}
 
-	async destroy() {
-		return Bluebird.resolve();
-	}
-
-	async translate(event: any): Promise<any> {
+	public async translate(event: any): Promise<any> {
 		if (!this.options.token.api || !this.options.token.intercom) {
 			return [];
 		}
@@ -1129,19 +1129,19 @@ module.exports = class FrontIntegration implements Integration {
 		assert.INTERNAL(
 			null,
 			ALL_THREAD_TYPES.includes(threadType),
-			this.options.errors.SyncInvalidType,
+			workerErrors.SyncInvalidType,
 			`Invalid thread type: ${threadType} for inbox ${inbox}`,
 		);
 
 		const cards: any[] = [];
 
 		const actor = await this.getLocalUser(event);
-		assert.INTERNAL(null, actor, this.options.errors.SyncNoActor, () => {
+		assert.INTERNAL(null, actor, workerErrors.SyncNoActor, () => {
 			return `No actor id for ${JSON.stringify(event)}`;
 		});
 
 		const threadActor = await this.getThreadActor(event);
-		assert.INTERNAL(null, threadActor, this.options.errors.SyncNoActor, () => {
+		assert.INTERNAL(null, threadActor, workerErrors.SyncNoActor, () => {
 			return `No thread actor id for ${JSON.stringify(event)}`;
 		});
 
@@ -1309,7 +1309,7 @@ module.exports = class FrontIntegration implements Integration {
 		]);
 	}
 
-	async mirror(card: any, options: any): Promise<any> {
+	public async mirror(card: any, options: any): Promise<any> {
 		if (!this.options.token.api || !this.options.token.intercom) {
 			return [];
 		}
@@ -1450,7 +1450,7 @@ module.exports = class FrontIntegration implements Integration {
 			assert.USER(
 				null,
 				author,
-				this.options.errors.SyncExternalRequestError,
+				workerErrors.SyncExternalRequestError,
 				`No Front author that corresponds to ${actor.slug}`,
 			);
 
@@ -1502,7 +1502,7 @@ module.exports = class FrontIntegration implements Integration {
 
 				const channel = await getConversationChannel(
 					this.context,
-					this.options.errors,
+					workerErrors,
 					this.front,
 					conversation,
 					thread.data.inbox,
@@ -1744,9 +1744,12 @@ module.exports = class FrontIntegration implements Integration {
 	 * @returns {Buffer}
 	 */
 	async getFile(file: string) {
-		if (!this.options.token.api) {
-			return null;
-		}
+		assert.INTERNAL(
+			null,
+			this.options.token.api,
+			workerErrors.SyncExternalRequestError,
+			'Front api token is missing',
+		);
 
 		try {
 			const response = await axios.get(
@@ -1763,7 +1766,7 @@ module.exports = class FrontIntegration implements Integration {
 			assert.USER(
 				null,
 				error.statusCode !== 500,
-				this.options.errors.SyncExternalRequestError,
+				workerErrors.SyncExternalRequestError,
 				`Front crashed with ${error.statusCode} when fetching attachment ${file}`,
 			);
 
@@ -1802,9 +1805,11 @@ module.exports = class FrontIntegration implements Integration {
 			throw error;
 		}
 	}
+}
+
+export const frontIntegrationDefinition: IntegrationDefinition = {
+	initialize: async (options) => new FrontIntegration(options),
+
+	// Front doesn't seem to offer any webhook security mechanism
+	isEventValid: _.constant(true),
 };
-
-module.exports.slug = SLUG;
-
-// Front doesn't seem to offer any webhook security mechanism
-module.exports.isEventValid = _.constant(true);

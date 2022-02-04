@@ -1,2 +1,6 @@
-// tslint:disable-next-line: no-var-requires
-export default [require('./front')];
+import type { IntegrationDefinition, Map } from '@balena/jellyfish-worker';
+import { frontIntegrationDefinition } from './front';
+
+export const integrations: Map<IntegrationDefinition> = {
+	front: frontIntegrationDefinition,
+};

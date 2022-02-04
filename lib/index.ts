@@ -1,30 +1,27 @@
-import { JellyfishPluginBase } from '@balena/jellyfish-plugin-base';
+import type { PluginDefinition } from '@balena/jellyfish-worker';
+import { contracts } from './contracts';
+import { integrations } from './integrations';
 import { actions } from './actions';
-import { cards } from './cards';
-import integrations from './integrations';
+
+// tslint:disable-next-line: no-var-requires
+const { version } = require('../package.json');
 
 /**
  * The Front Jellyfish plugin.
  */
-export class FrontPlugin extends JellyfishPluginBase {
-	constructor() {
-		super({
-			slug: 'jellyfish-plugin-front',
-			name: 'Front Plugin',
-			version: '1.0.0',
-			actions,
-			cards,
-			integrations,
-			requires: [
-				{
-					slug: 'action-library',
-					version: '>=15.x',
-				},
-				{
-					slug: 'jellyfish-plugin-default',
-					version: '>=19.x',
-				},
-			],
-		});
-	}
-}
+export const frontPlugin = (): PluginDefinition => {
+	return {
+		slug: 'plugin-front',
+		name: 'Front Plugin',
+		version,
+		contracts,
+		actions,
+		integrationMap: integrations,
+		requires: [
+			{
+				slug: 'plugin-default',
+				version: '>=21.x',
+			},
+		],
+	};
+};

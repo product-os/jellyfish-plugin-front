@@ -1,5 +1,6 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import * as errors from '@balena/jellyfish-sync/build/errors';
+import { defaultPlugin } from '@balena/jellyfish-plugin-default';
+import { PluginManager } from '@balena/jellyfish-worker';
 import axios from 'axios';
 import FormData from 'form-data';
 import fs from 'fs';
@@ -8,9 +9,11 @@ import nock from 'nock';
 import os from 'os';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+import { frontPlugin } from '../../../lib';
+import { FrontIntegration } from '../../../lib/integrations/front';
 
-// tslint:disable-next-line: no-var-requires
-const Front = require('../../../lib/integrations/front');
+const pluginManager = new PluginManager([defaultPlugin(), frontPlugin()]);
+const frontIntegration = pluginManager.getSyncIntegrations().front;
 
 const context: any = {
 	id: 'jellyfish-plugin-front-test',
@@ -31,7 +34,7 @@ afterAll(() => {
 
 describe('isEventValid()', () => {
 	test('should return true given anything', async () => {
-		const result = Front.isEventValid({ api: 'xxxxxxx' }, '....', {}, context);
+		const result = frontIntegration.isEventValid(context, '....', {}, context);
 		expect(result).toBe(true);
 	});
 });
@@ -48,9 +51,8 @@ test('getFile() should download file (nock)', async () => {
 		token: {
 			api: uuidv4(),
 		},
-		errors,
 	};
-	const instance = new Front(options);
+	const instance = new FrontIntegration(options);
 
 	nock('https://api2.frontapp.com', {
 		reqheaders: {
@@ -69,9 +71,8 @@ test('getFile() should download file (nock)', async () => {
 jestTest('getFile() should download file', async () => {
 	const options = {
 		token: defaultEnvironment.integration.front,
-		errors,
 	};
-	const instance = new Front(options);
+	const instance = new FrontIntegration(options);
 
 	// Get test channel
 	const channels = await axios.get('https://api2.frontapp.com/channels', {
