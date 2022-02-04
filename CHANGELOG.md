@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.0 - 2022-02-04
+
+* Use worker v18 [karaxuna]
+* Update resinci/jellyfish-test Docker tag to v1.4.23 [Renovate Bot]
+
 ## 1.3.173 - 2022-02-03
 
 * Update resinci/jellyfish-test Docker tag to v1.4.22 [Renovate Bot]

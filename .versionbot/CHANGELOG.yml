@@ -1,4 +1,24 @@
 - commits:
+    - subject: Use worker v18
+      hash: c31050d47633f0955ff761db5f33b70047872835
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: karaxuna
+      nested: []
+    - subject: Update resinci/jellyfish-test Docker tag to v1.4.23
+      hash: bb845a614647e98ea042ee2950f8fa602f115a8f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.0
+  title: "'Use worker v18'"
+  date: 2022-02-04T13:37:07.759Z
+- commits:
     - subject: Update resinci/jellyfish-test Docker tag to v1.4.22
       hash: 79d208963f6b3a44907b6a819cfa780dc7e206e0
       body: ""
