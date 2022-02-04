@@ -1,4 +1,4 @@
-import type { ActionFile } from '@balena/jellyfish-plugin-base';
+import { ActionDefinition } from '@balena/jellyfish-worker';
 import { actionIntegrationFrontMirrorEvent } from './action-integration-front-mirror-event';
 
-export const actions: ActionFile[] = [actionIntegrationFrontMirrorEvent];
+export const actions: ActionDefinition[] = [actionIntegrationFrontMirrorEvent];

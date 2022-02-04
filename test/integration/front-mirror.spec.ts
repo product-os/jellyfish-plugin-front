@@ -1,41 +1,36 @@
-import { ActionLibrary } from '@balena/jellyfish-action-library';
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import { DefaultPlugin } from '@balena/jellyfish-plugin-default';
-import { ProductOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { integrationHelpers } from '@balena/jellyfish-test-harness';
+import { defaultPlugin, testUtils } from '@balena/jellyfish-plugin-default';
+import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
+import { SessionContract } from '@balena/jellyfish-types/build/core';
 import { strict as assert } from 'assert';
 import Bluebird from 'bluebird';
 import { Conversation, Front } from 'front-sdk';
 import _ from 'lodash';
 import { v4 as uuid } from 'uuid';
-import { FrontPlugin } from '../../lib';
+import { frontPlugin } from '../../lib';
 
-let ctx: integrationHelpers.IntegrationTestContext;
+let ctx: testUtils.TestContext;
 const inboxes = defaultEnvironment.test.integration.front.inboxes;
 const front = new Front(defaultEnvironment.integration.front.api);
 let channel: any = {};
 let remoteInbox: any = {};
 let user: any = {};
-let userSession: string = '';
+let session: SessionContract;
 
 beforeAll(async () => {
-	ctx = await integrationHelpers.before([
-		DefaultPlugin,
-		ActionLibrary,
-		ProductOsPlugin,
-		FrontPlugin,
-	]);
+	ctx = await testUtils.newContext({
+		plugins: [productOsPlugin(), defaultPlugin(), frontPlugin()],
+	});
 
 	channel = await getChannel();
 	remoteInbox = await getInbox();
 	const teammate = await getTeammate();
-	const createdUser = await ctx.createUser(teammate.replace(/_/g, '-'));
-	user = createdUser.contract;
-	userSession = createdUser.session;
+	user = await ctx.createUser(teammate.replace(/_/g, '-'));
+	session = await ctx.createSession(user);
 });
 
 afterAll(() => {
-	return integrationHelpers.after(ctx);
+	return testUtils.destroyContext(ctx);
 });
 
 // Because Front might take a while to process message creation requests.
@@ -141,7 +136,7 @@ async function createSupportThread(
 
 	const supportThread = await ctx.createSupportThread(
 		user.id,
-		userSession,
+		session.id,
 		title,
 		{
 			environment: 'production',
@@ -165,8 +160,8 @@ test('should mirror support thread status', async () => {
 
 	// Update status to closed
 	await ctx.worker.patchCard(
-		ctx.context,
-		userSession,
+		ctx.logContext,
+		session.id,
 		ctx.worker.typeContracts[supportThread.type],
 		{
 			attachEvents: true,
@@ -181,7 +176,7 @@ test('should mirror support thread status', async () => {
 			},
 		],
 	);
-	await ctx.flushAll(userSession);
+	await ctx.flushAll(session.id);
 
 	// Check that the remote converstion status has updated
 	await ctx.retry(
@@ -213,8 +208,8 @@ test('should mirror support thread status', async () => {
 	);
 
 	// Check that the support thread is still closed
-	const threadAfter = await ctx.jellyfish.getCardById(
-		ctx.context,
+	const threadAfter = await ctx.kernel.getContractById(
+		ctx.logContext,
 		ctx.session,
 		supportThread.id,
 	);
@@ -228,10 +223,10 @@ test('should mirror whisper on insert support threads', async () => {
 		`Foo Bar ${uuid()}`,
 	);
 
-	const body = ctx.generateRandomWords(5);
+	const body = uuid();
 	const whisper: any = await ctx.createWhisper(
 		user.id,
-		userSession,
+		session.id,
 		supportThread,
 		body,
 	);
@@ -259,10 +254,10 @@ test('should mirror message insert on support threads', async () => {
 		`Foo Bar ${uuid()}`,
 	);
 
-	const body = ctx.generateRandomWords(5);
+	const body = uuid();
 	const message: any = await ctx.createMessage(
 		user.id,
-		userSession,
+		session.id,
 		supportThread,
 		body,
 	);
@@ -298,8 +293,8 @@ test('should be able to tag an unassigned conversation', async () => {
 	});
 
 	await ctx.worker.patchCard(
-		ctx.context,
-		userSession,
+		ctx.logContext,
+		session.id,
 		ctx.worker.typeContracts[supportThread.type],
 		{
 			attachEvents: true,
@@ -314,7 +309,7 @@ test('should be able to tag an unassigned conversation', async () => {
 			},
 		],
 	);
-	await ctx.flushAll(userSession);
+	await ctx.flushAll(session.id);
 
 	const result = await ctx.retry(
 		() => {
@@ -342,7 +337,7 @@ test('should be able to comment using a complex code', async () => {
 		"One last piece of the puzzle is to get the image url to pull. To get that you can run this from the browser console or sdk. \n\n`(await sdk.pine.get({ resource: 'release', id: <release-id>, options: { $expand: { image__is_part_of__release: { $expand: { image: { $select: ['is_stored_at__image_location'] } } }} } })).image__is_part_of__release.map(({ image }) => image[0].is_stored_at__image_location )`\n";
 	const whisper: any = await ctx.createWhisper(
 		user.id,
-		userSession,
+		session.id,
 		supportThread,
 		body,
 	);
@@ -373,7 +368,7 @@ test('should be able to comment using triple backticks', async () => {
 	const body = '```Foo\nBar```';
 	const whisper: any = await ctx.createWhisper(
 		user.id,
-		userSession,
+		session.id,
 		supportThread,
 		body,
 	);
@@ -404,7 +399,7 @@ test('should be able to comment using brackets', async () => {
 	const body = 'Hello <world> foo <bar>';
 	const whisper: any = await ctx.createWhisper(
 		user.id,
-		userSession,
+		session.id,
 		supportThread,
 		body,
 	);
@@ -434,8 +429,8 @@ test('should be able to close an inbound message', async () => {
 
 	// Update status to closed
 	await ctx.worker.patchCard(
-		ctx.context,
-		userSession,
+		ctx.logContext,
+		session.id,
 		ctx.worker.typeContracts[supportThread.type],
 		{
 			attachEvents: true,
@@ -450,7 +445,7 @@ test('should be able to close an inbound message', async () => {
 			},
 		],
 	);
-	await ctx.flushAll(userSession);
+	await ctx.flushAll(session.id);
 
 	// Check that the remove conversation status has updated
 	const result = await ctx.retry(
@@ -479,8 +474,8 @@ test('should be able to archive an inbound message', async () => {
 
 	// Update status to closed
 	await ctx.worker.patchCard(
-		ctx.context,
-		userSession,
+		ctx.logContext,
+		session.id,
 		ctx.worker.typeContracts[supportThread.type],
 		{
 			attachEvents: true,
@@ -495,7 +490,7 @@ test('should be able to archive an inbound message', async () => {
 			},
 		],
 	);
-	await ctx.flushAll(userSession);
+	await ctx.flushAll(session.id);
 
 	// Check that the remove conversation status has updated
 	const result = await ctx.retry(
@@ -535,7 +530,7 @@ test('should be able to reply to a moved inbound message', async () => {
 
 	// Add a new message to the thread
 	const message = 'Message in another inbox';
-	await ctx.createMessage(user.id, userSession, supportThread, message);
+	await ctx.createMessage(user.id, session.id, supportThread, message);
 
 	// Check that the new message was synced to the moved conversation
 	const messages = await ctx.retry(

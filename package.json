@@ -37,8 +37,8 @@
     "lint:fix": "balena-lint --fix lib test",
     "test": "npm run lint && npm run test:unit",
     "test:unit": "jest test/unit",
-    "test:mirror": "npx jest --runInBand --bail test/integration/front-mirror.spec.ts",
-    "test:translate": "npx jest --runInBand --bail test/integration/front-translate.spec.ts",
+    "test:mirror": "npx jest test/integration/front-mirror.spec.ts",
+    "test:translate": "npx jest test/integration/front-translate.spec.ts",
     "test:compose": "docker build -t balena/jellyfish-sut:latest . && docker-compose -f docker-compose.test.yml -f docker-compose.yml up --exit-code-from=sut",
     "doc": "typedoc lib/ && touch docs/.nojekyll",
     "prepack": "npm run build",
@@ -47,14 +47,14 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@balena/jellyfish-action-library": "^16.2.18",
     "@balena/jellyfish-assert": "^1.2.12",
     "@balena/jellyfish-environment": "^6.0.14",
-    "@balena/jellyfish-plugin-base": "^2.2.26",
+    "@balena/jellyfish-plugin-default": "^23.1.0",
+    "@balena/jellyfish-worker": "^18.3.0",
     "axios": "^0.25.0",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.0",
-    "front-sdk": "^0.8.1",
+    "front-sdk": "^0.8.2",
     "intercom-client": "^2.11.2",
     "lodash": "^4.17.21",
     "lru-cache": "^6.0.0",
@@ -64,11 +64,9 @@
   "devDependencies": {
     "@balena/jellyfish-config": "^2.0.2",
     "@balena/jellyfish-core": "^14.2.0",
-    "@balena/jellyfish-plugin-default": "^21.2.0",
-    "@balena/jellyfish-plugin-product-os": "^2.9.5",
-    "@balena/jellyfish-sync": "^6.3.0",
-    "@balena/jellyfish-test-harness": "^8.1.204",
-    "@balena/jellyfish-types": "^2.0.2",
+    "@balena/jellyfish-logger": "^4.0.29",
+    "@balena/jellyfish-plugin-product-os": "^4.0.2",
+    "@balena/jellyfish-types": "^2.0.4",
     "@balena/lint": "^6.2.0",
     "@types/bluebird": "^3.5.36",
     "@types/intercom-client": "^2.11.13",
@@ -88,11 +86,6 @@
     "ts-jest": "^27.1.3",
     "typedoc": "^0.22.11",
     "typescript": "^4.5.5"
-  },
-  "peerDependencies": {
-    "@balena/jellyfish-core": "^14.2.0",
-    "@balena/jellyfish-plugin-default": "^21.2.0",
-    "@balena/jellyfish-sync": "^6.3.0"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
