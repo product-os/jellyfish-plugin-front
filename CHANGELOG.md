@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.1 - 2022-02-05
+
+* Update external-non-major [Renovate Bot]
+
 ## 2.0.0 - 2022-02-04
 
 * Use worker v18 [karaxuna]
