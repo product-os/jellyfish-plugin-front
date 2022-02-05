@@ -9,6 +9,8 @@ services:
     depends_on:
       - postgres
       - redis
+    environment:
+      - LOGLEVEL=error
     secrets:
       - integration_front_token
       - integration_intercom_token

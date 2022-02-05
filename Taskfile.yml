@@ -10,5 +10,4 @@ tasks:
   test:
     cmds:
       - node ./scripts/delete-test-conversations.js
-      - npm run test:mirror
-      - npm run test:translate
+      - npm run test:integration
