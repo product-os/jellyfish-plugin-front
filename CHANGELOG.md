@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.4 - 2022-02-06
+
+* Enable permutations for translate tests [Josh Bowling]
+
 ## 2.0.3 - 2022-02-06
 
 * Update internal-patch [Renovate Bot]

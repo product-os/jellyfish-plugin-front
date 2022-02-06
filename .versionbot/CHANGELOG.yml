@@ -1,4 +1,18 @@
 - commits:
+    - subject: Enable permutations for translate tests
+      hash: 2185e2aa80e0336be7b9a8046bb6ae0dff473537
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 2.0.4
+  title: "'Enable permutations for translate tests'"
+  date: 2022-02-06T08:11:58.161Z
+- commits:
     - subject: Update internal-patch
       hash: 1f169152b6a8cbc7e48c774c3897cafaae5fba25
       body: ""
