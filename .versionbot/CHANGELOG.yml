@@ -1,4 +1,18 @@
 - commits:
+    - subject: Clean up postgres service
+      hash: cf16cacba1cb3eff92cad31145f9dc60a0517033
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 2.0.5
+  title: "'Clean up postgres service'"
+  date: 2022-02-06T09:09:02.231Z
+- commits:
     - subject: Enable permutations for translate tests
       hash: 2185e2aa80e0336be7b9a8046bb6ae0dff473537
       body: ""
