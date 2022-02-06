@@ -2,7 +2,9 @@ version: '2.1'
 
 services:
   postgres:
-    image: balena/open-balena-db:4.1.0
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
     restart: always
     networks:
       - internal

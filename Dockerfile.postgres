@@ -1,0 +1,8 @@
+# syntax=docker/dockerfile:1
+
+FROM balena/open-balena-db:v5.0.2
+
+ARG conf=/usr/share/postgresql/13/postgresql.conf.sample
+RUN echo "fsync = off" >> $conf && \
+	echo "synchronous_commit = off" >> $conf && \
+	echo "full_page_writes = off" >> $conf
