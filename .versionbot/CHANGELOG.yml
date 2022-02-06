@@ -1,5 +1,17 @@
 - commits:
     - subject: Update internal-patch
+      hash: b4f338cee86cddd4ff9d6bff0773fd5418d6d195
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.7
+  title: "'Update internal-patch'"
+  date: 2022-02-06T15:50:58.434Z
+- commits:
+    - subject: Update internal-patch
       hash: d4c8a325b9621bf4beab0a634712a9fdbee2670f
       body: ""
       footer:
