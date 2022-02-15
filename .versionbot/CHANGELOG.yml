@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-environment from 6.0.15 to 6.1.1
+      hash: 1d7253fba942a30563b30410f3f811741672819b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.19
+  title: "'Update @balena/jellyfish-environment from 6.0.15 to 6.1.1'"
+  date: 2022-02-15T03:44:08.798Z
+- commits:
     - subject: Update @balena/jellyfish-plugin-default from 23.1.21 to 23.2.1
       hash: 50770bbe43f30edbfe377c2990f966344f691027
       body: ""
