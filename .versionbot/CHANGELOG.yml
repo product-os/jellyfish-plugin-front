@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependencies (external v0 minor bumps)
+      hash: e4ee915e2a9a9638e2be87c0fe0f49372e7ee5b5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.20
+  title: "'Update dependencies (external v0 minor bumps)'"
+  date: 2022-02-15T04:05:26.191Z
+- commits:
     - subject: Update @balena/jellyfish-environment from 6.0.15 to 6.1.1
       hash: 1d7253fba942a30563b30410f3f811741672819b
       body: ""
