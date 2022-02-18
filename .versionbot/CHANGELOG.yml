@@ -1,4 +1,16 @@
 - commits:
+    - subject: 🔄 Synced file(s) with product-os/secrets
+      hash: 2d75f88f0cef6c6b881590839f8d26e73e95f5e1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+      nested: []
+  version: 2.0.27
+  title: "'🔄 Synced file(s) with product-os/secrets'"
+  date: 2022-02-18T01:11:28.257Z
+- commits:
     - subject: Update balena/open-balena-db from v5.0.2 to v5.0.3
       hash: f6d1b104bde8503bb8b0712a74a9b27853f25a24
       body: ""
