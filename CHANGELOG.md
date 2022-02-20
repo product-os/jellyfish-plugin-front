@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.29 - 2022-02-20
+
+* Update typedoc from 0.22.11 to 0.22.12 [Renovate Bot]
+
 ## 2.0.28 - 2022-02-18
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
