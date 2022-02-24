@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.34 - 2022-02-24
+
+* Update internal-patch [Renovate Bot]
+
 ## 2.0.33 - 2022-02-24
 
 * Transform serialize-error [Josh Bowling]
