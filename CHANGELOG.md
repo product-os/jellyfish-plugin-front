@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.33 - 2022-02-24
+
+* Transform serialize-error [Josh Bowling]
+
 ## 2.0.32 - 2022-02-23
 
 * Update @balena/jellyfish-core from 14.4.0 to 15.0.0 [Renovate Bot]

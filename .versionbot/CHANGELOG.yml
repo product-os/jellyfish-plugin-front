@@ -1,4 +1,18 @@
 - commits:
+    - subject: Transform serialize-error
+      hash: 774facb00d76def9269fc65062ad137a12b47643
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 2.0.33
+  title: "'Transform serialize-error'"
+  date: 2022-02-24T04:39:52.897Z
+- commits:
     - subject: Update @balena/jellyfish-core from 14.4.0 to 15.0.0
       hash: 824eb2d35f68603d74e29557c26569b71e07109f
       body: ""
