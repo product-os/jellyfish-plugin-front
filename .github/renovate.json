@@ -1,16 +1,5 @@
 {
   "extends": [
     "github>product-os/renovate-config"
-  ],
-  "packageRules": [
-    {
-      "matchDepTypes": [
-        "devDependencies",
-        "peerDependencies"
-      ],
-      "matchPackagePatterns": ["@balena/jellyfish-*"],
-      "matchUpdateTypes": ["patch"],
-      "enabled": false
-    }
   ]
 }
