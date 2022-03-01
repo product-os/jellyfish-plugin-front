@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.46 - 2022-03-01
+
+* Bump core and worker [Josh Bowling]
+
 ## 2.0.45 - 2022-02-28
 
 * Update internal-patch [Renovate Bot]
