@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: c2d2cc4743f241b3a00145619f965cfcda29d1a1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.50
+  title: "'Update internal-patch'"
+  date: 2022-03-01T10:41:52.135Z
+- commits:
     - subject: "Renovate: Stop ignoring internal patches"
       hash: a5651ed53c7c3bf63ecc38ea6e07697135409539
       body: ""
