@@ -1,4 +1,26 @@
 - commits:
+    - subject: Update usage of marked to match v4 API
+      hash: b7c270c4b14e41f42ed6eea1c15cf674f0dacef0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+    - subject: Update dependencies (external major bumps) [SECURITY]
+      hash: 16323996f432812f59d479fa11c24d73b0a34907
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.52
+  title: "'Update dependencies (external major bumps) [SECURITY]'"
+  date: 2022-03-01T14:43:29.189Z
+- commits:
     - subject: Update internal-patch
       hash: 09484dab29437bfca7d9ea0ee512dd57cd931b2f
       body: ""

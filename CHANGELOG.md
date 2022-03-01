@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.52 - 2022-03-01
+
+* Update usage of marked to match v4 API [Lucian Buzzo]
+* Update dependencies (external major bumps) [SECURITY] [Renovate Bot]
+
 ## 2.0.51 - 2022-03-01
 
 * Update internal-patch [Renovate Bot]
