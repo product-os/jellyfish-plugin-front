@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.48 - 2022-03-01
+
+* Update internal-patch [Renovate Bot]
+
 ## 2.0.47 - 2022-03-01
 
 * Remove jest esm transforms [Josh Bowling]

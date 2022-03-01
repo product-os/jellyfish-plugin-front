@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: d19d0a14fa89a73733c4ddf5bb690c51faaa00ee
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.48
+  title: "'Update internal-patch'"
+  date: 2022-03-01T09:57:49.833Z
+- commits:
     - subject: Remove jest esm transforms
       hash: fef2c3a3a4e8eec1062d80eb8bacbd6f38551fca
       body: ""
