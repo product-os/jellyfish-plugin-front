@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.47 - 2022-03-01
+
+* Remove jest esm transforms [Josh Bowling]
+
 ## 2.0.46 - 2022-03-01
 
 * Bump core and worker [Josh Bowling]
