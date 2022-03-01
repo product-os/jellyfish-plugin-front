@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Renovate: Stop ignoring internal patches"
+      hash: a5651ed53c7c3bf63ecc38ea6e07697135409539
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 2.0.49
+  title: "'Renovate: Stop ignoring internal patches'"
+  date: 2022-03-01T10:20:26.048Z
+- commits:
     - subject: Update internal-patch
       hash: d19d0a14fa89a73733c4ddf5bb690c51faaa00ee
       body: ""
