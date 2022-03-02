@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.53 - 2022-03-01
+
+* Update @balena/jellyfish-core from 15.1.0 to 16.0.0 [Renovate Bot]
+
 ## 2.0.52 - 2022-03-01
 
 * Update usage of marked to match v4 API [Lucian Buzzo]
