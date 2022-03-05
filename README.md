@@ -7,13 +7,13 @@ Provides a sync integration for Front.
 Below is an example how to use this library:
 
 ```js
-import { cardMixins } from '@balena/jellyfish-core';
-import { FrontPlugin } from '@balena/jellyfish-plugin-front';
+import { defaultPlugin } from '@balena/jellyfish-plugin-default';
+import { frontPlugin } from '@balena/jellyfish-plugin-front';
+import { PluginManager } from '@balena/jellyfish-worker';
 
-const plugin = new FrontPlugin();
-
-// Load cards from this plugin, can use custom mixins
-const cards = plugin.getCards(context, cardMixins);
+// Load cards from this plugin
+const pluginManager = new PluginManager([defaultPlugin(), frontPlugin()]);
+const cards = pluginManager.getCards();
 console.dir(cards);
 ```
 
