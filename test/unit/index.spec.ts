@@ -1,5 +1,5 @@
-import { PluginManager } from '@balena/jellyfish-worker';
 import { defaultPlugin } from '@balena/jellyfish-plugin-default';
+import { PluginManager } from '@balena/jellyfish-worker';
 import { frontPlugin } from '../../lib';
 
 const pluginManager = new PluginManager([defaultPlugin(), frontPlugin()]);
