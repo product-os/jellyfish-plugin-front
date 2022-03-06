@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.64 - 2022-03-06
+
+* Update @balena/jellyfish-plugin-default from 23.3.26 to 24.0.0 [Josh Bowling]
+
 ## 2.0.63 - 2022-03-06
 
 * Update internal-patch [Renovate Bot]
