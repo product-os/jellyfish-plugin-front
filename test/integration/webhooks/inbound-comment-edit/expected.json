@@ -15,7 +15,9 @@
         "https://api2.frontapp.com/conversations/cnv_1bolr9e"
       ],
       "mentionsUser": [],
+      "mentionsGroup": [],
       "alertsUser": [],
+      "alertsGroup": [],
       "description": "",
       "status": "open"
     }
