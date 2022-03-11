@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update axios from 0.26.0 to 0.26.1
+      hash: 7505a413ff99cc892dc033027fdaa46ad77265df
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.71
+  title: "'Update axios from 0.26.0 to 0.26.1'"
+  date: 2022-03-11T15:39:26.453Z
+- commits:
     - subject: Update internal-patch
       hash: 0b30c07a2682e8790dfc7dea30335ac3a83c6a7f
       body: ""
