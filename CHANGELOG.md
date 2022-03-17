@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.80 - 2022-03-17
+
+* Drop jellyfish-core dep [Josh Bowling]
+
 ## 2.0.79 - 2022-03-17
 
 * Update internal-patch [Renovate Bot]

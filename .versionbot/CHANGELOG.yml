@@ -1,4 +1,18 @@
 - commits:
+    - subject: Drop jellyfish-core dep
+      hash: ad9e58145a977c64d876fa5fc3d4cb03dfafc2f4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 2.0.80
+  title: "'Drop jellyfish-core dep'"
+  date: 2022-03-17T00:36:44.396Z
+- commits:
     - subject: Update internal-patch
       hash: efc76691257bd745439e2f36c73517590daa9ef2
       body: ""
