@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update internal-patch
+      hash: 65c5ce3fb7b7278e83b6a94b4f78e8789c957b6b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.81
+  title: "'Update internal-patch'"
+  date: 2022-03-18T13:45:07.667Z
+- commits:
     - subject: Drop jellyfish-core dep
       hash: ad9e58145a977c64d876fa5fc3d4cb03dfafc2f4
       body: ""
