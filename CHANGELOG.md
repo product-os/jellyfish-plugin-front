@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.83 - 2022-03-19
+
+* Update resinci/jellyfish-test from 1.4.27 to 3.0.1 [Josh Bowling]
+
 ## 2.0.82 - 2022-03-18
 
 * Update @balena/jellyfish-worker from 20.0.4 to 20.2.1 [Renovate Bot]
