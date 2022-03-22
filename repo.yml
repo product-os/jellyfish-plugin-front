@@ -1,6 +1,14 @@
-type: 'node'
+type: "node"
 upstream:
-  - repo: 'jellyfish-plugin-base'
-    url: 'https://github.com/product-os/jellyfish-plugin-base'
-  - repo: 'jellyfish-plugin-default'
-    url: 'https://github.com/product-os/jellyfish-plugin-default'
+  - repo: "jellyfish-assert"
+    url: "https://github.com/product-os/jellyfish-assert"
+  - repo: "jellyfish-logger"
+    url: "https://github.com/product-os/jellyfish-logger"
+  - repo: "jellyfish-environment"
+    url: "https://github.com/product-os/jellyfish-environment"
+  - repo: "jellyfish-worker"
+    url: "https://github.com/product-os/jellyfish-worker"
+  - repo: "jellyfish-plugin-default"
+    url: "https://github.com/product-os/jellyfish-plugin-default"
+  - repo: "jellyfish-plugin-product-os"
+    url: "https://github.com/product-os/jellyfish-plugin-product-os"
