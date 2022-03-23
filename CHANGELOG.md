@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.94 - 2022-03-23
+
+* Update internal-patch [Renovate Bot]
+* Update balena/open-balena-db from v5.0.3 to v5.1.0 [Renovate Bot]
+
 ## 2.0.93 - 2022-03-22
 
 * Update internal-patch [Renovate Bot]
