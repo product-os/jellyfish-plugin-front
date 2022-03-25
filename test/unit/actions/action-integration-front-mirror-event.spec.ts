@@ -1,6 +1,6 @@
 import type { Contract } from '@balena/jellyfish-types/build/core';
 import { WorkerContext } from '@balena/jellyfish-worker';
-import isArray from 'lodash/isArray';
+import _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
 import { actionIntegrationFrontMirrorEvent } from '../../../lib/actions/action-integration-front-mirror-event';
 
@@ -38,8 +38,7 @@ function makeContract(type: string, data = {}, slug = ''): Contract {
  * @summary Generate and return an action request object
  * @function
  *
- * @param context - execution context
- * @param requestArguments - optional request arguments
+ * @param args - optional request arguments
  * @returns action request object
  */
 function makeRequest(args = {}): any {
@@ -96,7 +95,7 @@ describe('action-integration-front-mirror-event', () => {
 			makeContract('user'),
 			makeRequest(),
 		);
-		if (isArray(result)) {
+		if (_.isArray(result)) {
 			expect(Object.keys(result[0])).toEqual(['id', 'type', 'version', 'slug']);
 		}
 	});
