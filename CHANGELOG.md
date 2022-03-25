@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.97 - 2022-03-25
+
+* Update typescript from 4.6.2 to 4.6.3 [Renovate Bot]
+
 ## 2.0.96 - 2022-03-23
 
 * Update resinci/jellyfish-test from v3.0.2 to v3.0.3 [Renovate Bot]

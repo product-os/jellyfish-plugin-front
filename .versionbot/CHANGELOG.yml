@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typescript from 4.6.2 to 4.6.3
+      hash: fe72643d6beeedd3aa4405d595737cb189b64faa
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.97
+  title: "'Update typescript from 4.6.2 to 4.6.3'"
+  date: 2022-03-25T01:01:11.636Z
+- commits:
     - subject: Update resinci/jellyfish-test from v3.0.2 to v3.0.3
       hash: 205f8e4ae8ba99e26e231d6d01158eb5467308ad
       body: ""
