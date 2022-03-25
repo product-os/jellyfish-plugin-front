@@ -1,8 +1,8 @@
 import * as assert from '@balena/jellyfish-assert';
 import {
+	errors as workerErrors,
 	Integration,
 	IntegrationDefinition,
-	errors as workerErrors,
 } from '@balena/jellyfish-worker';
 import axios from 'axios';
 import Bluebird from 'bluebird';

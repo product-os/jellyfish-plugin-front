@@ -1,5 +1,5 @@
 import { mirror } from '@balena/jellyfish-plugin-default';
-import { ActionDefinition } from '@balena/jellyfish-worker';
+import type { ActionDefinition } from '@balena/jellyfish-worker';
 
 const handler: ActionDefinition['handler'] = async (
 	session,
