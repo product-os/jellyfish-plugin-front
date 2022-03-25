@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.98 - 2022-03-25
+
+* Bump internal deps [Josh Bowling]
+
 ## 2.0.97 - 2022-03-25
 
 * Update typescript from 4.6.2 to 4.6.3 [Renovate Bot]
