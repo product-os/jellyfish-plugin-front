@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update external-non-major
+      hash: c7d2c948e29b8da0b2560e62d57ac55a734fd1e7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.99
+  title: "'Update external-non-major'"
+  date: 2022-03-26T00:05:33.918Z
+- commits:
     - subject: Bump internal deps
       hash: 4c94bfcf2fdb76c4da5bb68e25ec4ccff0e69399
       body: ""
