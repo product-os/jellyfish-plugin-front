@@ -49,7 +49,7 @@
     "@balena/jellyfish-assert": "^1.2.23",
     "@balena/jellyfish-environment": "^9.1.9",
     "@balena/jellyfish-plugin-default": "^24.0.57",
-    "@balena/jellyfish-worker": "^21.1.13",
+    "@balena/jellyfish-worker": "22.0.0-joshbwlng-stream-05eabb1a01bf1da4d4180fe27241621b71bc0c8d",
     "axios": "^0.26.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.1",
