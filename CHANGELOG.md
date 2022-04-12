@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.123 - 2022-04-12
+
+* Update @balena/jellyfish-worker from 21.1.13 to 21.2.5 [Renovate Bot]
+
 ## 2.0.122 - 2022-04-12
 
 * 🔄 Synced file(s) with product-os/secrets [joshbwlng]
