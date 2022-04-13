@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.126 - 2022-04-13
+
+* Update secrets [Josh Bowling]
+
 ## 2.0.125 - 2022-04-12
 
 * Update resinci/jellyfish-test from v3.0.6 to v3.0.7 [Renovate Bot]
