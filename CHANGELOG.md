@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.128 - 2022-04-13
+
+* 🔄 Synced file(s) with product-os/secrets [joshbwlng]
+
 ## 2.0.127 - 2022-04-13
 
 * Update secrets [Josh Bowling]
