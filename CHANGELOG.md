@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.131 - 2022-04-14
+
+* Update secrets [Josh Bowling]
+
 ## 2.0.130 - 2022-04-13
 
 * Update internal-patch [Renovate Bot]
