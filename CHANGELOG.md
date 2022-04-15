@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.134 - 2022-04-15
+
+* 🔄 Synced file(s) with product-os/jellyfish-config [joshbwlng]
+
 ## 2.0.133 - 2022-04-15
 
 * Bring secrets in with submodule [Josh Bowling]
