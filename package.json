@@ -46,10 +46,10 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@balena/jellyfish-assert": "^1.2.24",
-    "@balena/jellyfish-environment": "^9.1.16",
-    "@balena/jellyfish-plugin-default": "^24.0.72",
-    "@balena/jellyfish-worker": "^21.2.7",
+    "@balena/jellyfish-assert": "^1.2.25",
+    "@balena/jellyfish-environment": "^9.1.19",
+    "@balena/jellyfish-plugin-default": "^24.0.73",
+    "@balena/jellyfish-worker": "^21.2.8",
     "axios": "^0.26.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.1",
@@ -61,10 +61,10 @@
     "native-url": "^0.3.4"
   },
   "devDependencies": {
-    "@balena/jellyfish-config": "^2.0.5",
-    "@balena/jellyfish-logger": "^5.0.19",
+    "@balena/jellyfish-config": "^2.0.6",
+    "@balena/jellyfish-logger": "^5.0.21",
     "@balena/jellyfish-plugin-product-os": "^4.0.58",
-    "@balena/jellyfish-types": "^2.0.4",
+    "@balena/jellyfish-types": "^2.0.5",
     "@balena/lint": "^6.2.0",
     "@types/bluebird": "^3.5.36",
     "@types/intercom-client": "^2.11.13",
