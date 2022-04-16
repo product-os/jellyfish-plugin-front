@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update external-non-major
+      hash: e3f66a8f88cb7901fe4c10018bec50b6c489fe3e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.138
+  title: "'Update external-non-major'"
+  date: 2022-04-16T06:35:29.191Z
+- commits:
     - subject: Bump secrets submodule
       hash: 1fbe47428ffca1a284323bacd3322c44711eaafb
       body: ""

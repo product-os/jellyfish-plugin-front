@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.138 - 2022-04-16
+
+* Update external-non-major [Renovate Bot]
+
 ## 2.0.137 - 2022-04-16
 
 * Bump secrets submodule [Josh Bowling]
