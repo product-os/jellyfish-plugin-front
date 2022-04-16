@@ -1,4 +1,18 @@
 - commits:
+    - subject: Bump secrets submodule
+      hash: 1fbe47428ffca1a284323bacd3322c44711eaafb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 2.0.137
+  title: "'Bump secrets submodule'"
+  date: 2022-04-16T02:07:01.184Z
+- commits:
     - subject: Update internal-patch
       hash: 68c48be03b049f4d05a84b81e27f119180ef37ec
       body: ""
