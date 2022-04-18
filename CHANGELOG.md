@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 2.0.142 - 2022-04-18
+
+* Update internal-patch [Renovate Bot]
+
 ## 2.0.141 - 2022-04-18
 
 * Update @balena/jellyfish-worker from 21.2.12 to 22.0.0 [Josh Bowling]
