@@ -48,8 +48,8 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.2.26",
     "@balena/jellyfish-environment": "^10.0.2",
-    "@balena/jellyfish-plugin-default": "^24.0.85",
-    "@balena/jellyfish-worker": "^22.1.8",
+    "@balena/jellyfish-plugin-default": "^24.0.86",
+    "@balena/jellyfish-worker": "^22.1.9",
     "axios": "^0.26.1",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.1",
@@ -63,7 +63,7 @@
   "devDependencies": {
     "@balena/jellyfish-config": "^2.0.6",
     "@balena/jellyfish-logger": "^5.0.24",
-    "@balena/jellyfish-plugin-product-os": "^5.0.2",
+    "@balena/jellyfish-plugin-product-os": "^5.0.5",
     "@balena/jellyfish-types": "^2.0.5",
     "@balena/lint": "^6.2.0",
     "@types/bluebird": "^3.5.36",
