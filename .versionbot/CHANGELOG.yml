@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update to worker 24
+      hash: 06ff678e76f2c33bff58daaca1af7b1c922be048
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: karaxuna
+      nested: []
+  version: 3.0.0
+  title: "'Update to worker 24'"
+  date: 2022-05-11T07:15:15.141Z
+- commits:
     - subject: Update internal-patch
       hash: 891a2454ed55035e7fda0207c52e9529ed2753fe
       body: ""

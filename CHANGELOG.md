@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 3.0.0 - 2022-05-11
+
+* Update to worker 24 [karaxuna]
+
 ## 2.0.174 - 2022-05-10
 
 * Update internal-patch [Renovate Bot]
