@@ -1808,6 +1808,8 @@ export class FrontIntegration implements Integration {
 }
 
 export const frontIntegrationDefinition: IntegrationDefinition = {
+	slug: SLUG,
+
 	initialize: async (options) => new FrontIntegration(options),
 
 	// Front doesn't seem to offer any webhook security mechanism
