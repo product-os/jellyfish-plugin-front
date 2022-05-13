@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 4.0.0 - 2022-05-13
+
+* Update worker to v26 [karaxuna]
+* Update @balena/jellyfish-environment from 11.0.3 to 12.0.0 [Renovate Bot]
+
 ## 3.0.0 - 2022-05-11
 
 * Update to worker 24 [karaxuna]
