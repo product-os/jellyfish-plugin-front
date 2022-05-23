@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.6 - 2022-05-23
+
+* Update internal-patch [Renovate Bot]
+* Update resinci/jellyfish-test from v3.0.12 to v3.0.13 [Renovate Bot]
+
 ## 5.0.5 - 2022-05-21
 
 * Update external-non-major [Renovate Bot]
