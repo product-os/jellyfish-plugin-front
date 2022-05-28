@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 27.0.3 to 27.1.0
+      hash: bb7674c1e263c3444731d61ccf7b3639c3e49514
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.8
+  title: "'Update @balena/jellyfish-worker from 27.0.3 to 27.1.0'"
+  date: 2022-05-27T01:59:31.099Z
+- commits:
     - subject: Update internal-patch (internal patch bumps)
       hash: 16dfbeec16ab009e7c82a6b47b92ad07ba4da086
       body: ""
