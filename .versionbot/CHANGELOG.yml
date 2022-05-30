@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update jest packages
+      hash: dbdbd95960367fedc74767751a629e706150ddde
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 5.0.10
+  title: "'Update jest packages'"
+  date: 2022-05-30T02:46:12.146Z
+- commits:
     - subject: Update external-non-major (external non-major bumps)
       hash: a0aa61cc4ec7a7ef3ea513a9ce5459abd0312034
       body: ""

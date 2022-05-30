@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.10 - 2022-05-30
+
+* Update jest packages [Josh Bowling]
+
 ## 5.0.9 - 2022-05-28
 
 * Update external-non-major (external non-major bumps) [Renovate Bot]
