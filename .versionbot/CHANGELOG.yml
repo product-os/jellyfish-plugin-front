@@ -1,4 +1,40 @@
 - commits:
+    - subject: Update typedoc from 0.22.16 to 0.22.17
+      hash: 1c64faf0db2cc09b624717564505b238b41fb490
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update @balena/jellyfish-plugin-default from 27.3.1 to 27.4.2
+      hash: 24ec0f8238a2ba512f3d162f20221da0771dd3fe
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update @balena/jellyfish-logger from 5.0.33 to 5.1.0
+      hash: 382f8a0eb338c6e12c3a3ffd672a41fc91c0432b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+    - subject: Update typedoc from 0.22.15 to 0.22.16
+      hash: d0d69f0fbd592d2ad046679a652bcbfd7d72d608
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.11
+  title: "'Update typedoc from 0.22.16 to 0.22.17'"
+  date: 2022-06-01T04:33:30.210Z
+- commits:
     - subject: Update jest packages
       hash: dbdbd95960367fedc74767751a629e706150ddde
       body: ""

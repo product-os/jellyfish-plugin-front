@@ -4,6 +4,13 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.11 - 2022-06-01
+
+* Update typedoc from 0.22.16 to 0.22.17 [Renovate Bot]
+* Update @balena/jellyfish-plugin-default from 27.3.1 to 27.4.2 [Renovate Bot]
+* Update @balena/jellyfish-logger from 5.0.33 to 5.1.0 [Renovate Bot]
+* Update typedoc from 0.22.15 to 0.22.16 [Renovate Bot]
+
 ## 5.0.10 - 2022-05-30
 
 * Update jest packages [Josh Bowling]
