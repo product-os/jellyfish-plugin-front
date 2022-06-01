@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.13 - 2022-06-01
+
+* Update typescript from 4.6.4 to 4.7.2 [Renovate Bot]
+
 ## 5.0.12 - 2022-06-01
 
 * Update @balena/jellyfish-worker from 27.1.0 to 27.2.1 [Renovate Bot]
