@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 27.2.1 to 28.0.0
+      hash: 29239eaf6f0153748f1869f0b17d186614d62c9e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.14
+  title: "'Update @balena/jellyfish-worker from 27.2.1 to 28.0.0'"
+  date: 2022-06-02T05:40:10.296Z
+- commits:
     - subject: Update typescript from 4.6.4 to 4.7.2
       hash: dd66dad38e39dbcd8f657882ee292b5f1ecd1dbf
       body: ""
