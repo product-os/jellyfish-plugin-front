@@ -3,6 +3,7 @@ import {
 	errors as workerErrors,
 	Integration,
 	IntegrationDefinition,
+	SequenceItem,
 } from '@balena/jellyfish-worker';
 import axios from 'axios';
 import Bluebird from 'bluebird';
@@ -1102,7 +1103,7 @@ export class FrontIntegration implements Integration {
 		return;
 	}
 
-	public async translate(event: any): Promise<any> {
+	public async translate(event: any): Promise<SequenceItem[]> {
 		if (!this.options.token.api || !this.options.token.intercom) {
 			return [];
 		}
@@ -1309,7 +1310,7 @@ export class FrontIntegration implements Integration {
 		]);
 	}
 
-	public async mirror(card: any, options: any): Promise<any> {
+	public async mirror(card: any, options: any): Promise<SequenceItem[]> {
 		if (!this.options.token.api || !this.options.token.intercom) {
 			return [];
 		}
