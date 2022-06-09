@@ -10,59 +10,35 @@ export const triggeredActionIntegrationFrontMirrorEvent: TriggeredActionContract
 			schedule: 'sync',
 			filter: {
 				type: 'object',
-				anyOf: [
-					{
-						required: ['type'],
-						properties: {
-							type: {
-								type: 'string',
-								enum: ['message@1.0.0', 'whisper@1.0.0'],
-							},
-						},
+				required: ['type'],
+				properties: {
+					type: {
+						type: 'string',
+						enum: ['message@1.0.0', 'whisper@1.0.0'],
 					},
-					{
-						required: ['type', 'data'],
+				},
+				$$links: {
+					'is attached to': {
+						type: 'object',
 						properties: {
 							type: {
-								type: 'string',
 								const: 'support-thread@1.0.0',
 							},
-						},
-						allOf: [
-							{
+							data: {
+								type: 'object',
 								properties: {
-									// need to be specified separately, because we want to run on any changes
-									// within these properties
-									data: {
-										type: 'object',
-									},
-									tags: {
+									mirrors: {
 										type: 'array',
-									},
-								},
-							},
-							{
-								properties: {
-									data: {
-										type: 'object',
-										required: ['inbox', 'mirrors'],
-										properties: {
-											inbox: {
-												type: 'string',
-												enum: [
-													'S/Paid_Support',
-													'D/Security',
-													'Jellyfish Test Inbox',
-													'Jellyfish Testfront',
-												],
-											},
+										contains: {
+											type: 'string',
+											pattern: 'frontapp.com',
 										},
 									},
 								},
 							},
-						],
+						},
 					},
-				],
+				},
 			},
 			action: 'action-integration-front-mirror-event@1.0.0',
 			target: {
