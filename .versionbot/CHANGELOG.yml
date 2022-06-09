@@ -1,4 +1,39 @@
 - commits:
+    - subject: Be more specific when matching messages and whispers in trigger
+      hash: 058773cb052675229a78755ecefa5438aa2f03c1
+      body: |
+        This change makes the triggered action check that the support thread is
+        mirrored to Front before syncing, as opposed to checking inside the
+        mirror method.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+    - subject: Use correct return type for mirror and translate methods
+      hash: 9c0a00676d7bbf1579d90a36e77ece08f7611849
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+    - subject: Update @balena/jellyfish-worker from 29.0.0 to 29.1.0
+      hash: 35e266d03138e8f2a2805db7a78caf598a241ed0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 5.0.18
+  title: "'Make mirror trigger more specific'"
+  date: 2022-06-09T13:05:37.453Z
+- commits:
     - subject: Update internal packages
       hash: ee0a3710b91c833bef934dce6048382a78b8b0e8
       body: ""

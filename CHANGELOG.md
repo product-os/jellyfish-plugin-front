@@ -4,6 +4,12 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.18 - 2022-06-09
+
+* Be more specific when matching messages and whispers in trigger [Lucian Buzzo]
+* Use correct return type for mirror and translate methods [Lucian Buzzo]
+* Update @balena/jellyfish-worker from 29.0.0 to 29.1.0 [Renovate Bot]
+
 ## 5.0.17 - 2022-06-08
 
 * Update internal packages [Josh Bowling]
