@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update dependencies
+      hash: b7e1f684b26c4807c54b121c0d09f542b2b2f580
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 5.0.19
+  title: "'Update dependencies'"
+  date: 2022-06-12T11:48:40.144Z
+- commits:
     - subject: Be more specific when matching messages and whispers in trigger
       hash: 058773cb052675229a78755ecefa5438aa2f03c1
       body: |

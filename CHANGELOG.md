@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.19 - 2022-06-12
+
+* Update dependencies [Josh Bowling]
+
 ## 5.0.18 - 2022-06-09
 
 * Be more specific when matching messages and whispers in trigger [Lucian Buzzo]
