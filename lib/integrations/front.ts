@@ -1032,13 +1032,15 @@ async function getConversationChannel(
 		[],
 	);
 
-	const channel = _.find(channelsResponse._results, (result) => {
+	const channels = _.filter(channelsResponse._results, (result) => {
 		return (
 			lastMessageAddresses.includes(result.address) ||
 			lastMessageAddresses.includes(result.name) ||
 			lastMessageAddresses.includes(result.send_as)
 		);
 	});
+
+	const channel = _.first(channels);
 
 	assert.INTERNAL(null, channel, errors.SyncNoExternalResource, () => {
 		return [
@@ -1047,6 +1049,14 @@ async function getConversationChannel(
 			`and addresses ${lastMessageAddresses.join(', ')}`,
 		].join(' ');
 	});
+
+	if (channels.length > 0) {
+		context.log.info('Front channel found', {
+			channels: channels.map((c) => _.omit(c, ['_links'])),
+			addresses: lastMessageAddresses,
+			conversation: conversationId,
+		});
+	}
 
 	context.log.info('Front channel found', {
 		channel: _.omit(channel, ['_links']),
