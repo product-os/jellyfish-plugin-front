@@ -1,4 +1,20 @@
 - commits:
+    - subject: Add debug data for channels
+      hash: 9a957bcfa784f35577461273a0ebb677f19b4ff5
+      body: |
+        In some instances the channel chosen is private, this debug info will
+        allow us to see if there was a potential alternative.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 5.0.20
+  title: "'Add debug data for channels'"
+  date: 2022-06-13T08:03:22.070Z
+- commits:
     - subject: Update dependencies
       hash: b7e1f684b26c4807c54b121c0d09f542b2b2f580
       body: ""

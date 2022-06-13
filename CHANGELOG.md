@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.20 - 2022-06-13
+
+* Add debug data for channels [Lucian Buzzo]
+
 ## 5.0.19 - 2022-06-12
 
 * Update dependencies [Josh Bowling]
