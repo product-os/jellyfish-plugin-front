@@ -1,4 +1,18 @@
 - commits:
+    - subject: Use official Postgres 14 image
+      hash: f8ce516c27e4fe4fb76e0961e4ea1b563f1db8a3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 5.0.22
+  title: "'Use official Postgres 14 image'"
+  date: 2022-06-14T04:51:16.772Z
+- commits:
     - subject: Update jellyfish-worker to 3.0.11
       hash: 9f63fcc86acbb2135649dd287a14ac3b9d463394
       body: ""
