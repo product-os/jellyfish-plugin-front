@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update jellyfish-worker to 3.0.11
+      hash: 9f63fcc86acbb2135649dd287a14ac3b9d463394
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 5.0.21
+  title: "'Update jellyfish-worker to 3.0.11'"
+  date: 2022-06-14T02:44:34.684Z
+- commits:
     - subject: Add debug data for channels
       hash: 9a957bcfa784f35577461273a0ebb677f19b4ff5
       body: |

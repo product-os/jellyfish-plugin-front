@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.21 - 2022-06-14
+
+* Update jellyfish-worker to 3.0.11 [Josh Bowling]
+
 ## 5.0.20 - 2022-06-13
 
 * Add debug data for channels [Lucian Buzzo]
