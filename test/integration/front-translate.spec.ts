@@ -9,7 +9,6 @@ import webhooks from './webhooks';
 
 const TOKEN = defaultEnvironment.integration.front;
 let ctx: workerTestUtils.TestContext;
-let typeContractCount = 0;
 
 beforeAll(async () => {
 	ctx = await workerTestUtils.newContext({
@@ -45,24 +44,12 @@ beforeAll(async () => {
 		}),
 	);
 	ctx.worker.setTriggers(ctx.logContext, []);
-	typeContractCount = Object.keys(ctx.worker.typeContracts).length;
 
 	await workerTestUtils.translateBeforeAll(ctx);
 });
 
 afterEach(async () => {
 	await workerTestUtils.translateAfterEach(ctx);
-
-	// Ensure worker instance has all type contracts for next test
-	await ctx.retry(
-		() => {
-			return Object.keys(ctx.worker.typeContracts).length;
-		},
-		(currentTypeContractCount: number) => {
-			return currentTypeContractCount === typeContractCount;
-		},
-		30,
-	);
 });
 
 afterAll(() => {
