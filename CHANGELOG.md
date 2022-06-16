@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.23 - 2022-06-16
+
+* Update internal packages [Josh Bowling]
+
 ## 5.0.22 - 2022-06-14
 
 * Use official Postgres 14 image [Josh Bowling]
