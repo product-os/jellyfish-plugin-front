@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.24 - 2022-06-18
+
+* Update typescript from 4.7.3 to 4.7.4 [Josh Bowling]
+
 ## 5.0.23 - 2022-06-16
 
 * Update internal packages [Josh Bowling]
