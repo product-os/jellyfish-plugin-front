@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.25 - 2022-06-18
+
+* Use standard redis image [Josh Bowling]
+
 ## 5.0.24 - 2022-06-18
 
 * Update typescript from 4.7.3 to 4.7.4 [Josh Bowling]
