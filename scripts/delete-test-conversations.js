@@ -1,4 +1,4 @@
-/* eslint-disable no-underscore-dangle, id-length */
+#!/usr/bin/env node
 
 /*
  * This script looks through Front inboxes and deletes conversations that were created two or more days ago.
