@@ -1,4 +1,20 @@
 - commits:
+    - subject: Sync sales-threads
+      hash: 0e2edd7ac0fdf0f5b2e124e16f87cf38dc7c4594
+      body: |
+        This change fixes a bug where sales threads would not be matched by the
+        mirror triggers.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 5.0.28
+  title: "'Sync sales-threads'"
+  date: 2022-06-20T08:51:47.756Z
+- commits:
     - subject: "CI: Use standard node image"
       hash: ee2a6aba05ee6adbd1445003a911e986d1be8d59
       body: ""

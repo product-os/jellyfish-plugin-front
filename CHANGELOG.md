@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.28 - 2022-06-20
+
+* Sync sales-threads [Lucian Buzzo]
+
 ## 5.0.27 - 2022-06-20
 
 * CI: Use standard node image [Josh Bowling]
