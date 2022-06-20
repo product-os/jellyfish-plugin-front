@@ -103,9 +103,10 @@ const getInbox = async () => {
 	return inbox;
 };
 
-async function createSupportThread(
+async function createThread(
 	title: string,
 	description: string,
+	type: 'support-thread' | 'sales-thread' = 'support-thread',
 ): Promise<any> {
 	const inboundResult = await retryWhile429(() => {
 		return front.message.receiveCustom({
@@ -134,9 +135,10 @@ async function createSupportThread(
 		});
 	});
 
-	const supportThread = await ctx.createSupportThread(
+	const thread = ctx.createContract(
 		user.id,
 		session.id,
+		`${type}@1.0.0`,
 		title,
 		{
 			environment: 'production',
@@ -148,11 +150,12 @@ async function createSupportThread(
 			mentionsUser: [],
 		},
 	);
-	return supportThread;
+
+	return thread;
 }
 
 test('should mirror support thread status', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -218,7 +221,7 @@ test('should mirror support thread status', async () => {
 });
 
 test('should mirror whisper on insert support threads', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -249,7 +252,7 @@ test('should mirror whisper on insert support threads', async () => {
 });
 
 test('should mirror message insert on support threads', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -278,7 +281,7 @@ test('should mirror message insert on support threads', async () => {
 });
 
 test('should be able to tag an unassigned conversation', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -328,7 +331,7 @@ test('should be able to tag an unassigned conversation', async () => {
 });
 
 test('should be able to comment using a complex code', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -360,7 +363,7 @@ test('should be able to comment using a complex code', async () => {
 });
 
 test('should be able to comment using triple backticks', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -391,7 +394,7 @@ test('should be able to comment using triple backticks', async () => {
 });
 
 test('should be able to comment using brackets', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -422,7 +425,7 @@ test('should be able to comment using brackets', async () => {
 });
 
 test('should be able to close an inbound message', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -467,7 +470,7 @@ test('should be able to close an inbound message', async () => {
 });
 
 test('should be able to archive an inbound message', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -512,7 +515,7 @@ test('should be able to archive an inbound message', async () => {
 });
 
 test('should be able to reply to a moved inbound message', async () => {
-	const supportThread = await createSupportThread(
+	const supportThread = await createThread(
 		`My Issue ${uuid()}`,
 		`Foo Bar ${uuid()}`,
 	);
@@ -546,4 +549,36 @@ test('should be able to reply to a moved inbound message', async () => {
 		},
 	);
 	expect(messages._results[0].body).toEqual(`<p>${message}</p>\n`);
+});
+
+test('should be able to comment on a sales thread', async () => {
+	const supportThread = await createThread(
+		`My Issue ${uuid()}`,
+		`Foo Bar ${uuid()}`,
+		'sales-thread',
+	);
+
+	const body = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${uuid()}`;
+	const whisper: any = await ctx.createWhisper(
+		user.id,
+		session.id,
+		supportThread,
+		body,
+	);
+	assert(whisper !== null);
+
+	// Give a small delay for the comment to become available on Front's API
+	await Bluebird.delay(1000);
+
+	// Retrieve the comment from Front's API using the mirror ID
+	const comment = await retryWhile404(async () => {
+		return retryWhile429(() => {
+			return front.comment.get({
+				comment_id: whisper.data.mirrors[0].split('/').pop(),
+			});
+		});
+	});
+
+	// Double check that it's the same comment body
+	expect(comment.body).toEqual(body);
 });

@@ -22,7 +22,7 @@ export const triggeredActionIntegrationFrontMirrorEvent: TriggeredActionContract
 						type: 'object',
 						properties: {
 							type: {
-								const: 'support-thread@1.0.0',
+								enum: ['support-thread@1.0.0', 'sales-thread@1.0.0'],
 							},
 							data: {
 								type: 'object',
