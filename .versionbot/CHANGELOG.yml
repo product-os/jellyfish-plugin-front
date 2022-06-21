@@ -1,4 +1,18 @@
 - commits:
+    - subject: Bump dependencies
+      hash: 3d74ef87cbcfb5a82d41f970f57c2e8a3aaf2807
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 5.0.29
+  title: "'Bump dependencies'"
+  date: 2022-06-21T02:27:16.166Z
+- commits:
     - subject: Sync sales-threads
       hash: 0e2edd7ac0fdf0f5b2e124e16f87cf38dc7c4594
       body: |
