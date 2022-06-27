@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.34 - 2022-06-27
+
+* Update: update dependencies (internal patch bumps) [renovate[bot]]
+
 ## 5.0.33 - 2022-06-27
 
 * Update: update internal-patch (internal patch bumps) [renovate[bot]]
