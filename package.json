@@ -46,10 +46,10 @@
   "author": "Balena.io. <hello@balena.io>",
   "license": "AGPL-3.0",
   "dependencies": {
-    "@balena/jellyfish-assert": "^1.2.38",
-    "@balena/jellyfish-environment": "^12.0.11",
-    "@balena/jellyfish-plugin-default": "^27.8.13",
-    "@balena/jellyfish-worker": "^30.0.21",
+    "@balena/jellyfish-assert": "^1.2.39",
+    "@balena/jellyfish-environment": "^12.0.12",
+    "@balena/jellyfish-plugin-default": "^27.8.19",
+    "@balena/jellyfish-worker": "^30.0.25",
     "axios": "^0.27.2",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.1",
@@ -61,8 +61,8 @@
     "native-url": "^0.3.4"
   },
   "devDependencies": {
-    "@balena/jellyfish-logger": "^5.1.6",
-    "@balena/jellyfish-plugin-product-os": "^7.0.27",
+    "@balena/jellyfish-logger": "^5.1.7",
+    "@balena/jellyfish-plugin-product-os": "^7.0.28",
     "@balena/jellyfish-types": "^2.0.5",
     "@balena/lint": "^6.2.0",
     "@types/bluebird": "^3.5.36",
