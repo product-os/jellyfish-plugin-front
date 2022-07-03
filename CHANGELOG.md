@@ -4,6 +4,14 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.35 - 2022-07-02
+
+* Update typedoc from 0.23.3 to 0.23.5 [renovate[bot]]
+* Update typedoc from 0.23.2 to 0.23.3 [renovate[bot]]
+* Update @balena/jellyfish-environment from 12.0.12 to 12.1.0 [renovate[bot]]
+* Update @balena/jellyfish-worker from 30.0.25 to 30.1.0 [renovate[bot]]
+* Update: update typedoc from 0.23.1 to 0.23.2 [renovate[bot]]
+
 ## 5.0.34 - 2022-06-27
 
 * Update: update dependencies (internal patch bumps) [renovate[bot]]
