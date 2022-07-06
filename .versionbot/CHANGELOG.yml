@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-plugin-default from 27.8.19 to 27.9.1
+      hash: 8cd8098a8da0fcf4a4cb87e8dedbcb3d837fd6dd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 5.0.36
+  title: "'Update @balena/jellyfish-plugin-default from 27.8.19 to 27.9.1'"
+  date: 2022-07-06T03:12:34.488Z
+- commits:
     - subject: Update typedoc from 0.23.3 to 0.23.5
       hash: bae615d109d59414b6f34de2122c04ce5fc79599
       body: ""

@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.36 - 2022-07-06
+
+* Update @balena/jellyfish-plugin-default from 27.8.19 to 27.9.1 [renovate[bot]]
+
 ## 5.0.35 - 2022-07-02
 
 * Update typedoc from 0.23.3 to 0.23.5 [renovate[bot]]
