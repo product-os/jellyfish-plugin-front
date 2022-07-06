@@ -1,8 +1,8 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { defaultPlugin, testUtils } from '@balena/jellyfish-plugin-default';
 import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
-import { SessionContract } from '@balena/jellyfish-types/build/core';
 import { strict as assert } from 'assert';
+import type { SessionContract } from 'autumndb';
 import Bluebird from 'bluebird';
 import { Conversation, Front } from 'front-sdk';
 import _ from 'lodash';
