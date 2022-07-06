@@ -62,7 +62,7 @@
   },
   "devDependencies": {
     "@balena/jellyfish-logger": "^5.1.7",
-    "@balena/jellyfish-plugin-product-os": "^7.0.29",
+    "@balena/jellyfish-plugin-product-os": "^7.1.0",
     "@balena/jellyfish-types": "^2.0.5",
     "@balena/lint": "^6.2.0",
     "@types/bluebird": "^3.5.36",
