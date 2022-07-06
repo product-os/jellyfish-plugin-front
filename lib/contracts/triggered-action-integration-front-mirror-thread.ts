@@ -1,4 +1,4 @@
-import type { TriggeredActionContractDefinition } from '@balena/jellyfish-types/build/worker';
+import type { TriggeredActionContractDefinition } from '@balena/jellyfish-worker';
 
 export const triggeredActionIntegrationFrontMirrorThread: TriggeredActionContractDefinition =
 	{
