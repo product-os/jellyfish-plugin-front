@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typedoc from 0.23.5 to 0.23.6
+      hash: d9ded752b30cc41a1d831bd0990a4b461626685b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 5.0.38
+  title: "'Update typedoc from 0.23.5 to 0.23.6'"
+  date: 2022-07-09T01:54:58.679Z
+- commits:
     - subject: Drop jellyfish-types
       hash: f2cd3f20fa450d2737983350e3e681524761916c
       body: ""
