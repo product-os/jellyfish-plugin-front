@@ -1,6 +1,5 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { defaultPlugin } from '@balena/jellyfish-plugin-default';
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { testUtils as workerTestUtils } from '@balena/jellyfish-worker';
 import _ from 'lodash';
 import path from 'path';
@@ -12,7 +11,7 @@ let ctx: workerTestUtils.TestContext;
 
 beforeAll(async () => {
 	ctx = await workerTestUtils.newContext({
-		plugins: [productOsPlugin(), defaultPlugin(), frontPlugin()],
+		plugins: [defaultPlugin(), frontPlugin()],
 	});
 
 	// TODO: Improve translate test suite/protocol to avoid this
