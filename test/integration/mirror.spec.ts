@@ -1,6 +1,5 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { defaultPlugin, testUtils } from '@balena/jellyfish-plugin-default';
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { strict as assert } from 'assert';
 import type { SessionContract } from 'autumndb';
 import Bluebird from 'bluebird';
@@ -19,7 +18,7 @@ let session: SessionContract;
 
 beforeAll(async () => {
 	ctx = await testUtils.newContext({
-		plugins: [productOsPlugin(), defaultPlugin(), frontPlugin()],
+		plugins: [defaultPlugin(), frontPlugin()],
 	});
 
 	channel = await getChannel();
