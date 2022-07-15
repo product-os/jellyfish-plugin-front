@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.42 - 2022-07-15
+
+* Drop plugin-product-os [Josh Bowling]
+
 ## 5.0.41 - 2022-07-15
 
 * Update translate tests [Josh Bowling]
