@@ -80,7 +80,8 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div>Foo Bar</div>\n"
+          "message": "<div>Foo Bar</div>\n",
+          "reactions": {}
         }
       }
     },
@@ -106,7 +107,8 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": ""
+          "message": "",
+          "reactions": {}
         }
       }
     },

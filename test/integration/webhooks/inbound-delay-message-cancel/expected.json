@@ -43,7 +43,8 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div>Test</div>\n"
+          "message": "<div>Test</div>\n",
+          "reactions": {}
         }
       }
     },

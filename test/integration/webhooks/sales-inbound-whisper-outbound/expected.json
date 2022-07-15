@@ -51,7 +51,8 @@
               "url": "https://api2.frontapp.com/download/fil_691uv7n"
             }
           ],
-          "message": "Test<br><br>-- <br>Juan Cruz Viotti<br>Software Engineer<br><a href=\"https://www.jviotti.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.jviotti.com</a><br>"
+          "message": "Test<br><br>-- <br>Juan Cruz Viotti<br>Software Engineer<br><a href=\"https://www.jviotti.com\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.jviotti.com</a><br>",
+          "reactions": {}
         }
       }
     },
@@ -114,7 +115,8 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "This is mirrored in [flowdock sales thread 7HndgwH12oTQU4wMTpqSF9SbHkU](https://www.flowdock.com/app/rulemotion/s-sales/threads/7HndgwH12oTQU4wMTpqSF9SbHkU)\n[](https://www.balena-cloud.com?hidden=murmur&source=flowdock&flow=rulemotion/s-sales&thread=7HndgwH12oTQU4wMTpqSF9SbHkU&hmac=537b7c35482d33428454a74d430e475f7f345017570f3b003bfffbb2c2203f6b)"
+          "message": "This is mirrored in [flowdock sales thread 7HndgwH12oTQU4wMTpqSF9SbHkU](https://www.flowdock.com/app/rulemotion/s-sales/threads/7HndgwH12oTQU4wMTpqSF9SbHkU)\n[](https://www.balena-cloud.com?hidden=murmur&source=flowdock&flow=rulemotion/s-sales&thread=7HndgwH12oTQU4wMTpqSF9SbHkU&hmac=537b7c35482d33428454a74d430e475f7f345017570f3b003bfffbb2c2203f6b)",
+          "reactions": {}
         }
       }
     },
@@ -164,7 +166,8 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "Test whisper"
+          "message": "Test whisper",
+          "reactions": {}
         }
       }
     },
@@ -214,7 +217,8 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div>Test email reply</div><br><div class=\"front-signature fa-uid_3ceb624a81164f46da606d90470c85fb\"><div>—</div><div>Juan Cruz Viotti,</div><div>Software Engineer, Resin.io (https://resin.io)</div><div>twt: @resin_io</div></div><br><blockquote type=\"cite\" class=\"front-blockquote\">On July 19, 2019, 1:20 PM GMT+1 <a href=\"mailto:jv@jviotti.com\" target=\"_blank\" rel=\"noopener noreferrer\">jv@jviotti.com</a> wrote:<br /><br /><div id=\"fae_44t177n-n94dtz\">Test<br /><br />-- <br />Juan Cruz Viotti<br />Software Engineer<br /><a rel=\"noopener noreferrer\" href=\"https://www.jviotti.com/\" target=\"_blank\">https://www.jviotti.com</a><br /></div></blockquote>"
+          "message": "<div>Test email reply</div><br><div class=\"front-signature fa-uid_3ceb624a81164f46da606d90470c85fb\"><div>—</div><div>Juan Cruz Viotti,</div><div>Software Engineer, Resin.io (https://resin.io)</div><div>twt: @resin_io</div></div><br><blockquote type=\"cite\" class=\"front-blockquote\">On July 19, 2019, 1:20 PM GMT+1 <a href=\"mailto:jv@jviotti.com\" target=\"_blank\" rel=\"noopener noreferrer\">jv@jviotti.com</a> wrote:<br /><br /><div id=\"fae_44t177n-n94dtz\">Test<br /><br />-- <br />Juan Cruz Viotti<br />Software Engineer<br /><a rel=\"noopener noreferrer\" href=\"https://www.jviotti.com/\" target=\"_blank\">https://www.jviotti.com</a><br /></div></blockquote>",
+          "reactions": {}
         }
       }
     },

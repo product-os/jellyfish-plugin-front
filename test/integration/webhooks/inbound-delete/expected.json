@@ -43,7 +43,8 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div>Hey there</div>\n"
+          "message": "<div>Hey there</div>\n",
+          "reactions": {}
         }
       }
     },
