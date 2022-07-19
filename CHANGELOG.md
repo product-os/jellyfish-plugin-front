@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.44 - 2022-07-19
+
+* Drop plugin-default [Josh Bowling]
+
 ## 5.0.43 - 2022-07-16
 
 * Update @balena/jellyfish-worker from 31.2.0 to 31.4.0 [renovate[bot]]

@@ -1,4 +1,18 @@
 - commits:
+    - subject: Drop plugin-default
+      hash: 58338b9c42b6d1be2c68e8cb1408bf048bd58e09
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 5.0.44
+  title: "'Drop plugin-default'"
+  date: 2022-07-19T00:51:07.897Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 31.2.0 to 31.4.0
       hash: ab23e6b6a6976cdd9c189d15a7488bc8b3febdc9
       body: ""
