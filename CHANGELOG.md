@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 5.0.45 - 2022-07-19
+
+* Update typedoc from 0.23.7 to 0.23.8 [renovate[bot]]
+
 ## 5.0.44 - 2022-07-19
 
 * Drop plugin-default [Josh Bowling]
