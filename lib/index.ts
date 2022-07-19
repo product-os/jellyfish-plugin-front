@@ -17,11 +17,5 @@ export const frontPlugin = (): PluginDefinition => {
 		contracts,
 		actions,
 		integrationMap: integrations,
-		requires: [
-			{
-				slug: 'plugin-default',
-				version: '>=21.x',
-			},
-		],
 	};
 };

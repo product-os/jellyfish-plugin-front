@@ -1,5 +1,4 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
-import { defaultPlugin } from '@balena/jellyfish-plugin-default';
 import { PluginManager } from '@balena/jellyfish-worker';
 import axios from 'axios';
 import FormData from 'form-data';
@@ -12,7 +11,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { frontPlugin } from '../../../lib';
 import { FrontIntegration } from '../../../lib/integrations/front';
 
-const pluginManager = new PluginManager([defaultPlugin(), frontPlugin()]);
+const pluginManager = new PluginManager([frontPlugin()]);
 const frontIntegration = pluginManager.getSyncIntegrations().front;
 
 const context: any = {

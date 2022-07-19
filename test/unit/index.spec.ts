@@ -1,8 +1,7 @@
-import { defaultPlugin } from '@balena/jellyfish-plugin-default';
 import { PluginManager } from '@balena/jellyfish-worker';
 import { frontPlugin } from '../../lib';
 
-const pluginManager = new PluginManager([defaultPlugin(), frontPlugin()]);
+const pluginManager = new PluginManager([frontPlugin()]);
 
 test('Expected cards are loaded', () => {
 	const cards = pluginManager.getCards();
