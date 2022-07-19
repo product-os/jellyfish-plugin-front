@@ -1,4 +1,4 @@
-import type { Contract } from 'autumndb';
+import type { AutumnDBSession, Contract } from 'autumndb';
 import { WorkerContext } from '@balena/jellyfish-worker';
 import _ from 'lodash';
 import { v4 as uuidv4 } from 'uuid';
@@ -33,6 +33,10 @@ function makeContract(type: string, data = {}, slug = ''): Contract {
 		data,
 	};
 }
+
+const mockSession: AutumnDBSession = {
+	actor: makeContract('user'),
+};
 
 /**
  * @summary Generate and return an action request object
@@ -90,7 +94,7 @@ describe('action-integration-front-mirror-event', () => {
 	test('should return a list of cards', async () => {
 		expect.assertions(1);
 		const result = await handler(
-			`test-${uuidv4()}`,
+			mockSession,
 			context as WorkerContext,
 			makeContract('user'),
 			makeRequest(),

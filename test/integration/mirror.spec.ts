@@ -1,7 +1,7 @@
 import { defaultEnvironment } from '@balena/jellyfish-environment';
 import { testUtils } from '@balena/jellyfish-worker';
 import { strict as assert } from 'assert';
-import type { SessionContract } from 'autumndb';
+import type { AutumnDBSession } from 'autumndb';
 import Bluebird from 'bluebird';
 import { Conversation, Front } from 'front-sdk';
 import _ from 'lodash';
@@ -14,7 +14,19 @@ const front = new Front(defaultEnvironment.integration.front.api);
 let channel: any = {};
 let remoteInbox: any = {};
 let user: any = {};
-let session: SessionContract;
+let session: AutumnDBSession;
+
+const retry = async (fn: any, times = 5, delay = 500): Promise<any> => {
+	while (times > 0) {
+		try {
+			return await fn();
+		} catch (error: any) {
+			times--;
+			await Bluebird.delay(delay);
+		}
+	}
+	throw new Error('Ran out of attempts');
+};
 
 beforeAll(async () => {
 	ctx = await testUtils.newContext({
@@ -25,7 +37,7 @@ beforeAll(async () => {
 	remoteInbox = await getInbox();
 	const teammate = await getTeammate();
 	user = await ctx.createUser(teammate.replace(/_/g, '-'));
-	session = await ctx.createSession(user);
+	session = { actor: user };
 });
 
 afterAll(() => {
@@ -134,21 +146,15 @@ async function createThread(
 		});
 	});
 
-	const thread = ctx.createContract(
-		user.id,
-		session.id,
-		`${type}@1.0.0`,
-		title,
-		{
-			environment: 'production',
-			inbox: remoteInbox.name,
-			status: 'open',
-			mirrors: [message._links.related.conversation],
-			description,
-			alertsUser: [],
-			mentionsUser: [],
-		},
-	);
+	const thread = ctx.createContract(user.id, session, `${type}@1.0.0`, title, {
+		environment: 'production',
+		inbox: remoteInbox.name,
+		status: 'open',
+		mirrors: [message._links.related.conversation],
+		description,
+		alertsUser: [],
+		mentionsUser: [],
+	});
 
 	return thread;
 }
@@ -164,7 +170,7 @@ describe('mirror', () => {
 		// Update status to closed
 		await ctx.worker.patchCard(
 			ctx.logContext,
-			session.id,
+			session,
 			ctx.worker.typeContracts[supportThread.type],
 			{
 				attachEvents: true,
@@ -179,7 +185,7 @@ describe('mirror', () => {
 				},
 			],
 		);
-		await ctx.flushAll(session.id);
+		await ctx.flushAll(session);
 
 		// Check that the remote converstion status has updated
 		await ctx.retry(
@@ -229,7 +235,7 @@ describe('mirror', () => {
 		const body = uuid();
 		const whisper: any = await ctx.createWhisper(
 			user.id,
-			session.id,
+			session,
 			supportThread,
 			body,
 		);
@@ -251,23 +257,25 @@ describe('mirror', () => {
 		expect(comment.body).toEqual(body);
 	});
 
-	test('should mirror message insert on support threads', async () => {
+	test.only('should mirror message insert on support threads', async () => {
 		const supportThread = await createThread(
 			`My Issue ${uuid()}`,
 			`Foo Bar ${uuid()}`,
 		);
 
+		await Bluebird.delay(5000);
+
 		const body = uuid();
 		const message: any = await ctx.createMessage(
 			user.id,
-			session.id,
+			session,
 			supportThread,
 			body,
 		);
 		assert(message !== null);
 
 		// Give a small delay for the comment to become available on Front's API
-		await Bluebird.delay(1000);
+		await Bluebird.delay(5000);
 
 		// Retrieve the comment from Front's API using the mirror ID
 		const frontMessage = await retryWhile404(async () => {
@@ -297,7 +305,7 @@ describe('mirror', () => {
 
 		await ctx.worker.patchCard(
 			ctx.logContext,
-			session.id,
+			session,
 			ctx.worker.typeContracts[supportThread.type],
 			{
 				attachEvents: true,
@@ -312,7 +320,7 @@ describe('mirror', () => {
 				},
 			],
 		);
-		await ctx.flushAll(session.id);
+		await ctx.flushAll(session);
 
 		const result = await ctx.retry(
 			() => {
@@ -340,7 +348,7 @@ describe('mirror', () => {
 			"One last piece of the puzzle is to get the image url to pull. To get that you can run this from the browser console or sdk. \n\n`(await sdk.pine.get({ resource: 'release', id: <release-id>, options: { $expand: { image__is_part_of__release: { $expand: { image: { $select: ['is_stored_at__image_location'] } } }} } })).image__is_part_of__release.map(({ image }) => image[0].is_stored_at__image_location )`\n";
 		const whisper: any = await ctx.createWhisper(
 			user.id,
-			session.id,
+			session,
 			supportThread,
 			body,
 		);
@@ -371,7 +379,7 @@ describe('mirror', () => {
 		const body = '```Foo\nBar```';
 		const whisper: any = await ctx.createWhisper(
 			user.id,
-			session.id,
+			session,
 			supportThread,
 			body,
 		);
@@ -402,7 +410,7 @@ describe('mirror', () => {
 		const body = 'Hello <world> foo <bar>';
 		const whisper: any = await ctx.createWhisper(
 			user.id,
-			session.id,
+			session,
 			supportThread,
 			body,
 		);
@@ -433,7 +441,7 @@ describe('mirror', () => {
 		// Update status to closed
 		await ctx.worker.patchCard(
 			ctx.logContext,
-			session.id,
+			session,
 			ctx.worker.typeContracts[supportThread.type],
 			{
 				attachEvents: true,
@@ -448,7 +456,7 @@ describe('mirror', () => {
 				},
 			],
 		);
-		await ctx.flushAll(session.id);
+		await ctx.flushAll(session);
 
 		// Check that the remove conversation status has updated
 		const result = await ctx.retry(
@@ -478,7 +486,7 @@ describe('mirror', () => {
 		// Update status to closed
 		await ctx.worker.patchCard(
 			ctx.logContext,
-			session.id,
+			session,
 			ctx.worker.typeContracts[supportThread.type],
 			{
 				attachEvents: true,
@@ -493,7 +501,7 @@ describe('mirror', () => {
 				},
 			],
 		);
-		await ctx.flushAll(session.id);
+		await ctx.flushAll(session);
 
 		// Check that the remove conversation status has updated
 		const result = await ctx.retry(
@@ -523,6 +531,9 @@ describe('mirror', () => {
 			supportThread.data.mirrors[0].split('/'),
 		) as string;
 
+		// Some delays here to let Front catch up with the thread
+		await Bluebird.delay(5000);
+
 		// Move conversation to a different inbox
 		await retryWhile429(() => {
 			return front.conversation.update({
@@ -531,22 +542,26 @@ describe('mirror', () => {
 			});
 		});
 
+		await Bluebird.delay(5000);
+
 		// Add a new message to the thread
 		const message = 'Message in another inbox';
-		await ctx.createMessage(user.id, session.id, supportThread, message);
+		await ctx.createMessage(user.id, session, supportThread, message);
 
 		// Check that the new message was synced to the moved conversation
-		const messages = await ctx.retry(
-			() => {
-				return retryWhile429(() => {
-					return front.conversation.listMessages({
-						conversation_id: conversationId,
-					});
+		const messages = await retry(
+			async () => {
+				const msgs = await front.conversation.listMessages({
+					conversation_id: conversationId,
 				});
+				if (msgs._results.length === 2) {
+					return msgs;
+				}
+
+				throw new Error('No messages found');
 			},
-			(msgs: any) => {
-				return msgs._results.length === 2;
-			},
+			20,
+			2000,
 		);
 		expect(messages._results[0].body).toEqual(`<p>${message}</p>\n`);
 	});
@@ -561,7 +576,7 @@ describe('mirror', () => {
 		const body = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${uuid()}`;
 		const whisper: any = await ctx.createWhisper(
 			user.id,
-			session.id,
+			session,
 			supportThread,
 			body,
 		);
