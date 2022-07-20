@@ -257,7 +257,7 @@ describe('mirror', () => {
 		expect(comment.body).toEqual(body);
 	});
 
-	test.only('should mirror message insert on support threads', async () => {
+	test('should mirror message insert on support threads', async () => {
 		const supportThread = await createThread(
 			`My Issue ${uuid()}`,
 			`Foo Bar ${uuid()}`,
