@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update autumndb from 21.0.0 to 21.1.0
+      hash: 3a1b53ed764c092aea4fd01cd6cf4f4646baf0db
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.2
+  title: "'Update autumndb from 21.0.0 to 21.1.0'"
+  date: 2022-07-20T20:22:55.729Z
+- commits:
     - subject: Fix leftover .only integration mirror tests
       hash: 19142d150f8749926bef5f4c13573dd23aabbed5
       body: ""
