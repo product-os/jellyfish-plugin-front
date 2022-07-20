@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.1 - 2022-07-20
+
+* Fix leftover .only integration mirror tests [Lucian Buzzo]
+
 ## 6.0.0 - 2022-07-20
 
 * Upgrade to latest versions of worker and autumndb [Lucian Buzzo]

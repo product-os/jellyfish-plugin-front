@@ -1,4 +1,18 @@
 - commits:
+    - subject: Fix leftover .only integration mirror tests
+      hash: 19142d150f8749926bef5f4c13573dd23aabbed5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 6.0.1
+  title: "'Fix leftover .only integration mirror tests'"
+  date: 2022-07-20T11:49:14.674Z
+- commits:
     - subject: Upgrade to latest versions of worker and autumndb
       hash: 6f3beb9149722eaa3ac5a6483ee286f741006252
       body: |
