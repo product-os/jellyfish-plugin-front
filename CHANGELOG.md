@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.0 - 2022-07-20
+
+* Upgrade to latest versions of worker and autumndb [Lucian Buzzo]
+
 ## 5.0.45 - 2022-07-19
 
 * Update typedoc from 0.23.7 to 0.23.8 [renovate[bot]]

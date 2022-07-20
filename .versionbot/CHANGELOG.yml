@@ -1,4 +1,19 @@
 - commits:
+    - subject: Upgrade to latest versions of worker and autumndb
+      hash: 6f3beb9149722eaa3ac5a6483ee286f741006252
+      body: |
+        This change is a major update that changes how sessions are handled.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 6.0.0
+  title: "'Upgrade to latest versions of worker and autumndb'"
+  date: 2022-07-20T08:22:19.250Z
+- commits:
     - subject: Update typedoc from 0.23.7 to 0.23.8
       hash: a59e95c61a39317fc8431cb19b6a4053271dad8b
       body: ""
