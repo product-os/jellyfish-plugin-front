@@ -1,4 +1,20 @@
 - commits:
+    - subject: Speed up tests by not saving redis store to disk
+      hash: 5313c3a556a5af0d8a366fe6ddcd6ffffdf17b10
+      body: |
+        Since the redis instance is only used for tests and development, its
+        fine to skip writing to disk in favour of more speed.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 6.0.4
+  title: "'Speed up tests by not saving redis store to disk'"
+  date: 2022-07-21T15:14:38.542Z
+- commits:
     - subject: Don't rely on conversation objects having a `last_message` field.
       hash: d8c8067c3b1af231aa91baff82ab2b7c1c5c8af3
       body: |

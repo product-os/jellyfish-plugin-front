@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.4 - 2022-07-21
+
+* Speed up tests by not saving redis store to disk [Lucian Buzzo]
+
 ## 6.0.3 - 2022-07-21
 
 * Don't rely on conversation objects having a `last_message` field. [Lucian Buzzo]
