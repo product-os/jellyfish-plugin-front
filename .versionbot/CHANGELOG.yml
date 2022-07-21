@@ -1,4 +1,23 @@
 - commits:
+    - subject: Don't rely on conversation objects having a `last_message` field.
+      hash: d8c8067c3b1af231aa91baff82ab2b7c1c5c8af3
+      body: |
+        It seems that in some cases conversation objects retrieved from the
+        Front API do not have the `last_message` field, resulting in errors when
+        determining which channel to use when syncing a message back to front.
+        This change retrieves the last message on a conversation with
+        a separate API request using the `_links` reference.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 6.0.3
+  title: "'Don't rely on conversation objects having a  field.'"
+  date: 2022-07-21T14:25:58.607Z
+- commits:
     - subject: Update autumndb from 21.0.0 to 21.1.0
       hash: 3a1b53ed764c092aea4fd01cd6cf4f4646baf0db
       body: ""

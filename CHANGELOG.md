@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.3 - 2022-07-21
+
+* Don't rely on conversation objects having a `last_message` field. [Lucian Buzzo]
+
 ## 6.0.2 - 2022-07-20
 
 * Update autumndb from 21.0.0 to 21.1.0 [renovate[bot]]
