@@ -983,6 +983,22 @@ async function getConversationChannel(
 		});
 	});
 
+	const lastMessageId = conversationResponse._links.related.last_message
+		.split('/')
+		.pop()
+		.split('?', 1)[0];
+
+	const lastMessage = await handleRateLimit(context, () => {
+		context.log.info('Front API request', {
+			type: 'message.get',
+			id: lastMessageId,
+		});
+
+		return front.message.get({
+			message_id: lastMessageId,
+		});
+	});
+
 	/*
 	 * (2) List all the available channels account-wide, to account
 	 * for cases where a conversation is moved between inboxes, and
@@ -1005,7 +1021,7 @@ async function getConversationChannel(
 	 * that inbox.
 	 */
 	const lastMessageAddresses = _.reduce(
-		conversationResponse.last_message.recipients,
+		lastMessage.recipients,
 		(handles: any, recipient: any) => {
 			// Looks like this can happen in some cases, even though its
 			// still unclear why.
@@ -1045,7 +1061,7 @@ async function getConversationChannel(
 	assert.INTERNAL(null, channel, errors.SyncNoExternalResource, () => {
 		return [
 			`Could not find channel to respond to ${conversationId}`,
-			`using message ${conversationResponse.last_message.id}`,
+			`using message ${lastMessage.id}`,
 			`and addresses ${lastMessageAddresses.join(', ')}`,
 		].join(' ');
 	});
