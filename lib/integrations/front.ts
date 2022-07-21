@@ -12,6 +12,7 @@ import * as Intercom from 'intercom-client';
 import _ from 'lodash';
 import LRU from 'lru-cache';
 import { marked } from 'marked';
+import sanitizeHtml from 'sanitize-html';
 import * as utils from './utils';
 
 // tslint:disable: no-var-requires
@@ -1512,13 +1513,14 @@ export class FrontIntegration implements Integration {
 			if (baseType === 'message') {
 				const conversation: string = _.last(threadFrontUrl.split('/')) || '';
 				const message = card.data.payload.message;
-				const html = marked.parse(message, {
+				const rawhtml = marked.parse(message, {
 					// Enable github flavored markdown
 					gfm: true,
 					breaks: true,
 					headerIds: false,
-					sanitize: true,
 				});
+
+				const html = sanitizeHtml(rawhtml);
 
 				this.context.log.info('Creating front message', {
 					conversation,
