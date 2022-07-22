@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-environment from 12.2.2 to 12.3.0
+      hash: c429e47265419627d666cd9e6be156b7e182988c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.5
+  title: "'Update @balena/jellyfish-environment from 12.2.2 to 12.3.0'"
+  date: 2022-07-22T06:43:10.128Z
+- commits:
     - subject: Speed up tests by not saving redis store to disk
       hash: 5313c3a556a5af0d8a366fe6ddcd6ffffdf17b10
       body: |

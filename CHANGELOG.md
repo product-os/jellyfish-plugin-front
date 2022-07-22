@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.5 - 2022-07-22
+
+* Update @balena/jellyfish-environment from 12.2.2 to 12.3.0 [renovate[bot]]
+
 ## 6.0.4 - 2022-07-21
 
 * Speed up tests by not saving redis store to disk [Lucian Buzzo]
