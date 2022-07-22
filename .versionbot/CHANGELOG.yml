@@ -1,4 +1,23 @@
 - commits:
+    - subject: Stop using deprecated marked HTML sanitizer
+      hash: 65de1ce7a82d427c139a77137a5e426e17f45ef6
+      body: >
+        This PR switches from using the [deprecated `sanitize` option in
+        marked](https://marked.js.org/using_advanced#options) in favor of
+        sanitizing the html with `sanitize-html`.
+
+        I chose `sanitize-html` over the recommended `DOMPurify` package as `DOMPurify` requires you to use JSDom if you want to sanitize html in a NodeJS environment, and this seemed like too much overhead.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+        signed-off-by: Lucian Buzzo <lucian.buzzo@gmail.com>
+      author: Lucian Buzzo
+      nested: []
+  version: 6.0.6
+  title: "'Stop using deprecated marked HTML sanitizer'"
+  date: 2022-07-22T08:21:41.478Z
+- commits:
     - subject: Update @balena/jellyfish-environment from 12.2.2 to 12.3.0
       hash: c429e47265419627d666cd9e6be156b7e182988c
       body: ""
