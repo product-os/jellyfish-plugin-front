@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update repo.yml
+      hash: 3a5a33c96a3f6058b96ac939c1c1c0265e10327f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@balena.io>
+        signed-off-by: Josh Bowling <josh@balena.io>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.7
+  title: "'Update repo.yml'"
+  date: 2022-07-24T06:22:54.075Z
+- commits:
     - subject: Stop using deprecated marked HTML sanitizer
       hash: 65de1ce7a82d427c139a77137a5e426e17f45ef6
       body: >

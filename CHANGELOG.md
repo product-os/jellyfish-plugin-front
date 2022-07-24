@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.7 - 2022-07-24
+
+* Update repo.yml [Josh Bowling]
+
 ## 6.0.6 - 2022-07-22
 
 * Stop using deprecated marked HTML sanitizer [Lucian Buzzo]
