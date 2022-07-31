@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependencies (external major bumps)
+      hash: 451bb2ed70b9f3e25cc4a86223094af398a52ccf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.15
+  title: "'Update dependencies (external major bumps)'"
+  date: 2022-07-31T23:52:50.118Z
+- commits:
     - subject: Update lru-cache to v7
       hash: d55b1c31da4c0c0e98af3eaad24b0b2c1e6f2767
       body: ""

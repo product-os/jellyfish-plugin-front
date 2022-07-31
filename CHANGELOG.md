@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.15 - 2022-07-31
+
+* Update dependencies (external major bumps) [renovate[bot]]
+
 ## 6.0.14 - 2022-07-31
 
 * Update lru-cache to v7 [Josh Bowling]
