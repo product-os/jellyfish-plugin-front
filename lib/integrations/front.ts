@@ -109,7 +109,9 @@ function getElementByFuzzyMirrorId(
 /*
  * Front contact cache, for rate limiting purposes.
  */
-const FRONT_CONTACT_CACHE = new LRU(200);
+const FRONT_CONTACT_CACHE = new LRU({
+	max: 200,
+});
 
 async function getFrontContact(
 	context: any,
