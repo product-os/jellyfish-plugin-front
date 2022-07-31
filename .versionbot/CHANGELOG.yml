@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update lru-cache to v7
+      hash: d55b1c31da4c0c0e98af3eaad24b0b2c1e6f2767
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.14
+  title: "'Update lru-cache to v7'"
+  date: 2022-07-31T23:07:12.877Z
+- commits:
     - subject: Update @balena/jellyfish-environment from 12.3.0 to 12.3.1
       hash: e4c2ddb7d2fd1559a142ec3e1eb4ec747d10d8d7
       body: ""

@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.14 - 2022-07-31
+
+* Update lru-cache to v7 [Josh Bowling]
+
 ## 6.0.13 - 2022-07-31
 
 * Update @balena/jellyfish-environment from 12.3.0 to 12.3.1 [renovate[bot]]
