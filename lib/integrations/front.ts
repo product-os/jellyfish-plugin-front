@@ -54,7 +54,9 @@ export class FrontIntegration implements Integration {
 
 		if (this.options.token.intercom) {
 			this.intercom = new Intercom.Client({
-				token: this.options.token.intercom,
+				tokenAuth: {
+					token: this.options.token.intercom,
+				},
 			});
 		}
 	}

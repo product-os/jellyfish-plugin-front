@@ -54,7 +54,7 @@
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.1",
     "front-sdk": "^0.8.2",
-    "intercom-client": "^2.11.2",
+    "intercom-client": "^3.1.5",
     "lodash": "^4.17.21",
     "lru-cache": "^7.14.0",
     "marked": "^4.1.0",
