@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.15 - 2022-08-03
+
+* Update @balena/jellyfish-assert from 1.2.46 to 1.2.50 [renovate[bot]]
+
 ## 6.0.14 - 2022-07-31
 
 * Update lru-cache to v7 [Josh Bowling]

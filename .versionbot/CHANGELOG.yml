@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-assert from 1.2.46 to 1.2.50
+      hash: 7e994eefc4d542ed0aad4d62d48af28a589707e1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.15
+  title: "'Update @balena/jellyfish-assert from 1.2.46 to 1.2.50'"
+  date: 2022-08-03T22:30:11.082Z
+- commits:
     - subject: Update lru-cache to v7
       hash: d55b1c31da4c0c0e98af3eaad24b0b2c1e6f2767
       body: ""
