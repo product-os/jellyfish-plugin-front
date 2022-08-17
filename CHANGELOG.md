@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.19 - 2022-08-17
+
+* Update worker to 33.0.10 [Josh Bowling]
+
 ## 6.0.18 - 2022-08-04
 
 * Update typedoc from 0.23.9 to 0.23.10 [renovate[bot]]

@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update worker to 33.0.10
+      hash: 28ee91a116ff6bb6fd25a1703d14709b921b3070
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.19
+  title: "'Update worker to 33.0.10'"
+  date: 2022-08-17T07:09:32.423Z
+- commits:
     - subject: Update typedoc from 0.23.9 to 0.23.10
       hash: 13b1a9a1adc9dbad77e2a71af8a28a8180a7fca4
       body: ""
