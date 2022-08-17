@@ -48,7 +48,7 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.2.51",
     "@balena/jellyfish-environment": "^13.0.1",
-    "@balena/jellyfish-worker": "^33.0.12",
+    "@balena/jellyfish-worker": "^33.0.15",
     "@types/sanitize-html": "^2.6.2",
     "axios": "^0.27.2",
     "bluebird": "^3.7.2",
