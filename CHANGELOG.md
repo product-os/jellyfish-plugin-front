@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.29 - 2022-08-19
+
+* Update intercom-client to v3 [Josh Bowling]
+
 ## 6.0.28 - 2022-08-18
 
 * Update @balena/jellyfish-worker from 33.0.15 to 33.0.17 [renovate[bot]]

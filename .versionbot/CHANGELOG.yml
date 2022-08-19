@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update intercom-client to v3
+      hash: 627d02671fc00f56abde9fa12b5ff44446f8e7f3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.29
+  title: "'Update intercom-client to v3'"
+  date: 2022-08-19T22:55:47.282Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 33.0.15 to 33.0.17
       hash: da07b35378cf476f2084872962deb62c6b74be3e
       body: ""
