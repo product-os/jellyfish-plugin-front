@@ -1,7 +1,7 @@
 {
   "name": "@balena/jellyfish-plugin-front",
   "description": "Front Jellyfish Plugin",
-  "version": "6.0.35",
+  "version": "6.0.36",
   "repository": {
     "type": "git",
     "url": "https://github.com/product-os/jellyfish-plugin-front"
@@ -88,6 +88,6 @@
     "pre-commit": "npx lint-staged"
   },
   "versionist": {
-    "publishedAt": "2022-08-20T05:49:26.865Z"
+    "publishedAt": "2022-08-20T06:36:09.820Z"
   }
 }
