@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.34 - 2022-08-20
+
+* Update @balena/jellyfish-environment from 13.0.3 to 13.0.4 [renovate[bot]]
+
 ## 6.0.33 - 2022-08-20
 
 * Update @types/lodash from 4.14.182 to 4.14.184 [renovate[bot]]
