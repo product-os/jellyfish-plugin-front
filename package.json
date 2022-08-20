@@ -67,7 +67,7 @@
     "@types/bluebird": "^3.5.36",
     "@types/intercom-client": "^2.11.13",
     "@types/jest": "^28.1.2",
-    "@types/lodash": "^4.14.182",
+    "@types/lodash": "^4.14.184",
     "@types/lru-cache": "^7.10.9",
     "@types/marked": "^4.0.3",
     "@types/uuid": "^8.3.4",
