@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.37 - 2022-08-20
+
+* Update jest monorepo [renovate[bot]]
+
 ## 6.0.36 - 2022-08-20
 
 * Update autumndb from 22.1.14 to 22.1.19 [renovate[bot]]
