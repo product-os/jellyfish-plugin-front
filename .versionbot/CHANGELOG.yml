@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update marked from 4.0.16 to 4.0.18
+      hash: dfcee13ff21465c0ca3c72a3e12d18bd5138d046
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.43
+  title: "'Update marked from 4.0.16 to 4.0.18'"
+  date: 2022-08-21T11:12:46.660Z
+- commits:
     - subject: Update autumndb from 22.1.19 to 22.1.25
       hash: cf59b641bc739e756e39d7a9d7aa377dfa7effa0
       body: ""
