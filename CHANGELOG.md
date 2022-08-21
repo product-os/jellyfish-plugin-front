@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.44 - 2022-08-21
+
+* Update nock from 13.2.7 to 13.2.9 [renovate[bot]]
+
 ## 6.0.43 - 2022-08-21
 
 * Update marked from 4.0.16 to 4.0.18 [renovate[bot]]

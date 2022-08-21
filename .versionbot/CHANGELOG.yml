@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update nock from 13.2.7 to 13.2.9
+      hash: a0dcd0368df9b871a4b1adcb5d2acef9033e5743
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.44
+  title: "'Update nock from 13.2.7 to 13.2.9'"
+  date: 2022-08-21T11:53:21.350Z
+- commits:
     - subject: Update marked from 4.0.16 to 4.0.18
       hash: dfcee13ff21465c0ca3c72a3e12d18bd5138d046
       body: ""
