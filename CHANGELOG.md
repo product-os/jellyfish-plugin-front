@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.38 - 2022-08-21
+
+* Update lint-staged from 13.0.2 to 13.0.3 [renovate[bot]]
+
 ## 6.0.37 - 2022-08-20
 
 * Update jest monorepo [renovate[bot]]
