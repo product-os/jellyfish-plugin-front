@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.39 - 2022-08-21
+
+* Update @balena/jellyfish-logger from 5.1.33 to 5.1.37 [renovate[bot]]
+
 ## 6.0.38 - 2022-08-21
 
 * Update lint-staged from 13.0.2 to 13.0.3 [renovate[bot]]
