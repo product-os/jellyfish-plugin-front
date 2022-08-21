@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.49 - 2022-08-21
+
+* Update marked from 4.0.18 to 4.0.19 [renovate[bot]]
+
 ## 6.0.48 - 2022-08-21
 
 * Update lru-cache from 7.13.1 to 7.14.0 [renovate[bot]]

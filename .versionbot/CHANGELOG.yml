@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update marked from 4.0.18 to 4.0.19
+      hash: cb24ca84c0f4589ea10d7d5da20f27a4d83f57de
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.49
+  title: "'Update marked from 4.0.18 to 4.0.19'"
+  date: 2022-08-21T18:16:09.508Z
+- commits:
     - subject: Update lru-cache from 7.13.1 to 7.14.0
       hash: ce094e5e725bcf70d37a5dae48a107efe62bc473
       body: ""
