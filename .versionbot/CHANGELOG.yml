@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lru-cache from 7.13.1 to 7.14.0
+      hash: ce094e5e725bcf70d37a5dae48a107efe62bc473
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.48
+  title: "'Update lru-cache from 7.13.1 to 7.14.0'"
+  date: 2022-08-21T14:42:59.169Z
+- commits:
     - subject: Update date-fns from 2.28.0 to 2.29.2
       hash: bc3c94d0861cb55edbb27dd7e13ecabc71ba9c0f
       body: ""
