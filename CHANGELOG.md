@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.47 - 2022-08-21
+
+* Update date-fns from 2.28.0 to 2.29.2 [renovate[bot]]
+
 ## 6.0.46 - 2022-08-21
 
 * Update @balena/jellyfish-worker from 33.0.25 to 33.0.26 [renovate[bot]]
