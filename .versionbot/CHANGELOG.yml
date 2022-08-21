@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @types/marked from 4.0.5 to 4.0.6
+      hash: b7594068845aa81bbb7f9bcd70f0b4cd1688feaa
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.50
+  title: "'Update @types/marked from 4.0.5 to 4.0.6'"
+  date: 2022-08-21T20:50:43.983Z
+- commits:
     - subject: Update marked from 4.0.18 to 4.0.19
       hash: cb24ca84c0f4589ea10d7d5da20f27a4d83f57de
       body: ""

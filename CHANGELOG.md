@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.50 - 2022-08-21
+
+* Update @types/marked from 4.0.5 to 4.0.6 [renovate[bot]]
+
 ## 6.0.49 - 2022-08-21
 
 * Update marked from 4.0.18 to 4.0.19 [renovate[bot]]
