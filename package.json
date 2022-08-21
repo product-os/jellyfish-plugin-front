@@ -56,7 +56,7 @@
     "front-sdk": "^0.8.2",
     "intercom-client": "^2.11.2",
     "lodash": "^4.17.21",
-    "lru-cache": "^7.13.1",
+    "lru-cache": "^7.14.0",
     "marked": "^4.0.18",
     "native-url": "^0.3.4",
     "sanitize-html": "^2.7.1"
