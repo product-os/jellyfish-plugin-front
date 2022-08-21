@@ -57,7 +57,7 @@
     "intercom-client": "^2.11.2",
     "lodash": "^4.17.21",
     "lru-cache": "^7.14.0",
-    "marked": "^4.0.18",
+    "marked": "^4.0.19",
     "native-url": "^0.3.4",
     "sanitize-html": "^2.7.1"
   },
