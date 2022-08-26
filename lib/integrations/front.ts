@@ -85,14 +85,23 @@ function getConversationMirrorId(event: any): string {
 }
 
 const MIRROR_ID_RE = /frontapp\.com.*$/;
+const FRONT_API_PREFIXES = [
+	'https://resin.io.api.',
+	'https://api2.',
+	'https://resinio.api.',
+	'https://resin-io-dev.api.',
+];
 
-// The mirrorId can be prefixed with resin.io or api2, so we use a pattern match
-// to find matching elements by mirrorId
-function getElementByFuzzyMirrorId(
+// find matching elements by mirrorId
+// The mirrorId is the full URL, and it can use as the host value
+// either resin.io.api, resinio.api or api2. Running several queries to
+// avoid using a pattern match that timed out on a previous version
+// TODO: Use a worker function that accepts an enum instead of doing separate queries
+async function getElementByFuzzyMirrorId(
 	context: any,
 	type: string,
 	mirrorId: string,
-): any {
+): Promise<any> {
 	const mirrorIdMatches = mirrorId.match(MIRROR_ID_RE);
 	if (!mirrorIdMatches) {
 		context.log.error('Mirror ID does not match expected pattern', {
@@ -101,9 +110,23 @@ function getElementByFuzzyMirrorId(
 		});
 		return null;
 	}
-	return context.getElementByMirrorId(type, mirrorIdMatches[0], {
-		usePattern: true,
+
+	// mirrorIdMatches[0] will give a result that doesn't include the host prefix lile 'frontapp.com/conversations/cnv_9nisn4d'
+	const candidateIds = FRONT_API_PREFIXES.map(
+		(prefix) => prefix + mirrorIdMatches[0],
+	);
+	const results = await Promise.all(
+		candidateIds.map(async (id) => {
+			return context.getElementByMirrorId(type, id, { pattern: true });
+		}),
+	);
+	context.log.debug('getElementByFuzzyMirrorId results', {
+		mirrorId,
+		candidateIds,
+		results,
 	});
+
+	return _.compact(results)[0];
 }
 
 /*
