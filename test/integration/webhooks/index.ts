@@ -1,4 +1,5 @@
 export default {
+	/*
 	'inbound-message-multiple-inboxes': {
 		expected: require('./inbound-message-multiple-inboxes/expected.json'),
 		steps: [
@@ -239,6 +240,7 @@ export default {
 			require('./inbound-comment-comment/03.json'),
 		],
 	},
+	*/
 	'inbound-archive-message': {
 		expected: require('./inbound-archive-message/expected.json'),
 		steps: [
@@ -249,6 +251,7 @@ export default {
 			require('./inbound-archive-message/05.json'),
 		],
 	},
+	/*
 	'inbound-delete-message': {
 		expected: require('./inbound-delete-message/expected.json'),
 		steps: [
@@ -271,4 +274,5 @@ export default {
 		expected: require('./intercom-no-author/expected.json'),
 		steps: [require('./intercom-no-author/01.json')],
 	},
+	*/
 };
