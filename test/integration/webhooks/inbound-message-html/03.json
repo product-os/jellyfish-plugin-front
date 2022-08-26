@@ -25,7 +25,8 @@
           "followers": "https://api2.frontapp.com/conversations/cnv_11sgc1v/followers",
           "messages": "https://api2.frontapp.com/conversations/cnv_11sgc1v/messages",
           "comments": "https://api2.frontapp.com/conversations/cnv_11sgc1v/comments",
-          "inboxes": "https://api2.frontapp.com/conversations/cnv_11sgc1v/inboxes"
+          "inboxes": "https://api2.frontapp.com/conversations/cnv_11sgc1v/inboxes",
+          "last_message": "https://api2.frontapp.com/messages/msg_1y9l9g3"
         }
       },
       "id": "cnv_11sgc1v",

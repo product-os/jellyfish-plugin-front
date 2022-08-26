@@ -25,7 +25,8 @@
           "followers": "https://api2.frontapp.com/conversations/cnv_11sgc1v/followers",
           "messages": "https://api2.frontapp.com/conversations/cnv_11sgc1v/messages",
           "comments": "https://api2.frontapp.com/conversations/cnv_11sgc1v/comments",
-          "inboxes": "https://api2.frontapp.com/conversations/cnv_11sgc1v/inboxes"
+          "inboxes": "https://api2.frontapp.com/conversations/cnv_11sgc1v/inboxes",
+          "last_message": "https://api2.frontapp.com/messages/msg_1y9l9g3"
         }
       },
       "id": "cnv_11sgc1v",
@@ -57,61 +58,6 @@
         "role": "to"
       },
       "tags": [],
-      "last_message": {
-        "_links": {
-          "self": "https://api2.frontapp.com/messages/msg_1y9l9g3",
-          "related": {
-            "conversation": "https://api2.frontapp.com/conversations/cnv_11sgc1v"
-          }
-        },
-        "id": "msg_1y9l9g3",
-        "type": "email",
-        "is_inbound": false,
-        "created_at": 1539209658.632,
-        "blurb": "Response! ",
-        "body": "<div>Response!</div><br><div class=\"front-signature fa-uid_a8aee144305bcb9048143583437fe7f7\">—<br />Juan Cruz Viotti,<div>Software Engineer, Resin.io (https://resin.io)</div><div>twt: @resin_io</div></div><br><blockquote type=\"cite\" class=\"front-blockquote\">On Wed, Oct 10, 2018 at 11:13 pm,  &lt;<a href=\"mailto:juan@resin.io\" target=\"_blank\" rel=\"noopener noreferrer\">juan@resin.io</a>&gt; Juan Cruz Viotti wrote:<br /><br /><div id=\"fae_1y9l9g3b7xo8r\"><div>Hey there @foo!!</div>\n</div></blockquote>",
-        "text": "Response!\n",
-        "is_draft": false,
-        "error_type": null,
-        "metadata": {},
-        "author": {
-          "_links": {
-            "self": "https://api2.frontapp.com/teammates/tea_grc",
-            "related": {
-              "inboxes": "https://api2.frontapp.com/teammates/tea_grc/inboxes",
-              "conversations": "https://api2.frontapp.com/teammates/tea_grc/conversations"
-            }
-          },
-          "id": "tea_grc",
-          "email": "juan@resin.io",
-          "username": "jviotti",
-          "first_name": "Juan Cruz",
-          "last_name": "Viotti",
-          "is_admin": true,
-          "is_available": true
-        },
-        "recipients": [
-          {
-            "_links": {
-              "related": {
-                "contact": null
-              }
-            },
-            "handle": "test@resin.io",
-            "role": "from"
-          },
-          {
-            "_links": {
-              "related": {
-                "contact": "https://api2.frontapp.com/contacts/crd_5ef35"
-              }
-            },
-            "handle": "juan@resin.io",
-            "role": "to"
-          }
-        ],
-        "attachments": []
-      },
       "created_at": 1539209633.011,
       "is_private": false
     },
