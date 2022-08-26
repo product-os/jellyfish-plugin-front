@@ -25,7 +25,8 @@
           "followers": "https://api2.frontapp.com/conversations/cnv_11dvpbu/followers",
           "messages": "https://api2.frontapp.com/conversations/cnv_11dvpbu/messages",
           "comments": "https://api2.frontapp.com/conversations/cnv_11dvpbu/comments",
-          "inboxes": "https://api2.frontapp.com/conversations/cnv_11dvpbu/inboxes"
+          "inboxes": "https://api2.frontapp.com/conversations/cnv_11dvpbu/inboxes",
+          "last_message": "https://api2.frontapp.com/messages/msg_1w1emp6"
         }
       },
       "id": "cnv_11dvpbu",
@@ -42,46 +43,6 @@
         "role": "from"
       },
       "tags": [],
-      "last_message": {
-        "_links": {
-          "self": "https://api2.frontapp.com/messages/msg_1w1emp6",
-          "related": {
-            "conversation": "https://api2.frontapp.com/conversations/cnv_11dvpbu"
-          }
-        },
-        "id": "msg_1w1emp6",
-        "type": "email",
-        "is_inbound": true,
-        "created_at": 1539023564.69,
-        "blurb": " Hello ",
-        "body": "<div>Hello</div>\n",
-        "text": "Hello\n",
-        "is_draft": false,
-        "error_type": null,
-        "metadata": {},
-        "author": null,
-        "recipients": [
-          {
-            "_links": {
-              "related": {
-                "contact": null
-              }
-            },
-            "handle": "juan@resin.io",
-            "role": "from"
-          },
-          {
-            "_links": {
-              "related": {
-                "contact": "https://api2.frontapp.com/contacts/crd_hgkpe"
-              }
-            },
-            "handle": "26ww-resin_io_dev@in.frontapp.com",
-            "role": "to"
-          }
-        ],
-        "attachments": []
-      },
       "created_at": 1539023565.832,
       "is_private": false
     },

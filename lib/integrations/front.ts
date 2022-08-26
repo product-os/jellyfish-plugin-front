@@ -543,21 +543,18 @@ async function getConversationLastMessage(
 	event: any,
 	targetCard: any,
 	remoteMessages: any,
+	lastMessage: any,
 ): Promise<any> {
-	if (
-		!event.data.payload.conversation ||
-		!event.data.payload.conversation.last_message
-	) {
+	if (!event.data.payload.conversation || !lastMessage) {
 		return [];
 	}
 
-	const root = event.data.payload.conversation.last_message;
 	const message = await getMessage(
 		instance,
 		front,
 		intercom,
 		sequence,
-		root,
+		lastMessage,
 		targetCard.id,
 		utils.getDateFromEpoch(event.data.payload.emitted_at),
 		remoteMessages,
@@ -963,6 +960,27 @@ async function getIntercomUser(
 	});
 }
 
+async function getLastMessageFromFront(
+	context: any,
+	front: any,
+	uri: string,
+): Promise<any> {
+	const lastMessageId = uri.split('/').pop()!.split('?', 1)[0];
+
+	const lastMessage = await handleRateLimit(context, () => {
+		context.log.info('Front API request', {
+			type: 'message.get',
+			id: lastMessageId,
+		});
+
+		return front.message.get({
+			message_id: lastMessageId,
+		});
+	});
+
+	return lastMessage;
+}
+
 async function getConversationChannel(
 	context: any,
 	errors: any,
@@ -986,21 +1004,11 @@ async function getConversationChannel(
 		});
 	});
 
-	const lastMessageId = conversationResponse._links.related.last_message
-		.split('/')
-		.pop()
-		.split('?', 1)[0];
-
-	const lastMessage = await handleRateLimit(context, () => {
-		context.log.info('Front API request', {
-			type: 'message.get',
-			id: lastMessageId,
-		});
-
-		return front.message.get({
-			message_id: lastMessageId,
-		});
-	});
+	const lastMessage = await getLastMessageFromFront(
+		context,
+		front,
+		conversationResponse._links.related.last_message,
+	);
 
 	/*
 	 * (2) List all the available channels account-wide, to account
@@ -1165,12 +1173,21 @@ export class FrontIntegration implements Integration {
 
 		const cards: any[] = [];
 
+		// Get last message if possible
+		const lastMsg = event.data.payload.conversation._links.related.last_message
+			? await getLastMessageFromFront(
+					this.context,
+					this.front,
+					event.data.payload.conversation._links.related.last_message,
+			  )
+			: null;
+
 		const actor = await this.getLocalUser(event);
 		assert.INTERNAL(null, actor, workerErrors.SyncNoActor, () => {
 			return `No actor id for ${JSON.stringify(event)}`;
 		});
 
-		const threadActor = await this.getThreadActor(event);
+		const threadActor = await this.getThreadActor(event, lastMsg);
 		assert.INTERNAL(null, threadActor, workerErrors.SyncNoActor, () => {
 			return `No thread actor id for ${JSON.stringify(event)}`;
 		});
@@ -1252,6 +1269,7 @@ export class FrontIntegration implements Integration {
 			event,
 			threadCard,
 			remoteMessages,
+			lastMsg,
 		);
 		if (lastMessage.length > 0) {
 			this.context.log.info('Inserting last message');
@@ -1630,7 +1648,7 @@ export class FrontIntegration implements Integration {
 		);
 	}
 
-	async getThreadActor(event: any) {
+	async getThreadActor(event: any, lastMessage: any) {
 		if (
 			event.data.payload.conversation &&
 			event.data.payload.conversation.recipient
@@ -1700,7 +1718,8 @@ export class FrontIntegration implements Integration {
 
 				if (
 					event.data.payload.conversation.recipient.handle &&
-					event.data.payload.conversation.last_message.type !== 'intercom'
+					lastMessage &&
+					lastMessage.type !== 'intercom'
 				) {
 					return this.context.getActorId({
 						email: event.data.payload.conversation.recipient.handle,
