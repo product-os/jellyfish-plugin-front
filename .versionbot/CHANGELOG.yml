@@ -1,4 +1,21 @@
 - commits:
+    - subject: Update and enable all translate tests
+      hash: 71fbd2323d582e4b58c09f7fd54762972fedda02
+      body: |
+        Update all translate tests that were temporarily disabled as they
+        still assumed the now removed last_message object was provided by
+        the webhook payload.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.64
+  title: "'Update and enable all translate tests'"
+  date: 2022-08-26T09:45:05.403Z
+- commits:
     - subject: Handle loss of last_message object
       hash: 03419b7c88ec26aec0f16198852a84cf684275ed
       body: |

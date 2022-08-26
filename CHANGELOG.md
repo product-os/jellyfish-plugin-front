@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.64 - 2022-08-26
+
+* Update and enable all translate tests [Josh Bowling]
+
 ## 6.0.63 - 2022-08-26
 
 * Handle loss of last_message object [Josh Bowling]
