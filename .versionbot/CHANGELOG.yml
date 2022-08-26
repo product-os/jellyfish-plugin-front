@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Avoid using a pattern query. Issue #635"
+      hash: e639eb7a57b47b6b54ba392ef86b899dbedf5067
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+      author: Ramiro González Maciel
+      nested: []
+  version: 6.0.66
+  title: "'Avoid using a pattern query. Issue #635'"
+  date: 2022-08-26T14:41:28.655Z
+- commits:
     - subject: Update typedoc from 0.23.10 to 0.23.11
       hash: a418660b310a04615dab5a5a1ddaac73a38b27fd
       body: ""
