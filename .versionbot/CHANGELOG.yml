@@ -1,4 +1,23 @@
 - commits:
+    - subject: Handle loss of last_message object
+      hash: 03419b7c88ec26aec0f16198852a84cf684275ed
+      body: |
+        Front has recently dropped data.conversation.last_message from its
+        get event endpoint return dataset. Instead, a uri to the last message
+        is stored under conversation._links.related.last_message. We need to use
+        this uri to get the message data from the Front API and no longer
+        assume its a part of the initial webhook payload.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.63
+  title: "'Handle loss of last_message object'"
+  date: 2022-08-26T05:41:22.070Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 33.0.37 to 33.0.38
       hash: 653b929797ddfb1efff14146a51880ea60ba8703
       body: ""

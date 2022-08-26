@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.63 - 2022-08-26
+
+* Handle loss of last_message object [Josh Bowling]
+
 ## 6.0.62 - 2022-08-25
 
 * Update @balena/jellyfish-worker from 33.0.37 to 33.0.38 [renovate[bot]]
