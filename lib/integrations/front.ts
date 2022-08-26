@@ -94,9 +94,7 @@ const FRONT_API_PREFIXES = [
 
 // find matching elements by mirrorId
 // The mirrorId is the full URL, and it can use as the host value
-// either resin.io.api, resinio.api or api2. Running several queries to
-// avoid using a pattern match that timed out on a previous version
-// TODO: Use a worker function that accepts an enum instead of doing separate queries
+// either resin.io.api, resinio.api or api2.
 async function getElementByFuzzyMirrorId(
 	context: any,
 	type: string,
@@ -115,18 +113,23 @@ async function getElementByFuzzyMirrorId(
 	const candidateIds = FRONT_API_PREFIXES.map(
 		(prefix) => prefix + mirrorIdMatches[0],
 	);
-	const results = await Promise.all(
-		candidateIds.map(async (id) => {
-			return context.getElementByMirrorId(type, id, { pattern: true });
-		}),
-	);
-	context.log.debug('getElementByFuzzyMirrorId results', {
+
+	context.log.info('Searching for Front element by mirrorId', {
+		type,
 		mirrorId,
 		candidateIds,
-		results,
 	});
 
-	return _.compact(results)[0];
+	const result = await context.getElementByMirrorIds(type, candidateIds);
+
+	context.log.info('Front getElementByFuzzyMirrorId results', {
+		type,
+		mirrorId,
+		candidateIds,
+		result: result && result.id ? result.id : null,
+	});
+
+	return result;
 }
 
 /*
