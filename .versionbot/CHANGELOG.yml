@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typedoc from 0.23.10 to 0.23.11
+      hash: a418660b310a04615dab5a5a1ddaac73a38b27fd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.65
+  title: "'Update typedoc from 0.23.10 to 0.23.11'"
+  date: 2022-08-26T10:26:44.922Z
+- commits:
     - subject: Update and enable all translate tests
       hash: 71fbd2323d582e4b58c09f7fd54762972fedda02
       body: |

@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.65 - 2022-08-26
+
+* Update typedoc from 0.23.10 to 0.23.11 [renovate[bot]]
+
 ## 6.0.64 - 2022-08-26
 
 * Update and enable all translate tests [Josh Bowling]
