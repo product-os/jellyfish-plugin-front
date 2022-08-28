@@ -1167,7 +1167,13 @@ export class FrontIntegration implements Integration {
 	}
 
 	public async translate(event: any): Promise<SequenceItem[]> {
+		this.context.log.info('FrontIntegration.translate event:.', {
+			event,
+		});
 		if (!this.options.token.api || !this.options.token.intercom) {
+			this.context.log.info(
+				'FrontIntegration.translate No token.api or not intercom token on env, returning.',
+			);
 			return [];
 		}
 
@@ -1241,6 +1247,10 @@ export class FrontIntegration implements Integration {
 				$eval: 'cards[0].id',
 			};
 		}
+
+		this.context.log.info(
+			'FrontIntegration.translate before getAllThreadMessages',
+		);
 
 		// Do a recap using the API
 		const remoteMessages = await getAllThreadMessages(
