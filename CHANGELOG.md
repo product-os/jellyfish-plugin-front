@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.67 - 2022-08-28
+
+* Query using mirror IDs with an enum [Josh Bowling]
+
 ## 6.0.66 - 2022-08-26
 
 * Avoid using a pattern query. Issue #635 [Ramiro González Maciel]
