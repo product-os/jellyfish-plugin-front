@@ -320,7 +320,7 @@ async function getMessageActor(
 	});
 }
 
-function getMessageText(payload: any): string {
+export function getMessageText(payload: any): string {
 	/*
 	 * This means that the body is plain text and not HTML.
 	 */
@@ -331,7 +331,7 @@ function getMessageText(payload: any): string {
 	if (
 		payload.attachments &&
 		payload.attachments.length > 0 &&
-		payload.text.trim().length === 0
+		(!payload.text || payload.text.trim().length === 0)
 	) {
 		return '';
 	}
