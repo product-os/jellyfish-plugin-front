@@ -10,6 +10,7 @@ import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { frontPlugin } from '../../../lib';
 import { FrontIntegration } from '../../../lib/integrations/front';
+import { getMessageText } from '../../../lib/integrations/front';
 
 const pluginManager = new PluginManager([frontPlugin()]);
 const frontIntegration = pluginManager.getSyncIntegrations().front;
@@ -35,6 +36,59 @@ describe('isEventValid()', () => {
 	test('should return true given anything', async () => {
 		const result = frontIntegration.isEventValid(context, '....', {}, context);
 		expect(result).toBe(true);
+	});
+});
+
+describe('getMessageText()', () => {
+	test('should parse a message with attachments and no text nor body', async () => {
+		const comment = {
+			_links: {
+				self: 'https://resinio.api.frontapp.com/comments/com_1d9tXXX',
+				related: {
+					conversation:
+						'https://resinio.api.frontapp.com/conversations/cnv_csr9XXX',
+					mentions:
+						'https://resinio.api.frontapp.com/comments/com_1d9tXXX/mentions',
+				},
+			},
+			id: 'com_1d9tXXX',
+			body: '',
+			posted_at: 1660635848.557,
+			author: {
+				_links: {
+					self: 'https://resinio.api.frontapp.com/teammates/tea_33XXX',
+					related: {
+						inboxes:
+							'https://resinio.api.frontapp.com/teammates/tea_33XXX/inboxes',
+						conversations:
+							'https://resinio.api.frontapp.com/teammates/tea_33XXX/conversations',
+					},
+				},
+				id: 'tea_33XXX',
+				email: 'XXX.YYY@balena.io',
+				username: 'XXXYYY',
+				first_name: 'XXX',
+				last_name: 'YYY',
+				is_admin: true,
+				is_available: true,
+				is_blocked: false,
+				custom_fields: {},
+			},
+			attachments: [
+				{
+					id: 'fil_16lrlxxx',
+					url: 'https://resinio.api.frontapp.com/download/fil_16lrlxxx',
+					filename: 'image.png',
+					content_type: 'image/png',
+					size: 186861,
+					metadata: {
+						is_inline: false,
+					},
+				},
+			],
+		};
+		const result = getMessageText(comment);
+		expect(result).toBe('');
 	});
 });
 
