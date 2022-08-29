@@ -328,6 +328,7 @@ export function getMessageText(payload: any): string {
 		return _.trim(payload.body, ' \n');
 	}
 
+	// Users usually attach files and don't enter a text
 	if (
 		payload.attachments &&
 		payload.attachments.length > 0 &&
