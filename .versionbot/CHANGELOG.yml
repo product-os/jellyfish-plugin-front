@@ -1,4 +1,30 @@
 - commits:
+    - subject: Correctly parse comments with attachments and no text
+      hash: 09cadf708a3ea2a8a609863dce17386d7744b38a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+      author: Ramiro González Maciel
+      nested: []
+    - subject: Query using mirror IDs with an enum
+      hash: 25e75d79ee6c755528c5c3983d7dbaf281330af8
+      body: |
+        Improve efficiency when searching for contracts that have one of a set
+        of mirror IDs by using an enum instead of a pattern.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.67
+  title: "'Correctly parse comments with attachments and no text'"
+  date: 2022-08-29T16:02:42.644Z
+- commits:
     - subject: "Avoid using a pattern query. Issue #635"
       hash: e639eb7a57b47b6b54ba392ef86b899dbedf5067
       body: ""
