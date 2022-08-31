@@ -34,6 +34,9 @@ const ALL_THREAD_TYPES = [
 	'brainstorm-topic@1.0.0',
 ];
 
+const RETRIES = parseInt(process.env.FRONT_RETRIES || '60', 10);
+const DELAY = parseInt(process.env.FRONT_DELAY || '5000', 10);
+
 export class FrontIntegration implements Integration {
 	public slug = SLUG;
 	public context: any;
@@ -43,7 +46,7 @@ export class FrontIntegration implements Integration {
 
 	constructor(options: any) {
 		this.options = options;
-		const retryOptions = { retries: 5, delay: 100 };
+		const retryOptions = { retries: RETRIES, delay: DELAY };
 		this.context = this.options.context
 			? retryableContext(this.options.context, retryOptions)
 			: null;
