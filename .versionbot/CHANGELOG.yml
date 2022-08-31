@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update test
+      hash: 75e06dca4ab04e4e42f2ee68346f091a153f0aff
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Ramiro Gonzalez ramiro.gonzalez@balena.io
+        signed-off-by: Ramiro Gonzalez ramiro.gonzalez@balena.io
+      author: Ramiro González Maciel
+      nested: []
+  version: 6.0.73
+  title: "'Refactor FrontIntegration, create ContextSyncWrapper'"
+  date: 2022-08-31T16:05:06.568Z
+- commits:
     - subject: Update typedoc from 0.23.11 to 0.23.12
       hash: c07ad8b0c99ec56c7fc001aedc424ec1564a3e90
       body: ""
