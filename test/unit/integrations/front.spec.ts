@@ -10,7 +10,7 @@ import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import { frontPlugin } from '../../../lib';
 import { FrontIntegration } from '../../../lib/integrations/front';
-import { getMessageText } from '../../../lib/integrations/front';
+import { getMessageText } from '../../../lib/integrations/front-integration-utils';
 
 const pluginManager = new PluginManager([frontPlugin()]);
 const frontIntegration = pluginManager.getSyncIntegrations().front;

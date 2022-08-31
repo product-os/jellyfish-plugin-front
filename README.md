@@ -42,7 +42,7 @@ git secret reveal -f
 npm run compose
 export INTEGRATION_FRONT_TOKEN=$(cat .balena/secrets/integration_front_token)
 export INTEGRATION_INTERCOM_TOKEN=$(cat .balena/secrets/integration_intercom_token)
-REDIS_HOST=localhost POSTGRES_HOST=localhost npm run test:mirror
+REDIS_HOST=localhost POSTGRES_HOST=localhost npm run test:integration
 ```
 
 You can also access these Postgres and Redis instances:
