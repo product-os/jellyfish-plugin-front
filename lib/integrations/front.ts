@@ -13,7 +13,7 @@ import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
 import * as utils from './utils';
 import * as frontUtils from './front-integration-utils';
-import { ContextRetryWrapper } from './context-retry-wrapper';
+import { retryableContext } from './context-retry-wrapper';
 
 // TS-TODO: Use import when front-sdk is fixed
 // tslint:disable: no-var-requires
@@ -45,7 +45,7 @@ export class FrontIntegration implements Integration {
 		this.options = options;
 		const retryOptions = { retries: 5, delay: 100 };
 		this.context = this.options.context
-			? new ContextRetryWrapper(this.options.context, retryOptions)
+			? retryableContext(this.options.context, retryOptions)
 			: null;
 		this.front = new Front(this.options.token.api);
 

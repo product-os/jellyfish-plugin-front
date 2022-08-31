@@ -1,6 +1,6 @@
-import { ContextRetryWrapper } from '../../lib/integrations/context-retry-wrapper';
+import { retryableContext } from '../../lib/integrations/context-retry-wrapper';
 
-describe('ContextRetryWrapper', () => {
+describe('retryableContext', () => {
 	const context = {
 		getActorId: async () => {
 			throw new Error('NON_RETRY');
@@ -18,7 +18,7 @@ describe('ContextRetryWrapper', () => {
 		},
 	};
 	const options = { retries: 2, delay: 100 };
-	const wrapper = new ContextRetryWrapper(context, options);
+	const wrapper = retryableContext(context, options);
 	test('should fail immediately with a non-retryable error', async () => {
 		const now = new Date().valueOf();
 		try {

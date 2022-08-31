@@ -48,44 +48,41 @@ const DEFAULT_OPTIONS = {
 	delay: 2000,
 };
 
-export class ContextRetryWrapper {
-	context: any;
-	retries: number;
-	delay: number;
-	public log: any;
-
-	constructor(
-		context: any,
-		options: { retries: number; delay: number } = DEFAULT_OPTIONS,
-	) {
-		this.context = context;
-		this.retries = options.retries;
-		this.delay = options.delay;
-		this.log = context.log;
-	}
-
-	public async getActorId(args) {
-		return handleQueryTimeout(
-			this.context,
-			() => this.context.getActorId(args),
-			this.retries,
-			this.delay,
-		);
-	}
-	public async getElementById(args) {
-		return handleQueryTimeout(
-			this.context,
-			() => this.context.getElementById(args),
-			this.retries,
-			this.delay,
-		);
-	}
-	public async getElementByMirrorIds(args) {
-		return handleQueryTimeout(
-			this.context,
-			() => this.context.getElementByMirrorIds(args),
-			this.retries,
-			this.delay,
-		);
-	}
+/**
+ * Wraps a context, making some operations retry if there's a retryable error
+ * @param context
+ * @param options
+ * @returns
+ */
+export function retryableContext(
+	context: any,
+	options: { retries: number; delay: number } = DEFAULT_OPTIONS,
+) {
+	return {
+		...context,
+		getActorId: async (args) => {
+			return handleQueryTimeout(
+				context,
+				async () => context.getActorId(args),
+				options.retries,
+				options.delay,
+			);
+		},
+		getElementById: async (args) => {
+			return handleQueryTimeout(
+				context,
+				async () => context.getElementById(args),
+				options.retries,
+				options.delay,
+			);
+		},
+		getElementByMirrorIds: async (args) => {
+			return handleQueryTimeout(
+				context,
+				async () => context.getElementByMirrorIds(args),
+				options.retries,
+				options.delay,
+			);
+		},
+	};
 }
