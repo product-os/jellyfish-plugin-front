@@ -1,0 +1,91 @@
+/**
+ * Execute `fn`, retrying it if a QueryTimeout error occurs
+ * `fn` must be idempotent
+ *
+ * @param context any
+ * @param fn
+ * @param retries max retries
+ * @returns
+ */
+async function handleQueryTimeout(
+	context: any,
+	fn: any,
+	retries = 100,
+	delay = 2000,
+): Promise<any> {
+	try {
+		return await fn();
+	} catch (error: any) {
+		if (isRetryAllowed(error)) {
+			if (retries > 0) {
+				context.log.warn(
+					`Front.handleQueryTimeout retrying because ${error.message} in ${delay}ms. Retries remaining: ${retries}`,
+				);
+
+				await new Promise((resolve) => {
+					setTimeout(resolve, delay);
+				});
+				return await handleQueryTimeout(context, fn, retries - 1, delay);
+			} else {
+				context.log.error(
+					`Front.handleQueryTimeout retries exhausted! error message ${error.message}`,
+					{
+						error,
+					},
+				);
+			}
+		}
+		throw error;
+	}
+}
+
+function isRetryAllowed(error: Error): boolean {
+	return error.name === 'Error' && error.message === 'Query read timeout';
+}
+
+const DEFAULT_OPTIONS = {
+	retries: 5,
+	delay: 2000,
+};
+
+export class ContextRetryWrapper {
+	context: any;
+	retries: number;
+	delay: number;
+	public log: any;
+
+	constructor(
+		context: any,
+		options: { retries: number; delay: number } = DEFAULT_OPTIONS,
+	) {
+		this.context = context;
+		this.retries = options.retries;
+		this.delay = options.delay;
+		this.log = context.log;
+	}
+
+	public async getActorId(args) {
+		return handleQueryTimeout(
+			this.context,
+			() => this.context.getActorId(args),
+			this.retries,
+			this.delay,
+		);
+	}
+	public async getElementById(args) {
+		return handleQueryTimeout(
+			this.context,
+			() => this.context.getElementById(args),
+			this.retries,
+			this.delay,
+		);
+	}
+	public async getElementByMirrorIds(args) {
+		return handleQueryTimeout(
+			this.context,
+			() => this.context.getElementByMirrorIds(args),
+			this.retries,
+			this.delay,
+		);
+	}
+}
