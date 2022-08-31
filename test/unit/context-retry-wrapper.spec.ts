@@ -17,7 +17,7 @@ describe('ContextRetryWrapper', () => {
 			info: console.info,
 		},
 	};
-	const options = { retries: 5, delay: 100 };
+	const options = { retries: 2, delay: 100 };
 	const wrapper = new ContextRetryWrapper(context, options);
 	test('should fail immediately with a non-retryable error', async () => {
 		const now = new Date().valueOf();
