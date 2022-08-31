@@ -60,26 +60,26 @@ export function retryableContext(
 ) {
 	return {
 		...context,
-		getActorId: async (args) => {
+		getActorId: async (...args) => {
 			return handleQueryTimeout(
 				context,
-				async () => context.getActorId(args),
+				async () => context.getActorId(...args),
 				options.retries,
 				options.delay,
 			);
 		},
-		getElementById: async (args) => {
+		getElementById: async (...args) => {
 			return handleQueryTimeout(
 				context,
-				async () => context.getElementById(args),
+				async () => context.getElementById(...args),
 				options.retries,
 				options.delay,
 			);
 		},
-		getElementByMirrorIds: async (args) => {
+		getElementByMirrorIds: async (...args) => {
 			return handleQueryTimeout(
 				context,
-				async () => context.getElementByMirrorIds(args),
+				async () => context.getElementByMirrorIds(...args),
 				options.retries,
 				options.delay,
 			);

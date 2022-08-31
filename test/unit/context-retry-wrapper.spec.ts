@@ -8,8 +8,8 @@ describe('retryableContext', () => {
 		getElementById: async () => {
 			throw new Error('Query read timeout');
 		},
-		getElementByMirrorIds: async (args) => {
-			return args;
+		getElementByMirrorIds: async (type: string, mirrorIds: string[]) => {
+			return { type, mirrorIds };
 		},
 		log: {
 			warn: console.warn,
@@ -45,6 +45,9 @@ describe('retryableContext', () => {
 	});
 
 	test('should not fail if no error', async () => {
-		expect(await wrapper.getElementByMirrorIds('x')).toBe('x');
+		expect(await wrapper.getElementByMirrorIds('x', ['y'])).toEqual({
+			type: 'x',
+			mirrorIds: ['y'],
+		});
 	});
 });
