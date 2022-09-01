@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.75 - 2022-09-01
+
+* Add JellyfishDatabaseTimeoutError to the list of retryable errors [Ramiro González Maciel]
+
 ## 6.0.74 - 2022-09-01
 
 * Update typedoc from 0.23.12 to 0.23.13 [renovate[bot]]
