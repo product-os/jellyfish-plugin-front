@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.74 - 2022-09-01
+
+* Update typedoc from 0.23.12 to 0.23.13 [renovate[bot]]
+
 ## 6.0.73 - 2022-08-31
 
 * Update test [Ramiro González Maciel]
