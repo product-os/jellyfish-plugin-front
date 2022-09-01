@@ -1,3 +1,4 @@
+import { RetriesExhaustedError } from '../../lib/errors';
 import { retryableContext } from '../../lib/integrations/context-retry-wrapper';
 
 describe('retryableContext', () => {
@@ -36,7 +37,8 @@ describe('retryableContext', () => {
 			await wrapper.getElementById('x');
 		} catch (error: any) {
 			const after = new Date().valueOf();
-			expect(error.message).toBe('Query read timeout');
+			expect(error instanceof RetriesExhaustedError).toBeTruthy();
+			expect(error.message).toContain('Query read timeout');
 			expect(after - now).toBeGreaterThanOrEqual(
 				options.delay * options.retries,
 			);

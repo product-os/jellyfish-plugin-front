@@ -1,3 +1,5 @@
+import { RetriesExhaustedError } from '../errors';
+
 /**
  * Execute `fn`, retrying it if a QueryTimeout error occurs
  * `fn` must be idempotent
@@ -27,12 +29,11 @@ async function handleQueryTimeout(
 				});
 				return await handleQueryTimeout(context, fn, retries - 1, delay);
 			} else {
-				context.log.error(
-					`Front.handleQueryTimeout retries exhausted! error message ${error.message}`,
-					{
-						error,
-					},
-				);
+				const msg = `Front.handleQueryTimeout retries exhausted! error message ${error.message}`;
+				context.log.error(msg, {
+					error,
+				});
+				throw new RetriesExhaustedError(error);
 			}
 		}
 		throw error;
@@ -40,7 +41,13 @@ async function handleQueryTimeout(
 }
 
 function isRetryAllowed(error: Error): boolean {
-	return error.name === 'Error' && error.message === 'Query read timeout';
+	return (
+		(error.name === 'Error' && error.message === 'Query read timeout') ||
+		// using error.name instead of error instanceof JellyfishDatabaseTimeoutError
+		// because the error is not exported from the worker, only from autumndb
+		// TODO worker should re-export OR provide it's own error
+		error.name === 'JellyfishDatabaseTimeoutError'
+	);
 }
 
 const DEFAULT_OPTIONS = {
