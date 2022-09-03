@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.76 - 2022-09-03
+
+* Update @types/jest from 28.1.7 to 28.1.8 [renovate[bot]]
+
 ## 6.0.75 - 2022-09-01
 
 * Add JellyfishDatabaseTimeoutError to the list of retryable errors [Ramiro González Maciel]

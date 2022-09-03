@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @types/jest from 28.1.7 to 28.1.8
+      hash: 251cb74d560d20d6ea4b3d908d8b18fd681e4c2d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.76
+  title: "'Update @types/jest from 28.1.7 to 28.1.8'"
+  date: 2022-09-03T03:28:50.977Z
+- commits:
     - subject: Add JellyfishDatabaseTimeoutError to the list of retryable errors
       hash: 9475cbc3830f15e1a3b85f69325eb32c2949ab46
       body: ""
