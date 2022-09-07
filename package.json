@@ -57,7 +57,7 @@
     "intercom-client": "^2.11.2",
     "lodash": "^4.17.21",
     "lru-cache": "^7.14.0",
-    "marked": "^4.0.19",
+    "marked": "^4.1.0",
     "native-url": "^0.3.4",
     "sanitize-html": "^2.7.1"
   },
@@ -69,7 +69,7 @@
     "@types/jest": "^28.1.8",
     "@types/lodash": "^4.14.184",
     "@types/lru-cache": "^7.10.9",
-    "@types/marked": "^4.0.6",
+    "@types/marked": "^4.0.7",
     "@types/uuid": "^8.3.4",
     "autumndb": "^22.1.28",
     "date-fns": "^2.29.2",
