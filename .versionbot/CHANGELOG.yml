@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update marked from 4.0.19 to 4.1.0
+      hash: 621b7e11e364ea8098425427506109fb2bfe32b0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.78
+  title: "'Update marked from 4.0.19 to 4.1.0'"
+  date: 2022-09-07T23:18:42.201Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 33.2.0 to 33.2.2
       hash: 777e28aba5d46adba9bde385d664c5bf22bb3cfd
       body: ""
