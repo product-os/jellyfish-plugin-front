@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.79 - 2022-09-10
+
+* Bump external packages [Josh Bowling]
+
 ## 6.0.78 - 2022-09-07
 
 * Update marked from 4.0.19 to 4.1.0 [renovate[bot]]
