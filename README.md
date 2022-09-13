@@ -7,13 +7,11 @@ Provides a sync integration for Front.
 Below is an example how to use this library:
 
 ```typescript
-import { defaultPlugin } from '@balena/jellyfish-plugin-default';
 import { frontPlugin } from '@balena/jellyfish-plugin-front';
-import { productOsPlugin } from '@balena/jellyfish-plugin-product-os';
 import { PluginManager } from '@balena/jellyfish-worker';
 
 // Load contracts from this plugin
-const pluginManager = new PluginManager([defaultPlugin(), productOsPlugin(), frontPlugin()]);
+const pluginManager = new PluginManager([frontPlugin()]);
 const contracts = pluginManager.getCards();
 console.dir(contracts);
 ```
@@ -28,14 +26,7 @@ Visit the website for complete documentation: https://product-os.github.io/jelly
 
 Unit tests can be easily run with the command `npm test`.
 
-The integration tests require Postgres and Redis instances. The simplest way to run the tests locally is with `docker-compose`.
-```
-git submodule update --init
-git secret reveal -f
-npm run test:compose
-```
-
-You can also run tests locally against Postgres and Redis instances running in `docker-compose`:
+You can run integration tests locally against Postgres and Redis instances running in `docker-compose`:
 ```
 git submodule update --init
 git secret reveal -f

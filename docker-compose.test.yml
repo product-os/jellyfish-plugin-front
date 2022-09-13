@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3'
 
 services:
   sut:
@@ -9,16 +9,9 @@ services:
     depends_on:
       - postgres
       - redis
+    env_file:
+      - .env
     environment:
       - LOGLEVEL=error
-    secrets:
-      - integration_front_token
-      - integration_intercom_token
     networks:
       - internal
-
-secrets:
-  integration_front_token:
-    file: ./.balena/secrets/integration_front_token
-  integration_intercom_token:
-    file: ./.balena/secrets/integration_intercom_token
