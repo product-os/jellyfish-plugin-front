@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 33.4.26 to 33.4.30
+      hash: 4a320f49d58c1e2add444eae916901750022ce8b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.121
+  title: ""
+  date: 2022-09-14T01:03:13.585Z
+- commits:
     - subject: "CI: Move to Flowzone"
       hash: 542ecc3206125258c9e72fbe2ff2b027acb5c8cc
       body: ""
