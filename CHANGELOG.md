@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.130 - 2022-09-17
+
+* CI: Force exit integration tests [Josh Bowling]
+
 ## 6.0.129 - 2022-09-14
 
 * Update @balena/jellyfish-worker from 33.4.34 to 33.4.38 [renovate[bot]]

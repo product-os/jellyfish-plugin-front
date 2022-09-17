@@ -1,4 +1,20 @@
 - commits:
+    - subject: "CI: Force exit integration tests"
+      hash: 82e49ebe283beb4cd84e3feff0617d09438b5066
+      body: |
+        We can remove this after moving integration code to actions
+        and removing the broken way we test translates.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.130
+  title: ""
+  date: 2022-09-17T05:06:46.447Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 33.4.34 to 33.4.38
       hash: 3d3c48b6f8eb0b5bc2ed6d068401493e2f95cd78
       body: ""
