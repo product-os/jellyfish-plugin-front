@@ -59,7 +59,7 @@
     "lru-cache": "^7.14.0",
     "marked": "^4.1.0",
     "native-url": "^0.3.4",
-    "sanitize-html": "^2.7.1"
+    "sanitize-html": "^2.7.2"
   },
   "devDependencies": {
     "@balena/jellyfish-logger": "^5.1.68",
