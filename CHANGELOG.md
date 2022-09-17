@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.144 - 2022-09-17
+
+* Update ts-jest from 29.0.0 to 29.0.1 [renovate[bot]]
+
 ## 6.0.143 - 2022-09-17
 
 * Update sanitize-html from 2.7.1 to 2.7.2 [renovate[bot]]
