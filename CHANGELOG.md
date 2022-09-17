@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.137 - 2022-09-17
+
+* Update date-fns from 2.29.2 to 2.29.3 [renovate[bot]]
+
 ## 6.0.136 - 2022-09-17
 
 * Update @types/jest from 29.0.1 to 29.0.3 [renovate[bot]]
