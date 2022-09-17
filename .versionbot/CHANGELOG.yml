@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update autumndb from 22.2.44 to 22.2.47
+      hash: 7084eaa4085821b1ad82580ceb574c0d6c9aaff0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.131
+  title: ""
+  date: 2022-09-17T06:42:39.585Z
+- commits:
     - subject: "CI: Force exit integration tests"
       hash: 82e49ebe283beb4cd84e3feff0617d09438b5066
       body: |
