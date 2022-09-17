@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update sanitize-html from 2.7.1 to 2.7.2
+      hash: cf97fc37d71903c68b68735adf5df4c636f879c4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.143
+  title: ""
+  date: 2022-09-17T16:05:22.649Z
+- commits:
     - subject: Update autumndb from 22.2.49 to 22.2.52
       hash: c6f7fe98bfbf5a86a4a83f9b2a40d08b1a001b3b
       body: ""
