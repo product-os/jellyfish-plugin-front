@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 33.4.53 to 33.4.54
+      hash: a3863036970453d65ca41f731b561139d63c03ae
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.151
+  title: ""
+  date: 2022-09-18T17:44:23.032Z
+- commits:
     - subject: Drop test:compose script, update compose version
       hash: bd541a54bf5c938aa82b65ad1dbb5599d5d4e7e8
       body: ""
