@@ -1,4 +1,18 @@
 - commits:
+    - subject: Drop test:compose script, update compose version
+      hash: bd541a54bf5c938aa82b65ad1dbb5599d5d4e7e8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.150
+  title: ""
+  date: 2022-09-18T14:25:02.340Z
+- commits:
     - subject: Update secrets submodule
       hash: 09f0bd049fb00964696517f8ac82324b6faedf29
       body: ""
