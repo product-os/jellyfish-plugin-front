@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.163 - 2022-09-19
+
+* Docs: Fix doc generation failure [Josh Bowling]
+
 ## 6.0.162 - 2022-09-19
 
 * Update @balena/jellyfish-worker from 33.4.60 to 33.4.62 [renovate[bot]]

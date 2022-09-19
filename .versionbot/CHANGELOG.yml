@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Docs: Fix doc generation failure"
+      hash: 45c849447e1e15a48becca621f57616c3ce58105
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.163
+  title: ""
+  date: 2022-09-19T04:37:22.250Z
+- commits:
     - subject: Update @balena/jellyfish-worker from 33.4.60 to 33.4.62
       hash: 274d1cadeecacf7c3168169575b30cedf02b91c6
       body: ""
