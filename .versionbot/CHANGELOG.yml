@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update autumndb from 22.2.55 to 22.2.59
+      hash: 08cabc43435f4ff6ec17d2d47aa5e3843d04b7ff
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.164
+  title: ""
+  date: 2022-09-19T05:21:35.915Z
+- commits:
     - subject: "Docs: Fix doc generation failure"
       hash: 45c849447e1e15a48becca621f57616c3ce58105
       body: ""

@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.164 - 2022-09-19
+
+* Update autumndb from 22.2.55 to 22.2.59 [renovate[bot]]
+
 ## 6.0.163 - 2022-09-19
 
 * Docs: Fix doc generation failure [Josh Bowling]
