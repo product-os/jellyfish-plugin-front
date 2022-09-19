@@ -38,7 +38,7 @@
     "test": "npm run lint && npm run test:unit",
     "test:unit": "jest test/unit",
     "test:integration": "npx jest --runInBand --bail --forceExit test/integration",
-    "doc": "typedoc lib/ && touch docs/.nojekyll",
+    "doc": "typedoc --tsconfig tsconfig.build.json lib/ && touch docs/.nojekyll",
     "prepack": "npm run build",
     "compose": "docker-compose up"
   },
