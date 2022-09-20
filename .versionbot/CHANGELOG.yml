@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Dev: Remove unenforceable .editorconfig"
+      hash: ef9d13b82ccb861cb2d1492352f5dbc1a6c46d90
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.179
+  title: ""
+  date: 2022-09-20T04:22:08.404Z
+- commits:
     - subject: Update autumndb from 22.2.59 to 22.2.72
       hash: 66a2c96791c6f3bdf88d2b9772dc16268ae23f30
       body: ""

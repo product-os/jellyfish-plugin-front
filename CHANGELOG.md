@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.179 - 2022-09-20
+
+* Dev: Remove unenforceable .editorconfig [Josh Bowling]
+
 ## 6.0.178 - 2022-09-19
 
 * Update autumndb from 22.2.59 to 22.2.72 [renovate[bot]]
