@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add CodeQL workflow
+      hash: 3f19dd76f75ed1c04ace8a49c6ed31532e12fb91
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.180
+  title: ""
+  date: 2022-09-20T05:48:13.276Z
+- commits:
     - subject: "Dev: Remove unenforceable .editorconfig"
       hash: ef9d13b82ccb861cb2d1492352f5dbc1a6c46d90
       body: ""

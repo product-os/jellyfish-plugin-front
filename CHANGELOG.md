@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.180 - 2022-09-20
+
+* Add CodeQL workflow [Josh Bowling]
+
 ## 6.0.179 - 2022-09-20
 
 * Dev: Remove unenforceable .editorconfig [Josh Bowling]
