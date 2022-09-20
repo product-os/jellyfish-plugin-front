@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 33.4.77 to 33.4.79
+      hash: 18d264e2221a96acec170b00c9127b1f206cb3db
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.181
+  title: ""
+  date: 2022-09-20T13:51:22.717Z
+- commits:
     - subject: Add CodeQL workflow
       hash: 3f19dd76f75ed1c04ace8a49c6ed31532e12fb91
       body: ""
