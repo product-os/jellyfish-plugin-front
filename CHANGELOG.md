@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.200 - 2022-09-24
+
+* Update @types/bluebird from 3.5.36 to 3.5.37 [renovate[bot]]
+
 ## 6.0.199 - 2022-09-24
 
 * Update @balena/jellyfish-worker from 34.1.23 to 34.1.24 [renovate[bot]]
