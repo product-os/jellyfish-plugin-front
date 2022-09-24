@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update autumndb from 22.2.73 to 22.2.85
+      hash: 79b24c4d3249985f86d59c65562c3a08b3107f6f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.201
+  title: ""
+  date: 2022-09-24T23:14:14.811Z
+- commits:
     - subject: Update @types/bluebird from 3.5.36 to 3.5.37
       hash: 484e0e0118fbc86b93e1855a1b3ed25b73534f34
       body: ""
