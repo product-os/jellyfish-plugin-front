@@ -37,7 +37,7 @@
     "lint:fix": "balena-lint --fix lib test",
     "test": "npm run lint && npm run test:unit",
     "test:unit": "jest test/unit",
-    "test:integration": "npx jest --runInBand --bail --forceExit test/integration",
+    "test:integration": "jest --runInBand --bail --forceExit test/integration",
     "doc": "typedoc --tsconfig tsconfig.build.json lib/ && touch docs/.nojekyll",
     "prepack": "npm run build",
     "compose": "docker-compose up"
@@ -47,7 +47,7 @@
   "dependencies": {
     "@balena/jellyfish-assert": "^1.2.74",
     "@balena/jellyfish-environment": "^14.0.13",
-    "@balena/jellyfish-worker": "^34.1.24",
+    "@balena/jellyfish-worker": "35.0.0-joshbwlng-drop-execute-contract-d948b5456e79bb0056d37f80a476eed2a6d73571",
     "@types/sanitize-html": "^2.6.2",
     "axios": "^0.27.2",
     "bluebird": "^3.7.2",
