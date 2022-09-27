@@ -1,4 +1,16 @@
 - commits:
+    - subject: Rely on flowzone for docs publishing
+      hash: 2c2cfffea187bd62ee67e611f98d1b180b95b11e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Page-
+      nested: []
+  version: 6.0.212
+  title: ""
+  date: 2022-09-27T20:53:31.294Z
+- commits:
     - subject: Update autumndb from 22.2.85 to 22.2.92
       hash: 2e3087bda220a0ceaa72da39c7c8247c901e3404
       body: ""
