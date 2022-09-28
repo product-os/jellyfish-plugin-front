@@ -7,7 +7,7 @@
     "url": "https://github.com/product-os/jellyfish-plugin-front"
   },
   "engines": {
-    "node": "^16.0.0"
+    "node": ">=16.0.0"
   },
   "main": "build/index.js",
   "types": "build/index.d.ts",
