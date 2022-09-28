@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.217 - 2022-09-28
+
+* Update @balena/jellyfish-environment from 14.0.15 to 14.0.17 [renovate[bot]]
+
 ## 6.0.216 - 2022-09-28
 
 * Change engines to >=16 to enable node 18 tests/usage [Page-]
