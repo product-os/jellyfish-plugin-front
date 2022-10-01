@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ts-jest from 29.0.2 to 29.0.3
+      hash: f866ccaa5ad48b86fff9e8e668d22e9dcd2c3848
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.239
+  title: ""
+  date: 2022-10-01T16:25:11.428Z
+- commits:
     - subject: Update @balena/jellyfish-logger from 5.1.101 to 5.1.102
       hash: d9ba743c176325b47c1ebba8db1f040151f5c3f6
       body: ""

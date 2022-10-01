@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.239 - 2022-10-01
+
+* Update ts-jest from 29.0.2 to 29.0.3 [renovate[bot]]
+
 ## 6.0.238 - 2022-10-01
 
 * Update @balena/jellyfish-logger from 5.1.101 to 5.1.102 [renovate[bot]]
