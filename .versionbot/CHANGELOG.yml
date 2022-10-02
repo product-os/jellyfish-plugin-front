@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update typescript from 4.8.3 to 4.8.4
+      hash: 58580d6e0cc958015136c33b7d644ae330f75c4f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.248
+  title: ""
+  date: 2022-10-02T02:02:45.215Z
+- commits:
     - subject: Update autumndb from 22.2.110 to 22.2.114
       hash: f6c9a8ab46004c6398212b6f8df728537033bdaf
       body: ""
