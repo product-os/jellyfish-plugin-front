@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.249 - 2022-10-02
+
+* Update jest monorepo [renovate[bot]]
+
 ## 6.0.248 - 2022-10-02
 
 * Update typescript from 4.8.3 to 4.8.4 [renovate[bot]]
