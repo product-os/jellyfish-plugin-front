@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update @balena/jellyfish-worker from 34.1.54 to 34.1.58
+      hash: 177e2b0261ca4188a5ab3e7d0c97e3ad57f0597a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 6.0.250
+  title: ""
+  date: 2022-10-02T09:34:59.156Z
+- commits:
     - subject: Update jest monorepo
       hash: 1dfe7552f3df2e285a56cbeee823f8b77d722a38
       body: ""

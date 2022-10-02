@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.250 - 2022-10-02
+
+* Update @balena/jellyfish-worker from 34.1.54 to 34.1.58 [renovate[bot]]
+
 ## 6.0.249 - 2022-10-02
 
 * Update jest monorepo [renovate[bot]]
