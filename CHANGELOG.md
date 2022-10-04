@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.264 - 2022-10-04
+
+* Update @balena/jellyfish-logger from 5.1.103 to 5.1.104 [renovate[bot]]
+
 ## 6.0.263 - 2022-10-04
 
 * Update @balena/jellyfish-environment from 14.1.1 to 14.1.2 [renovate[bot]]
