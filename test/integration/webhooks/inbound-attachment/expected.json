@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "S/Paid_Support",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_1bd652j"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_1bd652j"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -47,9 +45,7 @@
           "data": {
             "environment": "production",
             "inbox": "S/Paid_Support",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_1bd652j"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_1bd652j"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -71,9 +67,7 @@
           "active": true,
           "slug": "user-jviotti2"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_2irqbh7"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_2irqbh7"],
         "timestamp": "2019-04-04T12:50:42.000Z",
         "payload": {
           "mentionsUser": [],
@@ -99,9 +93,7 @@
           "slug": "user-syncbot"
         },
         "timestamp": "2019-04-04T12:50:46.770Z",
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_37adv7"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_37adv7"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -149,9 +141,7 @@
           "active": true,
           "slug": "user-jviotti2"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_2irqd2r"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_2irqd2r"],
         "timestamp": "2019-04-04T12:51:05.000Z",
         "payload": {
           "mentionsUser": [],
@@ -208,9 +198,7 @@
           "active": true,
           "slug": "user-jviotti2"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_2irqdgz"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_2irqdgz"],
         "timestamp": "2019-04-04T12:51:11.000Z",
         "payload": {
           "mentionsUser": [],

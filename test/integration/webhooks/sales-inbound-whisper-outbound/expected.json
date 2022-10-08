@@ -11,9 +11,7 @@
     "data": {
       "inbox": "Z/Solutions",
       "environment": "production",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_23kgkub"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_23kgkub"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -34,9 +32,7 @@
           "active": true,
           "slug": "user-jv-jviotti-com"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_44t0vsz"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_44t0vsz"],
         "timestamp": "2019-07-19T12:20:11.786Z",
         "payload": {
           "mentionsUser": [],
@@ -82,9 +78,7 @@
           "data": {
             "inbox": "Z/Solutions",
             "environment": "production",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_23kgkub"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_23kgkub"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -106,9 +100,7 @@
           "active": true,
           "slug": "user-syncbot"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_6tgbyb"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_6tgbyb"],
         "timestamp": "2019-07-19T12:20:14.313Z",
         "payload": {
           "mentionsUser": [],
@@ -157,9 +149,7 @@
           "active": true,
           "slug": "user-jviotti"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_6tgc5f"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_6tgc5f"],
         "timestamp": "2019-07-19T12:20:22.339Z",
         "payload": {
           "mentionsUser": [],
@@ -208,12 +198,10 @@
           "active": true,
           "slug": "user-jviotti"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_44t177n"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_44t177n"],
         "timestamp": "2019-07-19T12:20:52.296Z",
         "payload": {
-          "mentionsUser": [ "user-resin_io" ],
+          "mentionsUser": ["user-resin_io"],
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],

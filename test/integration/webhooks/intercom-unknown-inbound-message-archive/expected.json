@@ -5,17 +5,13 @@
     "version": "1.0.0",
     "active": true,
     "loop": "loop-balena-io@1.0.0",
-    "tags": [
-      "Needs audit"
-    ],
+    "tags": ["Needs audit"],
     "requires": [],
     "capabilities": [],
     "data": {
       "environment": "production",
       "inbox": "S/Paid_Support",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_16263rn"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_16263rn"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -36,9 +32,7 @@
           "active": true,
           "slug": "user-jviotti2"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_27dmk4b"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_27dmk4b"],
         "timestamp": "2018-12-27T13:15:10.000Z",
         "payload": {
           "mentionsUser": [],
@@ -76,9 +70,7 @@
           "data": {
             "environment": "production",
             "inbox": "S/Paid_Support",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_16263rn"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_16263rn"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -100,9 +92,7 @@
           "active": true,
           "slug": "user-syncbot"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2j30ej"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2j30ej"],
         "timestamp": "2018-12-27T13:15:14.176Z",
         "payload": {
           "mentionsUser": [],

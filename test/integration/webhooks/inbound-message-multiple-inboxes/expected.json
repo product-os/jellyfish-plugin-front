@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "Test_Contracts",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_11sgc1v"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_11sgc1v"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -34,9 +32,7 @@
           "active": true,
           "slug": "user-juan-resin-io"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_1y9l8fv"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_1y9l8fv"],
         "timestamp": "2018-10-10T22:13:52.817Z",
         "payload": {
           "mentionsUser": [],
@@ -74,9 +70,7 @@
           "data": {
             "environment": "production",
             "inbox": "Test_Contracts",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_11sgc1v"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_11sgc1v"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -121,12 +115,10 @@
           "active": true,
           "slug": "user-jviotti"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_1y9l9g3"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_1y9l9g3"],
         "timestamp": "2018-10-10T22:14:18.632Z",
         "payload": {
-          "mentionsUser": [ "user-resin_io" ],
+          "mentionsUser": ["user-resin_io"],
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],

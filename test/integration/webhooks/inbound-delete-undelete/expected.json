@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "Demo Inbox",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_11dx1ei"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_11dx1ei"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -46,9 +44,7 @@
           "data": {
             "environment": "production",
             "inbox": "Demo Inbox",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_11dx1ei"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_11dx1ei"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",

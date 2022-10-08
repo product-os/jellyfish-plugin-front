@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "S/Forums",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_16ax9l7"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_16ax9l7"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -42,9 +40,7 @@
           "data": {
             "environment": "production",
             "inbox": "S/Forums",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_16ax9l7"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_16ax9l7"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -73,9 +69,7 @@
         },
         "target": "70ac6348-5c4f-46e4-9499-d8e74c0b6ad7",
         "timestamp": "2019-01-04T14:29:57.276Z",
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_284xm4z"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_284xm4z"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],

@@ -5,17 +5,13 @@
     "version": "1.0.0",
     "active": true,
     "loop": "loop-balena-io@1.0.0",
-    "tags": [
-      "testTag"
-    ],
+    "tags": ["testTag"],
     "requires": [],
     "capabilities": [],
     "data": {
       "environment": "production",
       "inbox": "Demo Inbox",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_183bv6i"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_183bv6i"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -49,9 +45,7 @@
           "data": {
             "environment": "production",
             "inbox": "Demo Inbox",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_183bv6i"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_183bv6i"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -101,9 +95,7 @@
           "active": true,
           "slug": "user-juan-balena-io"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_28s4nei"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_28s4nei"],
         "timestamp": "2019-01-18T16:34:51.902Z",
         "payload": {
           "mentionsUser": [],
@@ -128,9 +120,7 @@
           "active": true,
           "slug": "user-accounts-front-dev"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_25mft6"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_25mft6"],
         "timestamp": "2019-01-18T16:35:18.193Z",
         "payload": {
           "mentionsUser": [],
