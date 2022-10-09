@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.281 - 2022-10-09
+
+* Dev: Use prettier for json/yml [Josh Bowling]
+
 ## 6.0.280 - 2022-10-09
 
 * Update @balena/jellyfish-environment from 14.2.0 to 14.3.10 [renovate[bot]]
