@@ -5,18 +5,13 @@
     "version": "1.0.0",
     "active": true,
     "loop": "loop-balena-io@1.0.0",
-    "tags": [
-      "foo",
-      "bar"
-    ],
+    "tags": ["foo", "bar"],
     "requires": [],
     "capabilities": [],
     "data": {
       "environment": "production",
       "inbox": "Demo Inbox",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_11dvyca"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_11dvyca"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -37,9 +32,7 @@
           "active": true,
           "slug": "user-juan-resin-io"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_1w1f12q"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_1w1f12q"],
         "timestamp": "2018-10-08T18:36:28.538Z",
         "payload": {
           "mentionsUser": [],
@@ -77,9 +70,7 @@
           "data": {
             "environment": "production",
             "inbox": "Demo Inbox",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_11dvyca"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_11dvyca"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",

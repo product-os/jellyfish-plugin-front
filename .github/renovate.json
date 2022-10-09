@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "github>product-os/renovate-config"
-  ]
+  "extends": ["github>product-os/renovate-config"]
 }

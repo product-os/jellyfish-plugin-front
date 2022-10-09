@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "S/Paid_Support",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_16a10wz"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_16a10wz"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -42,9 +40,7 @@
           "data": {
             "environment": "production",
             "inbox": "S/Paid_Support",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_16a10wz"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_16a10wz"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -72,9 +68,7 @@
           "slug": "user-g-jacob-kring"
         },
         "timestamp": "2019-01-02T17:04:59.000Z",
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_27vf9n7"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_27vf9n7"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -99,9 +93,7 @@
           "slug": "user-syncbot"
         },
         "timestamp": "2019-01-02T17:05:07.746Z",
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2k3oez"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2k3oez"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -126,9 +118,7 @@
           "slug": "user-g-jacob-kring"
         },
         "timestamp": "2019-01-02T17:05:35.000Z",
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_27vffoj"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_27vffoj"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -153,9 +143,7 @@
           "slug": "user-g-jacob-kring"
         },
         "timestamp": "2019-01-02T17:05:46.000Z",
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_27vfhm3"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_27vfhm3"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -180,9 +168,7 @@
           "slug": "user-camerondiver"
         },
         "timestamp": "2019-01-02T17:08:31.510Z",
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_27vg2oz"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_27vg2oz"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -207,9 +193,7 @@
           "slug": "user-camerondiver"
         },
         "timestamp": "2019-01-02T17:08:45.286Z",
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_27vg6m3"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_27vg6m3"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -222,7 +206,7 @@
     },
     {
       "version": "1.0.0",
-      "tags": [ "summary" ],
+      "tags": ["summary"],
       "capabilities": [],
       "type": "whisper@1.0.0",
       "active": true,
@@ -234,9 +218,7 @@
           "slug": "user-camerondiver"
         },
         "timestamp": "2019-01-02T18:12:17.112Z",
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2k4fer"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2k4fer"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -261,9 +243,7 @@
           "slug": "user-g-jacob-kring"
         },
         "timestamp": "2019-01-03T16:14:48.000Z",
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_280hbvv"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_280hbvv"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -276,7 +256,7 @@
     },
     {
       "version": "1.0.0",
-      "tags": [ "summary" ],
+      "tags": ["summary"],
       "capabilities": [],
       "type": "whisper@1.0.0",
       "active": true,
@@ -288,9 +268,7 @@
           "slug": "user-thundron"
         },
         "timestamp": "2019-01-03T16:28:11.677Z",
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2kcn57"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2kcn57"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -315,9 +293,7 @@
           "slug": "user-lucianbuzzo"
         },
         "timestamp": "2019-01-17T16:58:27.834Z",
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2nmd7n"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2nmd7n"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],
@@ -342,9 +318,7 @@
           "slug": "user-jviotti"
         },
         "timestamp": "2019-01-17T17:18:42.935Z",
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2nmlyb"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2nmlyb"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],

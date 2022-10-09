@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "S/Paid_Support",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_173uno3"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_173uno3"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -34,9 +32,7 @@
           "active": true,
           "slug": "user-jviotti2"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_29otzx7"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_29otzx7"],
         "timestamp": "2019-01-17T10:42:40.000Z",
         "payload": {
           "mentionsUser": [],
@@ -74,9 +70,7 @@
           "data": {
             "environment": "production",
             "inbox": "S/Paid_Support",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_173uno3"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_173uno3"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -98,9 +92,7 @@
           "active": true,
           "slug": "user-syncbot"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2njyhf"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2njyhf"],
         "timestamp": "2019-01-17T10:42:48.363Z",
         "payload": {
           "mentionsUser": [],

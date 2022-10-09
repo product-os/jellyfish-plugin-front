@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "Demo Inbox",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_11dw1xu"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_11dw1xu"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -34,9 +32,7 @@
           "active": true,
           "slug": "user-juan-resin-io"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_1w1f6h6"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_1w1f6h6"],
         "timestamp": "2018-10-08T18:37:50.787Z",
         "payload": {
           "mentionsUser": [],
@@ -74,9 +70,7 @@
           "data": {
             "environment": "production",
             "inbox": "Demo Inbox",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_11dw1xu"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_11dw1xu"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",

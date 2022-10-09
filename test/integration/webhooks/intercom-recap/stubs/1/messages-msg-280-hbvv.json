@@ -1,42 +1,42 @@
 {
-    "_links": {
-      "related": {
-        "conversation": "https://api2.frontapp.com/conversations/cnv_16a10wz"
-      },
-      "self": "https://api2.frontapp.com/messages/msg_280hbvv"
+  "_links": {
+    "related": {
+      "conversation": "https://api2.frontapp.com/conversations/cnv_16a10wz"
     },
-    "attachments": [],
-    "author": null,
-    "blurb": " Sounds good, thanks! ",
-    "body": "<div><p>Sounds good, thanks!</p>\n</div>",
-    "created_at": 1546532088,
-    "error_type": null,
-    "id": "msg_280hbvv",
-    "is_draft": false,
-    "is_inbound": true,
-    "metadata": {
-      "intercom_url": "https://app.intercom.io/a/apps/yg02r5dz/inbox/conversation/20265921558"
-    },
-    "recipients": [
-      {
-        "_links": {
-          "related": {
-            "contact": "https://api2.frontapp.com/contacts/crd_23f9g9"
-          }
-        },
-        "handle": "589b6c94e1832926cacecb02",
-        "role": "from"
+    "self": "https://api2.frontapp.com/messages/msg_280hbvv"
+  },
+  "attachments": [],
+  "author": null,
+  "blurb": " Sounds good, thanks! ",
+  "body": "<div><p>Sounds good, thanks!</p>\n</div>",
+  "created_at": 1546532088,
+  "error_type": null,
+  "id": "msg_280hbvv",
+  "is_draft": false,
+  "is_inbound": true,
+  "metadata": {
+    "intercom_url": "https://app.intercom.io/a/apps/yg02r5dz/inbox/conversation/20265921558"
+  },
+  "recipients": [
+    {
+      "_links": {
+        "related": {
+          "contact": "https://api2.frontapp.com/contacts/crd_23f9g9"
+        }
       },
-      {
-        "_links": {
-          "related": {
-            "contact": "https://api2.frontapp.com/contacts/crd_5gqtnd"
-          }
-        },
-        "handle": "yg02r5dz",
-        "role": "to"
-      }
-    ],
-    "text": "Sounds good, thanks!",
-    "type": "intercom"
+      "handle": "589b6c94e1832926cacecb02",
+      "role": "from"
+    },
+    {
+      "_links": {
+        "related": {
+          "contact": "https://api2.frontapp.com/contacts/crd_5gqtnd"
+        }
+      },
+      "handle": "yg02r5dz",
+      "role": "to"
+    }
+  ],
+  "text": "Sounds good, thanks!",
+  "type": "intercom"
 }

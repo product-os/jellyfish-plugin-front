@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "Demo Inbox",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_1bolr9e"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_1bolr9e"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -47,9 +45,7 @@
           "data": {
             "environment": "production",
             "inbox": "Demo Inbox",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_1bolr9e"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_1bolr9e"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -71,9 +67,7 @@
           "active": true,
           "slug": "user-juan-balena-io"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_2ged8ve"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_2ged8ve"],
         "timestamp": "2019-03-13T19:54:20.108Z",
         "payload": {
           "mentionsUser": [],
@@ -98,9 +92,7 @@
           "active": true,
           "slug": "user-accounts-front-dev"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/comments/com_2q8hiy"
-        ],
+        "mirrors": ["https://api2.frontapp.com/comments/com_2q8hiy"],
         "timestamp": "2019-03-13T19:55:24.478Z",
         "payload": {
           "mentionsUser": [],

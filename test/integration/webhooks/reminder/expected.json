@@ -11,9 +11,7 @@
     "data": {
       "environment": "production",
       "inbox": "S/Paid_Support",
-      "mirrors": [
-        "https://api2.frontapp.com/conversations/cnv_151xwvf"
-      ],
+      "mirrors": ["https://api2.frontapp.com/conversations/cnv_151xwvf"],
       "mentionsUser": [],
       "alertsUser": [],
       "description": "",
@@ -42,9 +40,7 @@
           "data": {
             "environment": "production",
             "inbox": "S/Paid_Support",
-            "mirrors": [
-              "https://api2.frontapp.com/conversations/cnv_151xwvf"
-            ],
+            "mirrors": ["https://api2.frontapp.com/conversations/cnv_151xwvf"],
             "mentionsUser": [],
             "alertsUser": [],
             "description": "",
@@ -71,9 +67,7 @@
           "active": true,
           "slug": "user-gh-spiderkeys"
         },
-        "mirrors": [
-          "https://api2.frontapp.com/messages/msg_26k77bn"
-        ],
+        "mirrors": ["https://api2.frontapp.com/messages/msg_26k77bn"],
         "payload": {
           "alertsUser": [],
           "mentionsUser": [],

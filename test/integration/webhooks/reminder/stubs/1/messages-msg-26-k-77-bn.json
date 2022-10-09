@@ -1,42 +1,42 @@
 {
-    "_links": {
-      "related": {
-        "conversation": "https://api2.frontapp.com/conversations/cnv_151xwvf"
-      },
-      "self": "https://api2.frontapp.com/messages/msg_26k77bn"
+  "_links": {
+    "related": {
+      "conversation": "https://api2.frontapp.com/conversations/cnv_151xwvf"
     },
-    "attachments": [],
-    "author": null,
-    "blurb": " No worries. I've worked around it for now by pinning to an older base image. ",
-    "body": "<div><p>No worries. I've worked around it for now by pinning to an older base image.</p>\n</div>",
-    "created_at": 1545157973,
-    "error_type": null,
-    "id": "msg_26k77bn",
-    "is_draft": false,
-    "is_inbound": true,
-    "metadata": {
-      "intercom_url": "https://app.intercom.io/a/apps/yg02r5dz/inbox/conversation/19917193258"
-    },
-    "recipients": [
-      {
-        "_links": {
-          "related": {
-            "contact": "https://api2.frontapp.com/contacts/crd_166upl"
-          }
-        },
-        "handle": "57a3a9f3006b38ab3a00004a",
-        "role": "from"
+    "self": "https://api2.frontapp.com/messages/msg_26k77bn"
+  },
+  "attachments": [],
+  "author": null,
+  "blurb": " No worries. I've worked around it for now by pinning to an older base image. ",
+  "body": "<div><p>No worries. I've worked around it for now by pinning to an older base image.</p>\n</div>",
+  "created_at": 1545157973,
+  "error_type": null,
+  "id": "msg_26k77bn",
+  "is_draft": false,
+  "is_inbound": true,
+  "metadata": {
+    "intercom_url": "https://app.intercom.io/a/apps/yg02r5dz/inbox/conversation/19917193258"
+  },
+  "recipients": [
+    {
+      "_links": {
+        "related": {
+          "contact": "https://api2.frontapp.com/contacts/crd_166upl"
+        }
       },
-      {
-        "_links": {
-          "related": {
-            "contact": "https://api2.frontapp.com/contacts/crd_5gqtnd"
-          }
-        },
-        "handle": "yg02r5dz",
-        "role": "to"
-      }
-    ],
-    "text": "No worries. I've worked around it for now by pinning to an older base image. ",
-    "type": "intercom"
+      "handle": "57a3a9f3006b38ab3a00004a",
+      "role": "from"
+    },
+    {
+      "_links": {
+        "related": {
+          "contact": "https://api2.frontapp.com/contacts/crd_5gqtnd"
+        }
+      },
+      "handle": "yg02r5dz",
+      "role": "to"
+    }
+  ],
+  "text": "No worries. I've worked around it for now by pinning to an older base image. ",
+  "type": "intercom"
 }
