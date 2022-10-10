@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.282 - 2022-10-10
+
+* CI: Use JSON for Jest config [Josh Bowling]
+
 ## 6.0.281 - 2022-10-09
 
 * Dev: Use prettier for json/yml [Josh Bowling]

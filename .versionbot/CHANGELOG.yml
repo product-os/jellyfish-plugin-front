@@ -1,4 +1,18 @@
 - commits:
+    - subject: "CI: Use JSON for Jest config"
+      hash: dcd17add09b32d7e71a8a8be2cd0efb8334e7d69
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.282
+  title: ""
+  date: 2022-10-10T14:42:45.668Z
+- commits:
     - subject: "Dev: Use prettier for json/yml"
       hash: b790abec379a4959635e3402f6b8d16ce587204d
       body: ""
