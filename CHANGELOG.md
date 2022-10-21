@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.283 - 2022-10-21
+
+* Update internal packages [Josh Bowling]
+
 ## 6.0.282 - 2022-10-10
 
 * CI: Use JSON for Jest config [Josh Bowling]

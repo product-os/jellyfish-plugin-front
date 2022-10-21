@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update internal packages
+      hash: ea502bf7c6156094c55d8b606b4796ffd8da677c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 6.0.283
+  title: ""
+  date: 2022-10-21T02:23:42.331Z
+- commits:
     - subject: "CI: Use JSON for Jest config"
       hash: dcd17add09b32d7e71a8a8be2cd0efb8334e7d69
       body: ""
@@ -9151,8 +9165,8 @@
     - subject: Ensure data.mirrors set for synced brainstorm-topics
       hash: c0be71ea148be556f6d5612a1dfc6af05710904e
       body: >
-        This is another temporary change while we pull in legacy brainstorm
-        topics before deleting this code again.
+        This is another temporary change while we pull in legacy brainstorm topics
+        before deleting this code again.
       footer:
         Change-type: patch
         change-type: patch
@@ -9265,8 +9279,8 @@
     - subject: Add support for syncing legacy brainstorm topics
       hash: 1fed2709d1d478a690b45a314eb01aee55db8dd4
       body: >
-        This is a temporary change and will be reverted once the legacy
-        brainstorm topics have all been synced to Jellyfish.
+        This is a temporary change and will be reverted once the legacy brainstorm
+        topics have all been synced to Jellyfish.
       footer:
         Change-type: minor
         change-type: minor
@@ -9291,8 +9305,8 @@
     - subject: Set the loop field of synced support threads
       hash: b6fd14c30f7bf78d0d315b85fc7aae45f60fd2cb
       body: >
-        Need to add jellyfish-plugin-product-os as a dev dependency to pull in
-        the `loop-balena-io` contract and load it before running the translate
+        Need to add jellyfish-plugin-product-os as a dev dependency to pull in the
+        `loop-balena-io` contract and load it before running the translate
         integration tests so that jellyfish-core doesn't complain that the loop
         field is being set to a non-existent loop!
       footer:
