@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.0.285 - 2022-12-13
+
+* CI: Stop extending renovate config [Josh Bowling]
+
 ## 6.0.284 - 2022-10-24
 
 * Docs: Remove badge from readme [Josh Bowling]
