@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update dependency @balena/jellyfish-worker to 37.3.0
+      hash: 31eaae6a6a7ac247fcb7c2b9b309c3dbcd2775df
+      body: |
+        Update @balena/jellyfish-worker to 37.3.0
+
+        Update @balena/jellyfish-worker from 36.0.18 to 37.3.0
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 6.5.0
+  title: ""
+  date: 2022-12-27T03:47:24.176Z
+- commits:
     - subject: Update dependency @types/uuid to 9.0.0
       hash: 9fb22c15d242a4c9b020a60e20a190aacf2234de
       body: |
