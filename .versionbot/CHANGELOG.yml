@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update dependency axios to 1.2.1
+      hash: 166a697a23c6d5ef13cccc49392363f753bda3df
+      body: |
+        Update axios to 1.2.1
+
+        Update axios from 0.27.2 to 1.2.1
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 6.6.0
+  title: ""
+  date: 2022-12-31T12:31:50.067Z
+- commits:
     - subject: Update dependency @balena/jellyfish-worker to 37.3.0
       hash: 31eaae6a6a7ac247fcb7c2b9b309c3dbcd2775df
       body: |
