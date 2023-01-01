@@ -5,7 +5,7 @@ import type { AutumnDBSession } from 'autumndb';
 import Bluebird from 'bluebird';
 import { Conversation, Front } from 'front-sdk';
 import _ from 'lodash';
-import { v4 as uuid } from 'uuid';
+import { randomUUID } from 'node:crypto';
 import { frontPlugin } from '../../lib';
 
 let ctx: testUtils.TestContext;
@@ -125,7 +125,7 @@ async function createThread(
 			subject: title,
 			body: description,
 			sender: {
-				handle: `jellytest-${uuid()}`,
+				handle: `jellytest-${randomUUID()}`,
 			},
 		});
 	});
@@ -162,8 +162,8 @@ async function createThread(
 describe('mirror', () => {
 	test('should mirror support thread status', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 		const id = _.last(supportThread.data.mirrors[0].split('/')) as string;
 
@@ -228,11 +228,11 @@ describe('mirror', () => {
 
 	test('should mirror whisper on insert support threads', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 
-		const body = uuid();
+		const body = randomUUID();
 		const whisper: any = await ctx.createWhisper(
 			user.id,
 			session,
@@ -259,13 +259,13 @@ describe('mirror', () => {
 
 	test('should mirror message insert on support threads', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 
 		await Bluebird.delay(5000);
 
-		const body = uuid();
+		const body = randomUUID();
 		const message: any = await ctx.createMessage(
 			user.id,
 			session,
@@ -290,8 +290,8 @@ describe('mirror', () => {
 
 	test('should be able to tag an unassigned conversation', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 		const id = _.last((supportThread.data as any).mirrors[0].split('/'));
 
@@ -340,8 +340,8 @@ describe('mirror', () => {
 
 	test('should be able to comment using a complex code', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 
 		const body =
@@ -372,8 +372,8 @@ describe('mirror', () => {
 
 	test('should be able to comment using triple backticks', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 
 		const body = '```Foo\nBar```';
@@ -403,8 +403,8 @@ describe('mirror', () => {
 
 	test('should be able to comment using brackets', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 
 		const body = 'Hello <world> foo <bar>';
@@ -434,8 +434,8 @@ describe('mirror', () => {
 
 	test('should be able to close an inbound message', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 
 		// Update status to closed
@@ -479,8 +479,8 @@ describe('mirror', () => {
 
 	test('should be able to archive an inbound message', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 
 		// Update status to closed
@@ -524,8 +524,8 @@ describe('mirror', () => {
 
 	test('should be able to reply to a moved inbound message', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 		);
 		const conversationId = _.last(
 			supportThread.data.mirrors[0].split('/'),
@@ -568,12 +568,12 @@ describe('mirror', () => {
 
 	test('should be able to comment on a sales thread', async () => {
 		const supportThread = await createThread(
-			`My Issue ${uuid()}`,
-			`Foo Bar ${uuid()}`,
+			`My Issue ${randomUUID()}`,
+			`Foo Bar ${randomUUID()}`,
 			'sales-thread',
 		);
 
-		const body = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${uuid()}`;
+		const body = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. ${randomUUID()}`;
 		const whisper: any = await ctx.createWhisper(
 			user.id,
 			session,

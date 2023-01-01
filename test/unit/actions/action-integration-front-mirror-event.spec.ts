@@ -1,7 +1,7 @@
 import type { AutumnDBSession, Contract } from 'autumndb';
 import { WorkerContext } from '@balena/jellyfish-worker';
 import _ from 'lodash';
-import { v4 as uuidv4 } from 'uuid';
+import { randomUUID } from 'node:crypto';
 import { actionIntegrationFrontMirrorEvent } from '../../../lib/actions/action-integration-front-mirror-event';
 
 const handler = actionIntegrationFrontMirrorEvent.handler;
@@ -18,9 +18,9 @@ const handler = actionIntegrationFrontMirrorEvent.handler;
  */
 function makeContract(type: string, data = {}, slug = ''): Contract {
 	return {
-		id: uuidv4(),
-		name: uuidv4(),
-		slug: type === 'type' ? slug : `${type}-${uuidv4()}`,
+		id: randomUUID(),
+		name: randomUUID(),
+		slug: type === 'type' ? slug : `${type}-${randomUUID()}`,
 		type: `${type}@1.0.0`,
 		version: '1.0.0',
 		active: true,
@@ -48,9 +48,9 @@ const mockSession: AutumnDBSession = {
 function makeRequest(args = {}): any {
 	return {
 		action: {
-			id: uuidv4(),
-			name: uuidv4(),
-			slug: `action-${uuidv4()}`,
+			id: randomUUID(),
+			name: randomUUID(),
+			slug: `action-${randomUUID()}`,
 			type: 'action@1.0.0',
 			version: '1.0.0',
 			active: true,
@@ -64,20 +64,20 @@ function makeRequest(args = {}): any {
 				arguments: args,
 			},
 		},
-		card: uuidv4(),
-		actor: uuidv4(),
-		context: { id: uuidv4() },
+		card: randomUUID(),
+		actor: randomUUID(),
+		context: { id: randomUUID() },
 		timestamp: new Date().toISOString(),
 		epoch: new Date().toISOString(),
 		arguments: args,
-		originator: uuidv4(),
+		originator: randomUUID(),
 	};
 }
 
 const context: any = {
 	getCardById: () => {
 		return {
-			id: uuidv4(),
+			id: randomUUID(),
 		};
 	},
 	sync: {

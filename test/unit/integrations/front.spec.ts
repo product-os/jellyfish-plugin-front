@@ -5,9 +5,9 @@ import FormData from 'form-data';
 import fs from 'fs';
 import _ from 'lodash';
 import nock from 'nock';
+import { randomUUID } from 'node:crypto';
 import os from 'os';
 import path from 'path';
-import { v4 as uuidv4 } from 'uuid';
 import { frontPlugin } from '../../../lib';
 import { FrontIntegration } from '../../../lib/integrations/front';
 import { getMessageText } from '../../../lib/integrations/front-integration-utils';
@@ -21,9 +21,9 @@ const context: any = {
 
 beforeAll(() => {
 	context.file = {
-		slug: uuidv4(),
-		path: path.join(os.tmpdir(), `${uuidv4()}.txt`),
-		content: uuidv4(),
+		slug: randomUUID(),
+		path: path.join(os.tmpdir(), `${randomUUID()}.txt`),
+		content: randomUUID(),
 	};
 	fs.writeFileSync(context.file.path, context.file.content);
 });
@@ -102,7 +102,7 @@ const jestTest =
 test('getFile() should download file (nock)', async () => {
 	const options = {
 		token: {
-			api: uuidv4(),
+			api: randomUUID(),
 		},
 	};
 	const instance = new FrontIntegration(options);
