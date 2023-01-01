@@ -1,4 +1,16 @@
 - commits:
+    - subject: Drop uuid
+      hash: 0e50009a1b8b664552102714e78620c9ab39ff45
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 6.7.1
+  title: ""
+  date: 2023-01-01T08:13:44.264Z
+- commits:
     - subject: Update postgres Docker tag to v15
       hash: 83cc2574ef5c4245f4b4b2017c2357aa5cb6ad92
       body: |
