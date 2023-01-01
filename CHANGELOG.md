@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.7.2 - 2023-01-01
+
+* Update intercom-client to v4 [Josh Bowling]
+
 ## 6.7.1 - 2023-01-01
 
 * Drop uuid [Josh Bowling]

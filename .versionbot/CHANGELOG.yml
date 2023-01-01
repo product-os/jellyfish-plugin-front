@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update intercom-client to v4
+      hash: 882f8344d9e7bb71444ee1f6e99feff105847b74
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 6.7.2
+  title: ""
+  date: 2023-01-01T08:47:09.339Z
+- commits:
     - subject: Drop uuid
       hash: 0e50009a1b8b664552102714e78620c9ab39ff45
       body: ""
