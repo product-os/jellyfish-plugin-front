@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update dependency intercom-client to 4.0.0
+      hash: 079312205ba2a44cb4d295e24c3eb47bdf183846
+      body: |
+        Update intercom-client to 4.0.0
+
+        Update intercom-client from 2.11.2 to 4.0.0
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 6.9.0
+  title: ""
+  date: 2023-01-04T09:49:29.580Z
+- commits:
     - subject: Update dependency @balena/jellyfish-environment to 15.0.1
       hash: 136b8df9dc0ad415edfb1a1558f2dee81e125ce2
       body: |
