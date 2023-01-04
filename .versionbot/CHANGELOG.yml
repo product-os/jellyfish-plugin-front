@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update dependency @balena/jellyfish-environment to 15.0.1
+      hash: 136b8df9dc0ad415edfb1a1558f2dee81e125ce2
+      body: |
+        Update @balena/jellyfish-environment to 15.0.1
+
+        Update @balena/jellyfish-environment from 14.9.1 to 15.0.1
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 6.8.0
+  title: ""
+  date: 2023-01-04T08:57:38.330Z
+- commits:
     - subject: Drop uuid
       hash: 0e50009a1b8b664552102714e78620c9ab39ff45
       body: ""
