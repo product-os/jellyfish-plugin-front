@@ -1,4 +1,16 @@
 - commits:
+    - subject: Bump deps
+      hash: c23a7117b660adf9639010271e4e307bfc29660f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 6.8.1
+  title: ""
+  date: 2023-04-02T08:24:44.241Z
+- commits:
     - subject: Update dependency @balena/jellyfish-environment to 15.0.1
       hash: 136b8df9dc0ad415edfb1a1558f2dee81e125ce2
       body: |

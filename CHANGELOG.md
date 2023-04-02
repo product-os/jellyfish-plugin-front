@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.8.1 - 2023-04-02
+
+* Bump deps [Josh Bowling]
+
 ## 6.8.0 - 2023-01-04
 
 * Update dependency @balena/jellyfish-environment to 15.0.1 [Renovate Bot]
