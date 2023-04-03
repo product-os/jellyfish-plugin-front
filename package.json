@@ -51,7 +51,7 @@
     "@balena/jellyfish-assert": "^1.11.2",
     "@balena/jellyfish-environment": "^21.0.0",
     "@balena/jellyfish-worker": "^47.0.1",
-    "axios": "^1.0.0",
+    "axios": "^0.27.2",
     "bluebird": "^3.7.2",
     "fast-json-patch": "^3.1.1",
     "front-sdk": "^0.8.2",
