@@ -1,4 +1,16 @@
 - commits:
+    - subject: Downgrade axios
+      hash: 42a46b7d2ee3e11040bc2251ee50001031f8ffc4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 6.8.2
+  title: ""
+  date: 2023-04-03T07:48:21.941Z
+- commits:
     - subject: Bump deps
       hash: c23a7117b660adf9639010271e4e307bfc29660f
       body: ""
