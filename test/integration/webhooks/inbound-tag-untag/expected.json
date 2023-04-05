@@ -39,8 +39,7 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div>foo</div>\n",
-          "reactions": {}
+          "message": "<div>foo</div>\n"
         }
       }
     },
