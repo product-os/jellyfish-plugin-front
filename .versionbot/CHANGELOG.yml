@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update worker and autumndb
+      hash: 683f24abaf3175c43f5c18556f77ab0ee6652515
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 6.8.3
+  title: ""
+  date: 2023-04-06T02:32:14.481Z
+- commits:
     - subject: Downgrade axios
       hash: 42a46b7d2ee3e11040bc2251ee50001031f8ffc4
       body: ""
