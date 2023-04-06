@@ -74,8 +74,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div><p>Hi, is there a quick and easy way to revert to an older release? I've done it succesfully by &quot;pushing&quot; the older commit but it doesn't seem to be working for me right now</p>\n</div>",
-          "reactions": {}
+          "message": "<div><p>Hi, is there a quick and easy way to revert to an older release? I've done it succesfully by &quot;pushing&quot; the older commit but it doesn't seem to be working for me right now</p>\n</div>"
         }
       }
     },
@@ -99,8 +98,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "This is mirrored in [flowdock premium thread m-PT2l8ed9u-l_3FKX3kNhXzq5g](https://www.flowdock.com/app/rulemotion/public-s-premium/threads/m-PT2l8ed9u-l_3FKX3kNhXzq5g)\n[](https://www.balena-cloud.com?hidden=murmur&source=flowdock&flow=rulemotion/public-s-premium&thread=m-PT2l8ed9u-l_3FKX3kNhXzq5g&hmac=4938cfcb9c79d694fdfb1fc8cd4eb29f61dfc49959f85590f8c9327b69b2ca95)",
-          "reactions": {}
+          "message": "This is mirrored in [flowdock premium thread m-PT2l8ed9u-l_3FKX3kNhXzq5g](https://www.flowdock.com/app/rulemotion/public-s-premium/threads/m-PT2l8ed9u-l_3FKX3kNhXzq5g)\n[](https://www.balena-cloud.com?hidden=murmur&source=flowdock&flow=rulemotion/public-s-premium&thread=m-PT2l8ed9u-l_3FKX3kNhXzq5g&hmac=4938cfcb9c79d694fdfb1fc8cd4eb29f61dfc49959f85590f8c9327b69b2ca95)"
         }
       }
     },
@@ -124,8 +122,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div><p>Never mind I think I've gotten that to work again.. lol</p>\n</div>",
-          "reactions": {}
+          "message": "<div><p>Never mind I think I've gotten that to work again.. lol</p>\n</div>"
         }
       }
     },
@@ -149,8 +146,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div><p>Is this something I can do on the balena dashboard for future reference?</p>\n</div>",
-          "reactions": {}
+          "message": "<div><p>Is this something I can do on the balena dashboard for future reference?</p>\n</div>"
         }
       }
     },
@@ -174,8 +170,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div><p>Hey, it's not actually implemented on the dashboard side, but you can use staged releases, with the code found in examples here: <a href=\"https://github.com/balena-io-projects/staged-releases\">https://github.com/balena-io-projects/staged-releases</a></p>\n</div>",
-          "reactions": {}
+          "message": "<div><p>Hey, it's not actually implemented on the dashboard side, but you can use staged releases, with the code found in examples here: <a href=\"https://github.com/balena-io-projects/staged-releases\">https://github.com/balena-io-projects/staged-releases</a></p>\n</div>"
         }
       }
     },
@@ -199,8 +194,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div><p>I meant to say it's not implemented <em>yet</em>, but it is coming.</p>\n</div>",
-          "reactions": {}
+          "message": "<div><p>I meant to say it's not implemented <em>yet</em>, but it is coming.</p>\n</div>"
         }
       }
     },
@@ -224,8 +218,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "#summary user wanted to know how to rollback a device, showed them staged-releases",
-          "reactions": {}
+          "message": "#summary user wanted to know how to rollback a device, showed them staged-releases"
         }
       }
     },
@@ -249,8 +242,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div><p>Sounds good, thanks!</p>\n</div>",
-          "reactions": {}
+          "message": "<div><p>Sounds good, thanks!</p>\n</div>"
         }
       }
     },
@@ -274,8 +266,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "#summary user wanted to know how to rollback a device, showed them staged-releases (prev status)",
-          "reactions": {}
+          "message": "#summary user wanted to know how to rollback a device, showed them staged-releases (prev status)"
         }
       }
     },
@@ -299,8 +290,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "closed",
-          "reactions": {}
+          "message": "closed"
         }
       }
     },
@@ -324,8 +314,7 @@
           "mentionsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "Test",
-          "reactions": {}
+          "message": "Test"
         }
       }
     },

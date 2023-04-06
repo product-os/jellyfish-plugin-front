@@ -102,8 +102,7 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "<div>Foo</div>\n",
-          "reactions": {}
+          "message": "<div>Foo</div>\n"
         }
       }
     },
@@ -127,8 +126,7 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "hello",
-          "reactions": {}
+          "message": "hello"
         }
       }
     },

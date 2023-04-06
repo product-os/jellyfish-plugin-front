@@ -97,8 +97,7 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "First comment",
-          "reactions": {}
+          "message": "First comment"
         }
       }
     },
@@ -122,8 +121,7 @@
           "alertsUser": [],
           "mentionsGroup": [],
           "alertsGroup": [],
-          "message": "Second comment",
-          "reactions": {}
+          "message": "Second comment"
         }
       }
     },
