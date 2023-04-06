@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.8.5 - 2023-04-06
+
+* Fix hostname regex for tests [Josh Bowling]
+
 ## 6.8.4 - 2023-04-06
 
 * Fix mirror host check security issue [Josh Bowling]
