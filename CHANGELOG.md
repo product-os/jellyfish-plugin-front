@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.8.4 - 2023-04-06
+
+* Fix mirror host check security issue [Josh Bowling]
+
 ## 6.8.3 - 2023-04-06
 
 * Update worker and autumndb [Josh Bowling]
