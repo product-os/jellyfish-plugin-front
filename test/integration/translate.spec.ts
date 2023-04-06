@@ -84,7 +84,7 @@ describe('translate', () => {
 					},
 					{
 						source: 'front',
-						baseUrl: /(api2.frontapp.com|api.intercom.io)(:443)?$/,
+						baseUrl: /(api2\.frontapp\.com|api\.intercom\.io)(:443)?$/,
 						uriPath: /.*/,
 						basePath: path.join(__dirname, 'webhooks'),
 						isAuthorized: (request: any) => {
