@@ -11,6 +11,7 @@ import * as Intercom from 'intercom-client';
 import _ from 'lodash';
 import { marked } from 'marked';
 import sanitizeHtml from 'sanitize-html';
+import * as url from 'node:url';
 import * as utils from './utils';
 import * as frontUtils from './front-integration-utils';
 import { retryableContext } from './context-retry-wrapper';
@@ -36,6 +37,23 @@ const ALL_THREAD_TYPES = [
 
 const RETRIES = parseInt(process.env.FRONT_RETRIES || '60', 10);
 const DELAY = parseInt(process.env.FRONT_DELAY || '5000', 10);
+
+function getPrimaryDomain(urlString: string): string | undefined {
+	const parsedUrl = url.parse(urlString);
+	const host = parsedUrl.hostname;
+
+	if (host != null) {
+		// Split host into its components and reverse the array
+		const hostArr = host.split('.').reverse();
+
+		// Check if there is a TLD (top-level domain) in the first position
+		if (hostArr.length > 1 && hostArr[0].length <= 3) {
+			return hostArr.slice(0, 2).reverse().join('.');
+		} else {
+			return hostArr.slice(0, 1).reverse().join('.');
+		}
+	}
+}
 
 export class FrontIntegration implements Integration {
 	public slug = SLUG;
@@ -300,7 +318,7 @@ export class FrontIntegration implements Integration {
 		}
 
 		const frontUrl = _.find(card.data.mirrors, (mirror) => {
-			return _.includes(mirror, 'frontapp.com');
+			return getPrimaryDomain(mirror) === 'frontapp.com';
 		});
 
 		this.context.log.info('Mirroring Front', {
@@ -410,7 +428,7 @@ export class FrontIntegration implements Integration {
 			}
 
 			const threadFrontUrl = _.find(thread.data.mirrors, (mirror) => {
-				return _.includes(mirror, 'frontapp.com');
+				return getPrimaryDomain(mirror) === 'frontapp.com';
 			});
 			if (!threadFrontUrl) {
 				return [];
