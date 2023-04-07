@@ -1,4 +1,19 @@
 - commits:
+    - subject: Update actions/checkout digest to ac59398
+      hash: cc448f57203e075186bfa3a3ea728188c4ec9c6b
+      body: |
+        Update actions/checkout to
+
+        Update actions/checkout from 3 to
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Renovate Bot
+      nested: []
+  version: 6.9.0
+  title: ""
+  date: 2023-04-07T01:12:42.452Z
+- commits:
     - subject: Fix hostname regex for tests
       hash: 1cde40af18fdfeb1a9a942e2c8ccd3f90a9c4a09
       body: ""

@@ -4,6 +4,10 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.9.0 - 2023-04-07
+
+* Update actions/checkout digest to ac59398 [Renovate Bot]
+
 ## 6.8.5 - 2023-04-06
 
 * Fix hostname regex for tests [Josh Bowling]
