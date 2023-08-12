@@ -4,6 +4,11 @@
 
 ## 1.0.1 - 2021-07-05
 
+## 6.9.1 - 2023-08-12
+
+* Update date-fns to 2.30.0 [Josh Bowling]
+* Bump internal dependencies [Josh Bowling]
+
 ## 6.9.0 - 2023-04-07
 
 * Update actions/checkout digest to ac59398 [Renovate Bot]

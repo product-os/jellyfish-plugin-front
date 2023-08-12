@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update date-fns to 2.30.0
+      hash: ec85079cddd5da5798121a58adc6d87c333efa16
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+    - subject: Bump internal dependencies
+      hash: 307658d21e35995093dc5070fb3dae6ff41ab7a7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Josh Bowling
+      nested: []
+  version: 6.9.1
+  title: ""
+  date: 2023-08-12T08:56:18.251Z
+- commits:
     - subject: Update actions/checkout digest to ac59398
       hash: cc448f57203e075186bfa3a3ea728188c4ec9c6b
       body: |
@@ -9415,8 +9435,8 @@
     - subject: Ensure data.mirrors set for synced brainstorm-topics
       hash: c0be71ea148be556f6d5612a1dfc6af05710904e
       body: >
-        This is another temporary change while we pull in legacy brainstorm topics
-        before deleting this code again.
+        This is another temporary change while we pull in legacy brainstorm
+        topics before deleting this code again.
       footer:
         Change-type: patch
         change-type: patch
@@ -9529,8 +9549,8 @@
     - subject: Add support for syncing legacy brainstorm topics
       hash: 1fed2709d1d478a690b45a314eb01aee55db8dd4
       body: >
-        This is a temporary change and will be reverted once the legacy brainstorm
-        topics have all been synced to Jellyfish.
+        This is a temporary change and will be reverted once the legacy
+        brainstorm topics have all been synced to Jellyfish.
       footer:
         Change-type: minor
         change-type: minor
@@ -9555,8 +9575,8 @@
     - subject: Set the loop field of synced support threads
       hash: b6fd14c30f7bf78d0d315b85fc7aae45f60fd2cb
       body: >
-        Need to add jellyfish-plugin-product-os as a dev dependency to pull in the
-        `loop-balena-io` contract and load it before running the translate
+        Need to add jellyfish-plugin-product-os as a dev dependency to pull in
+        the `loop-balena-io` contract and load it before running the translate
         integration tests so that jellyfish-core doesn't complain that the loop
         field is being set to a non-existent loop!
       footer:
